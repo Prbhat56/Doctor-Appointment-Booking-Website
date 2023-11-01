@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/hospital/hospital_detail_page.dart';
+import 'package:myapp/hospital/hospital_result_page.dart';
 import 'package:myapp/utils.dart';
 
 class HospitalDisplayPage extends StatefulWidget {
@@ -10,11 +11,11 @@ class HospitalDisplayPage extends StatefulWidget {
 }
 
 class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
-    final cityController = TextEditingController();
+  final cityController = TextEditingController();
   String? dropdownValue;
   @override
   Widget build(BuildContext context) {
-        double baseWidth = 1440;
+    double baseWidth = 1440;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return SingleChildScrollView(
@@ -22,7 +23,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
         padding: const EdgeInsets.only(left: 10, right: 10, top: 12),
         child: Container(
           width: double.infinity,
-          height: 2200 * fem,
+          height: 2300 * fem,
           decoration: BoxDecoration(color: Colors.indigo.shade100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,32 +90,35 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    // autogroupsms3vYj (2xPSb39Gnc36PEnffNsmS3)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 43 * fem),
-                    width: double.infinity,
-                    height: 127 * fem,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0xffe1d8d8)),
-                      borderRadius: BorderRadius.circular(40 * fem),
-                      gradient: const LinearGradient(
-                        begin: Alignment(-0.763, 0.512),
-                        end: Alignment(-0.763, 2.512),
-                        colors: <Color>[Color(0xff005473), Color(0xff0481af)],
-                        stops: <double>[0, 1],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15,right: 15),
+                    child: Container(
+                      // autogroupsms3vYj (2xPSb39Gnc36PEnffNsmS3)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 0 * fem, 43 * fem),
+                      width: double.infinity,
+                      height: 127 * fem,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: const Color(0xffe1d8d8)),
+                        borderRadius: BorderRadius.circular(40 * fem),
+                        gradient: const LinearGradient(
+                          begin: Alignment(-0.763, 0.512),
+                          end: Alignment(-0.763, 2.512),
+                          colors: <Color>[Color(0xff005473), Color(0xff0481af)],
+                          stops: <double>[0, 1],
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Famous  Lab in Banglore ',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 65 * ffem,
-                          fontWeight: FontWeight.w600,
-                          height: 1.2125 * ffem / fem,
-                          letterSpacing: -1.2349999845 * fem,
-                          color: const Color(0xffffffff),
+                      child: Center(
+                        child: Text(
+                          'Famous Hospital in Delhi ',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 65 * ffem,
+                            fontWeight: FontWeight.w600,
+                            height: 1.2125 * ffem / fem,
+                            letterSpacing: -1.2349999845 * fem,
+                            color: Color(0xffffffff),
+                          ),
                         ),
                       ),
                     ),
@@ -217,11 +221,11 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                               });
                             },
                             items: <String>[
-                              'Lab In Delhi',
-                              'Lab In Delhi',
-                              'Lab In Delhi',
-                              'Lab In Delhi',
-                              'Lab In Delhi',
+                              'Hospital In Delhi',
+                              'Hospital In Delhi',
+                              'Hospital In Delhi',
+                              'Hospital In Delhi',
+                              'Hospital In Delhi',
                             ].map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -234,6 +238,40 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(height: 30,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                    Material(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(30),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HospitalResultPage()),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 22,
+                          horizontal: 44,
+                        ),
+                        child: Text(
+                          "Search",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 40,
@@ -251,7 +289,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab2.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -265,7 +303,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab1.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -280,7 +318,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'JDAR Pathology Lab',
+                    'Fortis Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -290,7 +328,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     ),
                   ),
                   Text(
-                    'Sekjae Pathology Lab',
+                    'Fortis Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -411,7 +449,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab2.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -425,7 +463,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab1.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -440,7 +478,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'JDAR Pathology Lab',
+                    'Fortis Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -450,7 +488,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                     ),
                   ),
                   Text(
-                    'Sekjae Pathology Lab',
+                    'Fortis Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,

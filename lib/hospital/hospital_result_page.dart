@@ -13,7 +13,7 @@ class HospitalResultPage extends StatefulWidget {
 class _HospitalResultPageState extends State<HospitalResultPage> {
   @override
   Widget build(BuildContext context) {
-        double baseWidth = 1440;
+    double baseWidth = 1440;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return SingleChildScrollView(
@@ -86,32 +86,35 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                // autogroupsms3vYj (2xPSb39Gnc36PEnffNsmS3)
-                margin:
-                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 43 * fem),
-                width: double.infinity,
-                height: 127 * fem,
-                decoration: BoxDecoration(
-                  border: Border.all(color: const Color(0xffe1d8d8)),
-                  borderRadius: BorderRadius.circular(40 * fem),
-                  gradient: const LinearGradient(
-                    begin: Alignment(-0.763, 0.512),
-                    end: Alignment(-0.763, 2.512),
-                    colors: <Color>[Color(0xff005473), Color(0xff0481af)],
-                    stops: <double>[0, 1],
+              Padding(
+                padding: const EdgeInsets.only(left: 15,right: 15),
+                child: Container(
+                  // autogroupsms3vYj (2xPSb39Gnc36PEnffNsmS3)
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 43 * fem),
+                  width: double.infinity,
+                  height: 127 * fem,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: const Color(0xffe1d8d8)),
+                    borderRadius: BorderRadius.circular(40 * fem),
+                    gradient: const LinearGradient(
+                      begin: Alignment(-0.763, 0.512),
+                      end: Alignment(-0.763, 2.512),
+                      colors: <Color>[Color(0xff005473), Color(0xff0481af)],
+                      stops: <double>[0, 1],
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text(
-                    'Found 6 Result Near You',
-                    style: SafeGoogleFont(
-                      'Inter',
-                      fontSize: 65 * ffem,
-                      fontWeight: FontWeight.w600,
-                      height: 1.2125 * ffem / fem,
-                      letterSpacing: -1.2349999845 * fem,
-                      color: const Color(0xffffffff),
+                  child: Center(
+                    child: Text(
+                      'Found 5 result near you ',
+                      style: SafeGoogleFont(
+                        'Inter',
+                        fontSize: 65 * ffem,
+                        fontWeight: FontWeight.w600,
+                        height: 1.2125 * ffem / fem,
+                        letterSpacing: -1.2349999845 * fem,
+                        color: Color(0xffffffff),
+                      ),
                     ),
                   ),
                 ),
@@ -132,7 +135,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab2.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -146,7 +149,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab1.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -161,7 +164,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'JDAR Pathology Lab',
+                    'Primus Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -171,7 +174,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     ),
                   ),
                   Text(
-                    'Sekjae Pathology Lab',
+                    'Primus Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -190,7 +193,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'E-13, South Extension \nMarket, Part-II, New Delhi',
+                    '0.8 km away from \nyour location',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 24 * ffem,
@@ -200,7 +203,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     ),
                   ),
                   Text(
-                    'E-13, South Extension \nMarket, Part-II, New Delhi',
+                    '0.8 km away from \nyour location',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 24 * ffem,
@@ -292,7 +295,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab2.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -306,7 +309,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(60 * fem),
                       child: Image.network(
-                        "assets/page-1/images/lab1.png",
+                        "assets/page-1/images/mainhospital.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -321,7 +324,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'JDAR Pathology Lab',
+                    'Primus Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -331,7 +334,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     ),
                   ),
                   Text(
-                    'Sekjae Pathology Lab',
+                    'Primus Hospital',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 35 * ffem,
@@ -350,7 +353,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'E-13, South Extension \nMarket, Part-II, New Delhi',
+                    '0.8 km away from \nyour location',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 24 * ffem,
@@ -360,7 +363,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                     ),
                   ),
                   Text(
-                    'E-13, South Extension \nMarket, Part-II, New Delhi',
+                    '0.8 km away from \nyour location',
                     style: SafeGoogleFont(
                       'Roboto',
                       fontSize: 24 * ffem,
@@ -440,7 +443,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
           ),
         ]),
       ),
-    )
-    );;
+    ));
+    ;
   }
 }

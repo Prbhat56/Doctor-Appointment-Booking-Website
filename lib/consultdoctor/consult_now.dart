@@ -16,7 +16,7 @@ class ConsultNowPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2200 * fem,
+        height: 2280 * fem,
         decoration: const BoxDecoration(
           color: Color.fromRGBO(255, 255, 255, 0.702),
         ),
@@ -302,8 +302,8 @@ class ConsultNowPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  width: 60 * fem,
-                                  height: 60 * fem,
+                                  width: 50 * fem,
+                                  height: 50 * fem,
                                   decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.white,
@@ -313,7 +313,7 @@ class ConsultNowPage extends StatelessWidget {
                                       '1',
                                       style: SafeGoogleFont(
                                         'Inter',
-                                        fontSize: 26 * ffem,
+                                        fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.10 * ffem / fem,
                                         color: const Color(0xff000000),
@@ -328,7 +328,7 @@ class ConsultNowPage extends StatelessWidget {
                                   'Select a speciality or symptom',
                                   style: SafeGoogleFont(
                                     'Inter',
-                                    fontSize: 30 * ffem,
+                                    fontSize: 26 * ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.07 * ffem / fem,
                                     color: const Color(0xffffffff),
@@ -346,8 +346,8 @@ class ConsultNowPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  width: 60 * fem,
-                                  height: 60 * fem,
+                                  width: 50 * fem,
+                                  height: 50 * fem,
                                   decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.white,
@@ -357,7 +357,7 @@ class ConsultNowPage extends StatelessWidget {
                                       '2',
                                       style: SafeGoogleFont(
                                         'Inter',
-                                        fontSize: 26 * ffem,
+                                        fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.10 * ffem / fem,
                                         color: const Color(0xff000000),
@@ -372,7 +372,7 @@ class ConsultNowPage extends StatelessWidget {
                                   'video call with a verified doctor',
                                   style: SafeGoogleFont(
                                     'Inter',
-                                    fontSize: 30 * ffem,
+                                    fontSize: 26 * ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.07 * ffem / fem,
                                     color: const Color(0xffffffff),
@@ -390,8 +390,8 @@ class ConsultNowPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  width: 60 * fem,
-                                  height: 60 * fem,
+                                  width: 50 * fem,
+                                  height: 50 * fem,
                                   decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.white,
@@ -401,7 +401,7 @@ class ConsultNowPage extends StatelessWidget {
                                       '3',
                                       style: SafeGoogleFont(
                                         'Inter',
-                                        fontSize: 26 * ffem,
+                                        fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.10 * ffem / fem,
                                         color: const Color(0xff000000),
@@ -413,10 +413,10 @@ class ConsultNowPage extends StatelessWidget {
                                   width: 40,
                                 ),
                                 Text(
-                                  'digital prescription & a free follow-up',
+                                  'digital prescription \n a free follow-up',
                                   style: SafeGoogleFont(
                                     'Inter',
-                                    fontSize: 30 * ffem,
+                                    fontSize: 26 * ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.07 * ffem / fem,
                                     color: const Color(0xffffffff),

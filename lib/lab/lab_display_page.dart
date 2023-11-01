@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/lab/lab_detail_page.dart';
+import 'package:myapp/lab/lab_result_page.dart';
 
 import '../utils.dart';
 
@@ -235,6 +236,40 @@ class _LabDisplayPageState extends State<LabDisplayPage> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(height: 30,),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                      Material(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(30),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LabResultPage()),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 22,
+                          horizontal: 44,
+                        ),
+                        child: Text(
+                          "Search",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 40,

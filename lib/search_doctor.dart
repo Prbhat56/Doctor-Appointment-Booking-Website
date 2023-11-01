@@ -565,91 +565,11 @@ class DoctorFindPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 30),
-                  Text(
-                    'Time to meet',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 32 * ffem,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.blueAccent,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
+             
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Material(
-                        color: Colors.redAccent,
-                        borderRadius: BorderRadius.circular(30),
-                        child: InkWell(
-                          onTap: () {
-                            // Handle button tap
-                          },
-                          borderRadius: BorderRadius.circular(30),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 14,
-                              horizontal: 28,
-                            ),
-                            child: Text(
-                              "Morning",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.redAccent,
-                        borderRadius: BorderRadius.circular(30),
-                        child: InkWell(
-                          onTap: () {
-                            // Handle button tap
-                          },
-                          borderRadius: BorderRadius.circular(30),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 14,
-                              horizontal: 28,
-                            ),
-                            child: Text(
-                              "Afternoon",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.redAccent,
-                        borderRadius: BorderRadius.circular(30),
-                        child: InkWell(
-                          onTap: () {
-                            // Handle button tap
-                          },
-                          borderRadius: BorderRadius.circular(30),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 14,
-                              horizontal: 28,
-                            ),
-                            child: Text(
-                              "Evening",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                  
                       Material(
                         color: Colors.black87,
                         borderRadius: BorderRadius.circular(30),

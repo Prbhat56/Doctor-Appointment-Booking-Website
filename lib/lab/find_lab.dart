@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/lab/lab_display_page.dart';
 import 'package:myapp/medical_shop_page.dart';
 import 'package:myapp/utils.dart';
 
@@ -114,7 +115,7 @@ class _SearchLabState extends State<SearchLab> {
                               });
                             },
 
-                            items: <String>['Hospital In Delhi', 'Hospital In Delhi', 'Hospital In Delhi','Hospital In Delhi','Hospital In Delhi']
+                            items: <String>['lab In Delhi', 'lab In Delhi', 'lab In Delhi','lab In Delhi','lab In Delhi']
                                 .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -137,7 +138,7 @@ class _SearchLabState extends State<SearchLab> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SearchMedicalShop()),
+                              builder: (context) => const LabDisplayPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),

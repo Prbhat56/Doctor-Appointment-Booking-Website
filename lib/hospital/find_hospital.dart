@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/hospital/hospital_display_page.dart';
 
 import '../utils.dart';
 
@@ -140,11 +141,11 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                     borderRadius: BorderRadius.circular(30),
                     child: InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const SearchMedicalShop()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HospitalDisplayPage()),
+                        );
                       },
                       borderRadius: BorderRadius.circular(30),
                       child: const Padding(
