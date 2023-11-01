@@ -85,7 +85,8 @@ class HomePage extends StatelessWidget {
                                   width: double.infinity,
                                   height: 95.25 * fem,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       //logo
                                       Container(
@@ -115,8 +116,8 @@ class HomePage extends StatelessWidget {
                                       //search bar starts
                                       Expanded(
                                         child: Container(
-                                          margin: EdgeInsets.fromLTRB(
-                                              0 * fem, 0 * fem, 109 * fem, 0 * fem),
+                                          margin: EdgeInsets.fromLTRB(0 * fem,
+                                              0 * fem, 109 * fem, 0 * fem),
                                           height: 40 * fem,
                                           decoration: BoxDecoration(
                                             color: const Color(0xfff3f3f3),
@@ -156,8 +157,8 @@ class HomePage extends StatelessWidget {
                                       //search bar ends
                                       // Contact us start
                                       Container(
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 1 * fem, 65 * fem, 0 * fem),
+                                        margin: EdgeInsets.fromLTRB(0 * fem,
+                                            1 * fem, 65 * fem, 0 * fem),
                                         child: TextButton(
                                           onPressed: () {
                                             launch(
@@ -203,7 +204,8 @@ class HomePage extends StatelessWidget {
                                                     fontSize: 28 * ffem,
                                                     fontWeight: FontWeight.w400,
                                                     height: 1.2125 * ffem / fem,
-                                                    color: const Color(0xffffffff),
+                                                    color:
+                                                        const Color(0xffffffff),
                                                   ),
                                                 )),
                                             Text(
@@ -216,56 +218,75 @@ class HomePage extends StatelessWidget {
                                               ),
                                             ),
                                             TextButton(
-                                                onPressed: () async{
+                                                onPressed: () async {
                                                   await showDialog<void>(
-                                                  context: context,
-                                                  builder: (context) => AlertDialog(
-                                                  content: Stack(
-                                                  clipBehavior: Clip.none,
-                                                  children: <Widget>[
-                                                  Positioned(
-                                                  right: -40,
-                                                  top: -40,
-                                                  child: InkResponse(
-                                                  onTap: () {
-                                                  Navigator.of(context).pop();
-                                                  },
-                                                  child: const CircleAvatar(
-                                                  backgroundColor: Colors.red,
-                                                  child: Icon(Icons.close),
-                                                  ),
-                                                  ),
-                                                  ),
-                                                  Form(
-                                                  key: _formKey,
-                                                  child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: <Widget>[
-                                                  Padding(
-                                                  padding: const EdgeInsets.all(8),
-                                                  child: TextFormField(),
-                                                  ),
-                                                  Padding(
-                                                  padding: const EdgeInsets.all(8),
-                                                  child: TextFormField(),
-                                                  ),
-                                                  Padding(
-                                                  padding: const EdgeInsets.all(8),
-                                                  child: ElevatedButton(
-                                                  child: const Text('Submitß'),
-                                                  onPressed: () {
-                                                  if (_formKey.currentState!.validate()) {
-                                                  _formKey.currentState!.save();
-                                                  }
-                                                  },
-                                                  ),
-                                                  )
-                                                  ],
-                                                  ),
-                                                  ),
-                                                  ],
-                                                  ),
-                                                  ));
+                                                      context: context,
+                                                      builder:
+                                                          (context) =>
+                                                              AlertDialog(
+                                                                content: Stack(
+                                                                  clipBehavior:
+                                                                      Clip.none,
+                                                                  children: <Widget>[
+                                                                    Positioned(
+                                                                      right:
+                                                                          -40,
+                                                                      top: -40,
+                                                                      child:
+                                                                          InkResponse(
+                                                                        onTap:
+                                                                            () {
+                                                                          Navigator.of(context)
+                                                                              .pop();
+                                                                        },
+                                                                        child:
+                                                                            const CircleAvatar(
+                                                                          backgroundColor:
+                                                                              Colors.red,
+                                                                          child:
+                                                                              Icon(Icons.close),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Form(
+                                                                      key:
+                                                                          _formKey,
+                                                                      child:
+                                                                          Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        children: <Widget>[
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.all(8),
+                                                                            child:
+                                                                                TextFormField(),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.all(8),
+                                                                            child:
+                                                                                TextFormField(),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.all(8),
+                                                                            child:
+                                                                                ElevatedButton(
+                                                                              child: const Text('Submitß'),
+                                                                              onPressed: () {
+                                                                                if (_formKey.currentState!.validate()) {
+                                                                                  _formKey.currentState!.save();
+                                                                                }
+                                                                              },
+                                                                            ),
+                                                                          )
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ));
                                                 },
                                                 child: Text(
                                                   "LogIn",
@@ -273,7 +294,8 @@ class HomePage extends StatelessWidget {
                                                     fontSize: 28 * ffem,
                                                     fontWeight: FontWeight.w400,
                                                     height: 1.2125 * ffem / fem,
-                                                    color: const Color(0xffffffff),
+                                                    color:
+                                                        const Color(0xffffffff),
                                                   ),
                                                 )),
                                           ],
@@ -289,12 +311,13 @@ class HomePage extends StatelessWidget {
                                   width: double.infinity,
                                   height: 130 * fem,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Container(
                                         // group3WZv (16:55)
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 3.75 * fem, 48 * fem, 0 * fem),
+                                        margin: EdgeInsets.fromLTRB(0 * fem,
+                                            3.75 * fem, 48 * fem, 0 * fem),
                                         width: 48 * fem,
                                         height: 33.75 * fem,
                                         child: Image.asset(
@@ -349,11 +372,12 @@ class HomePage extends StatelessWidget {
                                                   children: [
                                                     Container(
                                                       // autogrouprhpmxqE (3Yb4N5aEGBSnsB1oSARHPM)
-                                                      padding: EdgeInsets.fromLTRB(
-                                                          0 * fem,
-                                                          30 * fem,
-                                                          37.2 * fem,
-                                                          38.03 * fem),
+                                                      padding:
+                                                          EdgeInsets.fromLTRB(
+                                                              0 * fem,
+                                                              30 * fem,
+                                                              37.2 * fem,
+                                                              38.03 * fem),
                                                       height: double.infinity,
                                                       child: Row(
                                                         crossAxisAlignment:
@@ -362,8 +386,8 @@ class HomePage extends StatelessWidget {
                                                         children: [
                                                           Container(
                                                             // image366Ak (16:47)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     0 * fem,
                                                                     21.39 * fem,
@@ -377,8 +401,8 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           Container(
                                                             // bookappoinmentwithdoctors1S8 (16:46)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     3.03 * fem,
                                                                     29.49 * fem,
@@ -403,9 +427,10 @@ class HomePage extends StatelessWidget {
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w400,
-                                                                  height: 1.2125 *
-                                                                      ffem /
-                                                                      fem,
+                                                                  height:
+                                                                      1.2125 *
+                                                                          ffem /
+                                                                          fem,
                                                                   color: const Color(
                                                                       0xffffffff),
                                                                 ),
@@ -414,8 +439,8 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           Container(
                                                             // vectorhpk (23:261)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     6.03 * fem,
                                                                     0 * fem,
@@ -433,19 +458,22 @@ class HomePage extends StatelessWidget {
                                                     ),
                                                     Container(
                                                       // autogroupxnbhdTW (3Yb4D112LAPPCAyjorXnBh)
-                                                      padding: EdgeInsets.fromLTRB(
-                                                          22.51 * fem,
-                                                          29 * fem,
-                                                          26.2 * fem,
-                                                          36.08 * fem),
+                                                      padding:
+                                                          EdgeInsets.fromLTRB(
+                                                              22.51 * fem,
+                                                              29 * fem,
+                                                              26.2 * fem,
+                                                              36.08 * fem),
                                                       height: double.infinity,
                                                       decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                34 * fem),
+                                                            BorderRadius
+                                                                .circular(
+                                                                    34 * fem),
                                                         gradient:
                                                             const LinearGradient(
-                                                          begin: Alignment(0, -1),
+                                                          begin:
+                                                              Alignment(0, -1),
                                                           end: Alignment(0, 1),
                                                           colors: <Color>[
                                                             Color(0xff0f607d),
@@ -461,8 +489,8 @@ class HomePage extends StatelessWidget {
                                                         children: [
                                                           Container(
                                                             // image35Vkc (16:45)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     0 * fem,
                                                                     23 * fem,
@@ -476,8 +504,8 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           Container(
                                                             // buymedicineessentialsd68 (16:44)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     0 * fem,
                                                                     32.49 * fem,
@@ -502,9 +530,10 @@ class HomePage extends StatelessWidget {
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w400,
-                                                                  height: 1.2125 *
-                                                                      ffem /
-                                                                      fem,
+                                                                  height:
+                                                                      1.2125 *
+                                                                          ffem /
+                                                                          fem,
                                                                   color: const Color(
                                                                       0xffffffff),
                                                                 ),
@@ -513,8 +542,8 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           Container(
                                                             // vectorjQ4 (23:262)
-                                                            margin:
-                                                                EdgeInsets.fromLTRB(
+                                                            margin: EdgeInsets
+                                                                .fromLTRB(
                                                                     0 * fem,
                                                                     0 * fem,
                                                                     0 * fem,
@@ -540,7 +569,7 @@ class HomePage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 //           ImageSlideshow(
@@ -605,7 +634,8 @@ class HomePage extends StatelessWidget {
                                                     child: Container(
                                                       decoration:
                                                           const BoxDecoration(
-                                                        color: Color(0xffecf9fb),
+                                                        color:
+                                                            Color(0xffecf9fb),
                                                       ),
                                                     ),
                                                   ),
@@ -626,8 +656,9 @@ class HomePage extends StatelessWidget {
                                                           fontSize: 55 * ffem,
                                                           fontWeight:
                                                               FontWeight.w700,
-                                                          height:
-                                                              1.2125 * ffem / fem,
+                                                          height: 1.2125 *
+                                                              ffem /
+                                                              fem,
                                                           color: const Color(
                                                               0xff000000),
                                                         ),
@@ -637,11 +668,14 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           TextSpan(
                                                             text: 'providing',
-                                                            style: SafeGoogleFont(
+                                                            style:
+                                                                SafeGoogleFont(
                                                               'Inter',
-                                                              fontSize: 55 * ffem,
+                                                              fontSize:
+                                                                  55 * ffem,
                                                               fontWeight:
-                                                                  FontWeight.w700,
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.2125 *
                                                                   ffem /
                                                                   fem,
@@ -654,11 +688,14 @@ class HomePage extends StatelessWidget {
                                                           ),
                                                           TextSpan(
                                                             text: ' health ',
-                                                            style: SafeGoogleFont(
+                                                            style:
+                                                                SafeGoogleFont(
                                                               'Inter',
-                                                              fontSize: 55 * ffem,
+                                                              fontSize:
+                                                                  55 * ffem,
                                                               fontWeight:
-                                                                  FontWeight.w700,
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.2125 *
                                                                   ffem /
                                                                   fem,
@@ -686,13 +723,14 @@ class HomePage extends StatelessWidget {
                                                     child: Container(
                                                       decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                320 * fem),
+                                                            BorderRadius
+                                                                .circular(
+                                                                    320 * fem),
                                                         border: Border.all(
                                                             color: const Color(
                                                                 0xff005473)),
-                                                        color:
-                                                            const Color(0xff42869e),
+                                                        color: const Color(
+                                                            0xff42869e),
                                                       ),
                                                     ),
                                                   ),
@@ -724,13 +762,14 @@ class HomePage extends StatelessWidget {
                                                     child: Container(
                                                       decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                34 * fem),
+                                                            BorderRadius
+                                                                .circular(
+                                                                    34 * fem),
                                                         border: Border.all(
                                                             color: const Color(
                                                                 0xff005473)),
-                                                        color:
-                                                            const Color(0xffffffff),
+                                                        color: const Color(
+                                                            0xffffffff),
                                                       ),
                                                     ),
                                                   ),
@@ -760,8 +799,9 @@ class HomePage extends StatelessWidget {
                                                           fontSize: 32 * ffem,
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          height:
-                                                              1.2125 * ffem / fem,
+                                                          height: 1.2125 *
+                                                              ffem /
+                                                              fem,
                                                           color: const Color(
                                                               0xff005473),
                                                         ),
@@ -783,10 +823,12 @@ class HomePage extends StatelessWidget {
                                                       style: SafeGoogleFont(
                                                         'Inter',
                                                         fontSize: 24 * ffem,
-                                                        fontWeight: FontWeight.w400,
-                                                        height: 1.2125 * ffem / fem,
-                                                        color:
-                                                            const Color(0xff1b3033),
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        height:
+                                                            1.2125 * ffem / fem,
+                                                        color: const Color(
+                                                            0xff1b3033),
                                                       ),
                                                     ),
                                                   ),
@@ -801,16 +843,16 @@ class HomePage extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroupdfq3K4k (3Yb5iYKVaSyqn5U94idFQ3)
-                                  padding: EdgeInsets.fromLTRB(
-                                      687 * fem, 39.22 * fem, 53.2 * fem, 0 * fem),
+                                  padding: EdgeInsets.fromLTRB(687 * fem,
+                                      39.22 * fem, 53.2 * fem, 0 * fem),
                                   width: double.infinity,
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
                                       Container(
                                         // group2399e72 (16:39)
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 0 * fem, 27 * fem, 78 * fem),
+                                        margin: EdgeInsets.fromLTRB(0 * fem,
+                                            0 * fem, 27 * fem, 78 * fem),
                                         width: double.infinity,
                                         child: Row(
                                           crossAxisAlignment:
@@ -818,8 +860,11 @@ class HomePage extends StatelessWidget {
                                           children: [
                                             Container(
                                               // vectorP4c (16:42)
-                                              margin: EdgeInsets.fromLTRB(0 * fem,
-                                                  0 * fem, 627.2 * fem, 0 * fem),
+                                              margin: EdgeInsets.fromLTRB(
+                                                  0 * fem,
+                                                  0 * fem,
+                                                  627.2 * fem,
+                                                  0 * fem),
                                               width: 22.8 * fem,
                                               height: 40 * fem,
                                               child: Image.asset(
@@ -901,8 +946,8 @@ class HomePage extends StatelessWidget {
                                   },
                                   child: Container(
                                     // groupPMS (21:93)
-                                    margin: EdgeInsets.fromLTRB(
-                                        0.93 * fem, 0 * fem, 0 * fem, 43.5 * fem),
+                                    margin: EdgeInsets.fromLTRB(0.93 * fem,
+                                        0 * fem, 0 * fem, 43.5 * fem),
                                     width: 74.93 * fem,
                                     height: 88.5 * fem,
                                     child: Image.asset(
@@ -945,7 +990,8 @@ class HomePage extends StatelessWidget {
                             width: 238 * fem,
                             height: double.infinity,
                             decoration: BoxDecoration(
-                              border: Border.all(color: const Color(0xff3f849c)),
+                              border:
+                                  Border.all(color: const Color(0xff3f849c)),
                               color: const Color(0xffffffff),
                               borderRadius: BorderRadius.circular(36 * fem),
                             ),
@@ -958,8 +1004,8 @@ class HomePage extends StatelessWidget {
                                 children: [
                                   Container(
                                     // group2411sA8 (21:87)
-                                    margin: EdgeInsets.fromLTRB(
-                                        0.36 * fem, 0 * fem, 0 * fem, 43.67 * fem),
+                                    margin: EdgeInsets.fromLTRB(0.36 * fem,
+                                        0 * fem, 0 * fem, 43.67 * fem),
                                     width: 85.36 * fem,
                                     height: 89.33 * fem,
                                     child: Image.asset(
@@ -1002,7 +1048,8 @@ class HomePage extends StatelessWidget {
                             width: 238 * fem,
                             height: double.infinity,
                             decoration: BoxDecoration(
-                              border: Border.all(color: const Color(0xff3f849c)),
+                              border:
+                                  Border.all(color: const Color(0xff3f849c)),
                               color: const Color(0xffffffff),
                               borderRadius: BorderRadius.circular(36 * fem),
                             ),
@@ -1015,8 +1062,8 @@ class HomePage extends StatelessWidget {
                                 children: [
                                   Container(
                                     // groupPGt (21:115)
-                                    margin: EdgeInsets.fromLTRB(
-                                        0.95 * fem, 0 * fem, 0 * fem, 43.65 * fem),
+                                    margin: EdgeInsets.fromLTRB(0.95 * fem,
+                                        0 * fem, 0 * fem, 43.65 * fem),
                                     width: 117.95 * fem,
                                     height: 103.35 * fem,
                                     child: Image.asset(
@@ -1059,7 +1106,8 @@ class HomePage extends StatelessWidget {
                             width: 238 * fem,
                             height: double.infinity,
                             decoration: BoxDecoration(
-                              border: Border.all(color: const Color(0xff3f849c)),
+                              border:
+                                  Border.all(color: const Color(0xff3f849c)),
                               color: const Color(0xffffffff),
                               borderRadius: BorderRadius.circular(36 * fem),
                             ),
@@ -1116,7 +1164,8 @@ class HomePage extends StatelessWidget {
                             width: 238 * fem,
                             height: double.infinity,
                             decoration: BoxDecoration(
-                              border: Border.all(color: const Color(0xff3f849c)),
+                              border:
+                                  Border.all(color: const Color(0xff3f849c)),
                               color: const Color(0xffffffff),
                               borderRadius: BorderRadius.circular(36 * fem),
                             ),
@@ -1582,65 +1631,50 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  // group24748MR (257:438)
-                  margin: EdgeInsets.fromLTRB(8 * fem, 0 * fem, 7 * fem, 43 * fem),
-                  width: double.infinity,
-                  height: 736 * fem,
-                  child: Stack(
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: Container(
+              width: double.infinity,
+              height: 600 * fem,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(34 * fem),
+                border: Border.all(color: const Color(0xff73d7f7)),
+                color: const Color(0xffecf9fb),
+              ),
+              child: Stack(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Positioned(
-                        // rectangle174rYK (257:439)
-                        left: 0 * fem,
-                        top: 1900 * fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 1334 * fem,
-                            height: 735 * fem,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(34 * fem),
-                                border: Border.all(color: Color(0xff73d7f7)),
-                                color: Color(0xffecf9fb),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        // whyMEB (257:440)
-                        left: 70 * fem,
-                        top: 1987 * fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 170 * fem,
-                            height: 85 * fem,
-                            child: Text(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15, top: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
                               'Why ',
                               style: SafeGoogleFont(
                                 'Inter',
-                                fontSize: 70 * ffem,
+                                fontSize: 45 * ffem,
                                 fontWeight: FontWeight.w600,
                                 height: 1.2125 * ffem / fem,
                                 color: Color(0xff000000),
                               ),
                             ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        // docsearcheUB (257:441)
-                        left: 254 * fem,
-                        top: 1993 * fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 358 * fem,
-                            height: 79 * fem,
-                            child: RichText(
+                            SizedBox(
+                              width: 2,
+                            ),
+                            RichText(
                               text: TextSpan(
                                 style: SafeGoogleFont(
                                   'Inter',
-                                  fontSize: 65 * ffem,
+                                  fontSize: 42 * ffem,
                                   fontWeight: FontWeight.w700,
                                   height: 1.2102272621 * ffem / fem,
                                   color: Color(0xff005473),
@@ -1650,7 +1684,7 @@ class HomePage extends StatelessWidget {
                                     text: 'Doc ',
                                     style: SafeGoogleFont(
                                       'Inter',
-                                      fontSize: 65 * ffem,
+                                      fontSize: 42 * ffem,
                                       fontWeight: FontWeight.w800,
                                       height: 1.2125 * ffem / fem,
                                       color: Color(0xff005473),
@@ -1660,7 +1694,7 @@ class HomePage extends StatelessWidget {
                                     text: 'Search',
                                     style: SafeGoogleFont(
                                       'Inter',
-                                      fontSize: 65 * ffem,
+                                      fontSize: 42 * ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2125 * ffem / fem,
                                       color: Color(0xfffbbc05),
@@ -1669,66 +1703,618 @@ class HomePage extends StatelessWidget {
                                 ],
                               ),
                             ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Text(
+                          '\nRound-the-clock doctor availability\nBroad range of Specialities\nOrder medicines & tests online\nDigitised health records',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 36 * ffem,
+                            fontWeight: FontWeight.w400,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xff000000),
                           ),
                         ),
                       ),
-                      Positioned(
-                        // image503ud (257:442)
-                        left: 876 * fem,
-                        top: 2107 * fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 457 * fem,
-                            height: 529 * fem,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(400 * fem),
-                                topRight: Radius.circular(400 * fem),
-                                bottomRight: Radius.circular(34 * fem),
-                              ),
-                              child: Image.network(
-                                'assets/page-1/images/doctor_anime.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
+                    ],
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(400 * fem),
+                        topRight: Radius.circular(400 * fem),
+                        bottomRight: Radius.circular(34 * fem),
+                      ),
+                      child: Image.network(
+                        "assets/page-1/images/doctor_anime.png",
+                        fit: BoxFit.cover,
+                        width: 457 * fem,
+                        height: 529 * fem,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Container(
+            // group24752DH (257:444)
+            margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 49 * fem),
+            padding:
+                EdgeInsets.fromLTRB(52 * fem, 12.5 * fem, 22.2 * fem, 20 * fem),
+            width: double.infinity,
+            height: 291 * fem,
+            decoration: BoxDecoration(
+              color: Color(0xffecfafc),
+              borderRadius: BorderRadius.circular(34 * fem),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  // autogrouprkhzh4X (EyThHkfoyMxeEJdUwURkHZ)
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 29 * fem, 28 * fem),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        // image37nrf (257:448)
+                        margin: EdgeInsets.fromLTRB(
+                            0.5 * fem, 0 * fem, 0 * fem, 7.5 * fem),
+                        width: 174 * fem,
+                        height: 174 * fem,
+                        child: Image.network(
+                          "assets/page-1/images/fema_doctor.png",
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Positioned(
-                        // roundtheclockdoctoravailabilit (257:443)
-                        left: 36 * fem,
-                        top: 2080 * fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 913 * fem,
-                            height: 334 * fem,
-                            child: Text(
-                              '\nRound-the-clock doctor availability\nBroad range of Specialities\nOrder medicines & tests online\nDigitised health records',
+                      RichText(
+                        // docsearchhyd (257:451)
+                        text: TextSpan(
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 40 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.2102272034 * ffem / fem,
+                            color: Color(0xff005473),
+                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Doc ',
                               style: SafeGoogleFont(
                                 'Inter',
-                                fontSize: 55 * ffem,
-                                fontWeight: FontWeight.w400,
+                                fontSize: 40 * ffem,
+                                fontWeight: FontWeight.w800,
                                 height: 1.2125 * ffem / fem,
-                                color: Color(0xff000000),
+                                color: Color(0xff005473),
                               ),
                             ),
-                          ),
+                            TextSpan(
+                              text: 'Search',
+                              style: SafeGoogleFont(
+                                'Inter',
+                                fontSize: 40 * ffem,
+                                fontWeight: FontWeight.w500,
+                                height: 1.2125 * ffem / fem,
+                                color: Color(0xfffbbc05),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-
                     ],
                   ),
                 ),
+                Container(
+                  // autogroupct8spRy (EyThPqL1grsUYSdoLCCt8s)
+                  margin: EdgeInsets.fromLTRB(
+                      0 * fem, 28.5 * fem, 60 * fem, 66 * fem),
+                  height: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        // feelingunwellMRu (257:447)
+                        margin: EdgeInsets.fromLTRB(
+                            0 * fem, 0 * fem, 0 * fem, 15 * fem),
+                        child: Text(
+                          'Feeling unwell?',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 50 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xff005473),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        // youwillgetsuggestioninwithinam (257:449)
+                        constraints: BoxConstraints(
+                          maxWidth: 431 * fem,
+                        ),
+                        child: Text(
+                          'you will get suggestion in\nwith in a minutes..',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 36 * ffem,
+                            fontWeight: FontWeight.w400,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xff000000),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  // autogroup5dwqA8T (EyThVLArR9UXhh2LG75Dwq)
+                  margin: EdgeInsets.fromLTRB(
+                      0 * fem, 28.5 * fem, 53 * fem, 0 * fem),
+                  width: 214 * fem,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        // autogroupvxurg6o (EyThauqtRthGTMMh7ZVxuR)
+                        margin: EdgeInsets.fromLTRB(
+                            11 * fem, 0 * fem, 15 * fem, 12.02 * fem),
+                        width: double.infinity,
+                        height: 175.98 * fem,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              // rectangle180Pmu (257:446)
+                              left: 0 * fem,
+                              top: 0 * fem,
+                              child: Align(
+                                child: SizedBox(
+                                  width: 188 * fem,
+                                  height: 174 * fem,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff005473),
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100 * fem),
+                                        topRight: Radius.circular(100 * fem),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              // image39tTm (257:453)
+                              left: 46 * fem,
+                              top: 32.9794921875 * fem,
+                              child: Align(
+                                child: SizedBox(
+                                  width: 115.27 * fem,
+                                  height: 143 * fem,
+                                  child: Image.network(
+                                    "assets/page-1/images/doctor_anime2.png",
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Text(
+                        // bookconsultoaj (257:452)
+                        'Book consult',
+                        style: SafeGoogleFont(
+                          'Inter',
+                          fontSize: 34 * ffem,
+                          fontWeight: FontWeight.w600,
+                          height: 1.2125 * ffem / fem,
+                          color: Color(0xff000000),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  // getstartedYHR (257:454)
+                  margin: EdgeInsets.fromLTRB(
+                      0 * fem, 5.46 * fem, 27 * fem, 0 * fem),
+                  child: Text(
+                    'GET STARTED',
+                    style: SafeGoogleFont(
+                      'Inter',
+                      fontSize: 32 * ffem,
+                      fontWeight: FontWeight.w600,
+                      height: 1.2125 * ffem / fem,
+                      color: Color(0xff000000),
+                    ),
+                  ),
+                ),
+                Container(
+                    // vectorerF (257:450)
+                    margin: EdgeInsets.fromLTRB(
+                        0 * fem, 8.5 * fem, 0 * fem, 0 * fem),
+                    width: 22.8 * fem,
+                    height: 40 * fem,
+                    child: Icon(
+                      Icons.arrow_right_outlined,
+                      size: 42 * fem,
+                    )),
               ],
             ),
           ),
+          SizedBox(
+            height: 25,
+          ),
           Container(
+            margin: EdgeInsets.fromLTRB(5 * fem, 0 * fem, 10 * fem, 0 * fem),
+            padding:
+                EdgeInsets.fromLTRB(67 * fem, 36 * fem, 67 * fem, 32.16 * fem),
+            width: double.infinity,
+            height: 480 * fem,
+            decoration: BoxDecoration(
+              border: Border.all(color: Color(0xff73d7f7)),
+              color: Color(0xffecf9fb),
+              borderRadius: BorderRadius.circular(34 * fem),
+            ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('asdf')
+                Text(
+                  'To enjoy the  services provided by the ',
+                  style: SafeGoogleFont(
+                    'Inter',
+                    fontSize: 45 * ffem,
+                    fontWeight: FontWeight.w400,
+                    height: 1.2125 * ffem / fem,
+                    color: Color(0xff000000),
+                  ),
+                ),
+                Row(
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        style: SafeGoogleFont(
+                          'Inter',
+                          fontSize: 45 * ffem,
+                          fontWeight: FontWeight.w800,
+                          height: 1.2102272727 * ffem / fem,
+                          color: Color(0xff052e44),
+                        ),
+                        children: [
+                          TextSpan(
+                            text: 'Doc',
+                            style: SafeGoogleFont(
+                              'Inter',
+                              fontSize: 45 * ffem,
+                              fontWeight: FontWeight.w800,
+                              height: 1.2125 * ffem / fem,
+                              color: Color(0xff005473),
+                            ),
+                          ),
+                          TextSpan(
+                            text: ' ',
+                            style: SafeGoogleFont(
+                              'Inter',
+                              fontSize: 45 * ffem,
+                              fontWeight: FontWeight.w800,
+                              height: 1.2125 * ffem / fem,
+                              color: Color(0xff052e44),
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Search',
+                            style: SafeGoogleFont(
+                              'Inter',
+                              fontSize: 45 * ffem,
+                              fontWeight: FontWeight.w800,
+                              height: 1.2125 * ffem / fem,
+                              color: Color(0xfffbbc05),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'on the  mobile phone,',
+                      style: SafeGoogleFont(
+                        'Inter',
+                        fontSize: 45 * ffem,
+                        fontWeight: FontWeight.w400,
+                        height: 1.2125 * ffem / fem,
+                        color: Color(0xff000000),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  'Download our app',
+                  style: SafeGoogleFont(
+                    'Inter',
+                    fontSize: 45 * ffem,
+                    fontWeight: FontWeight.w400,
+                    height: 1.2125 * ffem / fem,
+                    color: Color(0xff000000),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 90, right: 90),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            // autogroupymeb7SK (EyTiEeG1ymPWENZzK3YmEb)
+                            margin: EdgeInsets.fromLTRB(
+                                1.42 * fem, 0 * fem, 0 * fem, 9.04 * fem),
+                            width: 125.04 * fem,
+                            height: 119.8 * fem,
+                            child: Image.network(
+                              'assets/page-1/images/group-2405-Ehn.png',
+                              width: 125.04 * fem,
+                              height: 119.8 * fem,
+                            ),
+                          ),
+                          RichText(
+                            // docsearch1nb (257:463)
+                            text: TextSpan(
+                              style: SafeGoogleFont(
+                                'Inter',
+                                fontSize: 45.1108283997 * ffem,
+                                fontWeight: FontWeight.w800,
+                                height: 1.2125 * ffem / fem,
+                                color: Color(0xff052e44),
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'Doc',
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 45.1108283997 * ffem,
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.2125 * ffem / fem,
+                                    color: Color(0xff005473),
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: ' ',
+                                ),
+                                TextSpan(
+                                  text: 'Search',
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 45.1108283997 * ffem,
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.2125 * ffem / fem,
+                                    color: Color(0xfffbbc05),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        // androidlarge1LyH (257:467)
+                        margin: EdgeInsets.fromLTRB(
+                            0 * fem, 0 * fem, 81 * fem, 3.84 * fem),
+                        padding: EdgeInsets.fromLTRB(
+                            1.71 * fem, 3.37 * fem, 1.52 * fem, 77 * fem),
+                        width: 94 * fem,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Color(0xff000000)),
+                          borderRadius: BorderRadius.circular(10 * fem),
+                          gradient: RadialGradient(
+                            center: Alignment(0.822, -1),
+                            radius: 1.34,
+                            colors: <Color>[
+                              Color(0xff327d97),
+                              Color(0xff287793),
+                              Color(0xff478e9c),
+                              Color(0xff5596a7),
+                              Color(0xff629eb2)
+                            ],
+                            stops: <double>[0, 0.229, 0.583, 0.807, 1],
+                          ),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              // group304kXD (257:479)
+                              margin: EdgeInsets.fromLTRB(
+                                  0 * fem, 0 * fem, 0 * fem, 47.88 * fem),
+                              width: double.infinity,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    // H1M (257:487)
+                                    margin: EdgeInsets.fromLTRB(
+                                        0 * fem, 0 * fem, 61.15 * fem, 0 * fem),
+                                    child: Text(
+                                      '9:41',
+                                      style: SafeGoogleFont(
+                                        'Roboto',
+                                        fontSize: 3.9550652504 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.1725 * ffem / fem,
+                                        color: Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    // cellularconnectionbGw (257:485)
+                                    margin: EdgeInsets.fromLTRB(0 * fem,
+                                        0.24 * fem, 1.32 * fem, 0 * fem),
+                                    width: 4.5 * fem,
+                                    height: 2.77 * fem,
+                                    child: Image.network(
+                                      "",
+                                      width: 4.5 * fem,
+                                      height: 2.77 * fem,
+                                    ),
+                                  ),
+                                  Container(
+                                    // wifiuHd (257:484)
+                                    margin: EdgeInsets.fromLTRB(0 * fem,
+                                        0.16 * fem, 1.45 * fem, 0 * fem),
+                                    width: 4.06 * fem,
+                                    height: 2.85 * fem,
+                                    child: Image.network(
+                                      "",
+                                      width: 4.06 * fem,
+                                      height: 2.85 * fem,
+                                    ),
+                                  ),
+                                  Container(
+                                    // batterypvP (257:480)
+                                    margin: EdgeInsets.fromLTRB(
+                                        0 * fem, 0.25 * fem, 0 * fem, 0 * fem),
+                                    width: 6.3 * fem,
+                                    height: 2.68 * fem,
+                                    child: Image.network(
+                                      'assets/page-1/images/group-2405-Ehn.png',
+                                      width: 6.3 * fem,
+                                      height: 2.68 * fem,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // group4k3M (257:470)
+                              margin: EdgeInsets.fromLTRB(
+                                  0.02 * fem, 0 * fem, 0 * fem, 6.75 * fem),
+                              width: 30.21 * fem,
+                              height: 33.5 * fem,
+                              child: Image.network(
+                                "",
+                                width: 30.21 * fem,
+                                height: 33.5 * fem,
+                              ),
+                            ),
+                            Container(
+                              // docsearch3o9 (257:469)
+                              margin: EdgeInsets.fromLTRB(
+                                  0 * fem, 0 * fem, 2.19 * fem, 0.5 * fem),
+                              child: RichText(
+                                text: TextSpan(
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 10 * ffem,
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.2125 * ffem / fem,
+                                    color: Color(0xff052e44),
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: 'Doc',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 10 * ffem,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1.2125 * ffem / fem,
+                                        color: Color(0xff005473),
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ' ',
+                                    ),
+                                    TextSpan(
+                                      text: 'Search',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 10 * ffem,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1.2125 * ffem / fem,
+                                        color: Color(0xfffbbc05),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Container(
+                              // bookappointmentmedicinedeliver (257:477)
+                              margin: EdgeInsets.fromLTRB(
+                                  0 * fem, 0 * fem, 0.19 * fem, 0 * fem),
+                              constraints: BoxConstraints(
+                                maxWidth: 51 * fem,
+                              ),
+                              child: Text(
+                                'Book appointment &  \nmedicine deliveries',
+                                style: SafeGoogleFont(
+                                  'Inter',
+                                  fontSize: 5 * ffem,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2125 * ffem / fem,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Download our\napp',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 55 * ffem,
+                            fontWeight: FontWeight.w800,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xff000000),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Container(
+            
+            width: double.infinity,
+            height: 510 * fem,
+            decoration: BoxDecoration(
+              gradient: RadialGradient(
+                center: Alignment(1.034, -0.142),
+                radius: 1.05,
+                colors: <Color>[
+                  Color(0xff0f607d),
+                  Color(0xff498f9d),
+                  Color(0xff277692),
+                  Color(0xff42869e),
+                  Color(0xef0aa3b8)
+                ],
+                stops: <double>[0, 0.26, 0.495, 0.75, 1],
+              ),
+            ),
+          ),
         ],
       ),
     );

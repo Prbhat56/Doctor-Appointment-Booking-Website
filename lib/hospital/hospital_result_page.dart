@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/hospital/hospital_detail_page.dart';
 
 import '../utils.dart';
-import 'lab_detail_page.dart';
 
-class LabResultPage extends StatefulWidget {
-  const LabResultPage({super.key});
+class HospitalResultPage extends StatefulWidget {
+  const HospitalResultPage({super.key});
 
   @override
-  State<LabResultPage> createState() => _LabResultPageState();
+  State<HospitalResultPage> createState() => _HospitalResultPageState();
 }
 
-class _LabResultPageState extends State<LabResultPage> {
-  final locController = TextEditingController();
-
+class _HospitalResultPageState extends State<HospitalResultPage> {
   @override
   Widget build(BuildContext context) {
-    double baseWidth = 1440;
+        double baseWidth = 1440;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return SingleChildScrollView(
@@ -228,7 +226,7 @@ class _LabResultPageState extends State<LabResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LabDetailPage()),
+                              builder: (context) => const HospitalDetailPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -256,7 +254,7 @@ class _LabResultPageState extends State<LabResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LabDetailPage()),
+                              builder: (context) => const HospitalDetailPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -388,7 +386,7 @@ class _LabResultPageState extends State<LabResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LabDetailPage()),
+                              builder: (context) => const HospitalDetailPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -416,7 +414,7 @@ class _LabResultPageState extends State<LabResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LabDetailPage()),
+                              builder: (context) => const HospitalDetailPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -443,6 +441,6 @@ class _LabResultPageState extends State<LabResultPage> {
         ]),
       ),
     )
-    );
+    );;
   }
 }
