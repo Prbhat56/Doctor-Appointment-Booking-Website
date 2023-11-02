@@ -10,7 +10,7 @@ class SlidingWebPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double baseWidth = 1440;
+    double baseWidth = 1120;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     SideBarController sideBarController = Get.put(SideBarController());
@@ -21,148 +21,224 @@ class SlidingWebPage extends StatelessWidget {
         children: [
           Expanded(
             flex: 3,
-            child: Container(
-              color: Colors.teal.shade50,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
+            child: Column(
+              children: [
+                Container(
+                  width: 1441 * fem,
+                  height: 124 * fem,
+                  color: Color(0xff005473),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      
-                      Image.asset(
-                        'assets/page-1/images/group-2405-Ehn.png',
-                        width: 70 * fem,
-                        height: 80 * fem,
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            'assets/page-1/images/logonew.png',
+                            width: 60.42 * fem,
+                            height: 58.63 * fem,
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RichText(
+                                text: TextSpan(
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 32 * ffem,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.2102272511 * ffem / fem,
+                                    color: Color(0xff005473),
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: 'Doc ',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 32 * ffem,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1.2125 * ffem / fem,
+                                        color: Color(0xffff2828),
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: 'Search',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 32 * ffem,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.2125 * ffem / fem,
+                                        color: Color(0xfffbbc05),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Doc ',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 32 * ffem,
-                          fontWeight: FontWeight.w800,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff005473),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 14),
+                        child: Container(
+                        
+                          width: 300,
+                           height: 56 * fem,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Color(0xffb3b3b3)),
+                            color: Color(0xffffffff),
+                            borderRadius:
+                                BorderRadius.circular(48.4500007629 * fem),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(width: 10 * fem),
+                              Expanded(
+                                child: Material(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: 'Search for doctors & hospitals',
+                                      hintStyle: TextStyle(
+                                        fontSize: 18.7000007629 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: Color(
+                                            0x56151515), // Adjust the color as needed
+                                      ),
+                                      border: InputBorder.none,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 10 * fem),
+                              Container(
+                                // autogroupxmgdojX (MuzoorWuEXsUXYSk4qxMgd)
+                                padding: EdgeInsets.fromLTRB(29.05 * fem,
+                                    22.95 * fem, 28.7 * fem, 11.8 * fem),
+                               
+                                 height: 56 * fem,
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Color(0xffb3b3b3)),
+                                  color: Color(0xffffffff),
+                                  borderRadius:
+                                      BorderRadius.circular(48.4500007629 * fem),
+                                ),
+                                child: Center(
+                                  // path26irV (1724:1495)
+                                  child: SizedBox(
+                                    width: 21.25 * fem,
+                                    height: 21.25 * fem,
+                                    child: Image.network(
+                                      "assets/page-1/images/searchicon.png",
+                                      width: 21.25 * fem,
+                                      height: 21.25 * fem,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
                       Text(
-                        'Search',
+                        'Home',
                         style: SafeGoogleFont(
                           'Inter',
-                          fontSize: 32 * ffem,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 24 * ffem,
+                          fontWeight: FontWeight.w400,
                           height: 1.2125 * ffem / fem,
-                          color: const Color(0xfffbbc05),
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      Text(
+                        'Contact us',
+                        style: SafeGoogleFont(
+                          'Inter',
+                          fontSize: 24 * ffem,
+                          fontWeight: FontWeight.w400,
+                          height: 1.2125 * ffem / fem,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(
+                            12.96 * fem, 10.8 * fem, 12.06 * fem, 10.13 * fem),
+                        width: 54 * fem,
+                        height: 54 * fem,
+                        decoration: BoxDecoration(
+                          color: Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(27 * fem),
+                        ),
+                        child: Center(
+                          // vector18m (1724:1499)
+                          child: SizedBox(
+                            width: 28.97 * fem,
+                            height: 33.08 * fem,
+                            child: Image.network(
+                              "assets/page-1/images/profilemain.png",
+                              width: 28.97 * fem,
+                              height: 33.08 * fem,
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  Expanded(
+                ),
+                SizedBox(height: 10,),
+                       Expanded(
                     child:Obx(() =>  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         HorizontalListItem(
-                            icon: Icons.home,
-                            text: 'Home',
+
+                            text: 'Find Doctors',
                             fem: ffem,
                             onTap: () => sideBarController.index.value = 0,
                             selected: sideBarController.index.value == 0),
                         HorizontalListItem(
-                            icon: Icons.video_call,
+
                             text: 'Video consult',
                             fem: ffem,
                             onTap: () => sideBarController.index.value = 1,
                             selected: sideBarController.index.value == 1),
                         HorizontalListItem(
-                            icon: Icons.medical_information,
-                            text: 'Medicine',
+
+                            text: 'Medicines',
                             fem: ffem,
                             onTap: () => sideBarController.index.value = 2,
                             selected: sideBarController.index.value == 2),
                         HorizontalListItem(
-                            icon: Icons.medical_information,
+
                             text: 'Lab Test',
                             fem: ffem,
                             onTap: () => sideBarController.index.value = 3,
                             selected: sideBarController.index.value == 3),
                         HorizontalListItem(
-                            icon: Icons.local_hospital,
+
                             text: 'Hospital',
                             fem: ffem,
                             onTap: () => sideBarController.index.value = 4,
                             selected: sideBarController.index.value == 4),
-                        HorizontalListItem(
-                            icon: Icons.person,
-                            text: 'Profile',
-                            fem: ffem,
-                            onTap: () async {
-                              await showDialog<void>(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                    content: Stack(
-                                      clipBehavior: Clip.none,
-                                      children: <Widget>[
-                                        Positioned(
-                                          right: -40,
-                                          top: -40,
-                                          child: InkResponse(
-                                            onTap: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const CircleAvatar(
-                                              backgroundColor: Colors.red,
-                                              child: Icon(Icons.close),
-                                            ),
-                                          ),
-                                        ),
-                                        Form(
-                                          key: _formKey,
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: const EdgeInsets.all(8),
-                                                child: TextFormField(),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.all(8),
-                                                child: TextFormField(),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.all(8),
-                                                child: ElevatedButton(
-                                                  child: const Text('Submit'),
-                                                  onPressed: () {
-                                                    if (_formKey.currentState!.validate()) {
-                                                      _formKey.currentState!.save();
-                                                    }
-                                                  },
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ));
-                            },
-                            selected: sideBarController.index.value == 5),
+
                       ],
-                    ),)
+                    ),
+                    )
                   ),
                 ],
               ),
             ),
-          ),
+           
+           
+           
+          
           Expanded(
             flex: 8,
-           child: Obx(() => sideBarController.pages[sideBarController.index.value]),
+            child: Obx(
+                () => sideBarController.pages[sideBarController.index.value]),
           ),
         ],
       ),
