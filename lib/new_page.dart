@@ -156,25 +156,7 @@ class HomePage extends StatelessWidget {
                                       ),
                                       //search bar ends
                                       // Contact us start
-                                      Container(
-                                        margin: EdgeInsets.fromLTRB(0 * fem,
-                                            1 * fem, 65 * fem, 0 * fem),
-                                        child: TextButton(
-                                          onPressed: () {
-                                            launch(
-                                                "mailto:hendramyuv@gmail.com?subject=Contact Us&body=Hello, I want to get in touch.");
-                                          },
-                                          child: Text(
-                                            'Contact us',
-                                            style: TextStyle(
-                                              fontSize: 28 * ffem,
-                                              fontWeight: FontWeight.w400,
-                                              height: 1.2125 * ffem / fem,
-                                              color: const Color(0xff000000),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                                    
                                       //contact us ends
                                       //signup/login button starts
                                       Container(
