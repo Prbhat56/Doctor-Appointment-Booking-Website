@@ -117,7 +117,7 @@ class HomePage extends StatelessWidget {
 
                                       //search bar ends
                                       // Contact us start
-                                    
+
                                       //contact us ends
                                       //signup/login button starts
                                       // Container(
@@ -537,7 +537,6 @@ class HomePage extends StatelessWidget {
                                 // ),
                                 Expanded(
                                   child: Container(
-
                                     // autogroup977vf2p (3Yb4ejm91xVKXk544z977V)
                                     width: double.infinity,
                                     height: 586.8 * fem,
@@ -629,7 +628,8 @@ class HomePage extends StatelessWidget {
                                                               ),
                                                             ),
                                                             const TextSpan(
-                                                              text: ' the \nbest',
+                                                              text:
+                                                                  ' the \nbest',
                                                             ),
                                                             TextSpan(
                                                               text: ' health ',
@@ -649,7 +649,8 @@ class HomePage extends StatelessWidget {
                                                               ),
                                                             ),
                                                             const TextSpan(
-                                                              text: 'services  ',
+                                                              text:
+                                                                  'services  ',
                                                             ),
                                                           ],
                                                         ),
@@ -666,11 +667,13 @@ class HomePage extends StatelessWidget {
                                                       width: 500 * fem,
                                                       height: 500 * fem,
                                                       child: Container(
-                                                        decoration: BoxDecoration(
+                                                        decoration:
+                                                            BoxDecoration(
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
-                                                                      320 * fem),
+                                                                      320 *
+                                                                          fem),
                                                           border: Border.all(
                                                               color: const Color(
                                                                   0xff005473)),
@@ -705,7 +708,8 @@ class HomePage extends StatelessWidget {
                                                       width: 386 * fem,
                                                       height: 84 * fem,
                                                       child: Container(
-                                                        decoration: BoxDecoration(
+                                                        decoration:
+                                                            BoxDecoration(
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -733,8 +737,9 @@ class HomePage extends StatelessWidget {
                                                           Navigator.push(
                                                             context,
                                                             MaterialPageRoute(
-                                                                builder: (context) =>
-                                                                    const MakeUser()),
+                                                                builder:
+                                                                    (context) =>
+                                                                        const MakeUser()),
                                                           );
                                                         },
                                                         child: Text(
@@ -770,8 +775,9 @@ class HomePage extends StatelessWidget {
                                                           fontSize: 24 * ffem,
                                                           fontWeight:
                                                               FontWeight.w400,
-                                                          height:
-                                                              1.2125 * ffem / fem,
+                                                          height: 1.2125 *
+                                                              ffem /
+                                                              fem,
                                                           color: const Color(
                                                               0xff1b3033),
                                                         ),
@@ -1610,10 +1616,10 @@ class HomePage extends StatelessWidget {
                                 fontSize: 45 * ffem,
                                 fontWeight: FontWeight.w600,
                                 height: 1.2125 * ffem / fem,
-                                color: Color(0xff000000),
+                                color: const Color(0xff000000),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 2,
                             ),
                             RichText(
@@ -1623,7 +1629,7 @@ class HomePage extends StatelessWidget {
                                   fontSize: 42 * ffem,
                                   fontWeight: FontWeight.w700,
                                   height: 1.2102272621 * ffem / fem,
-                                  color: Color(0xff005473),
+                                  color: const Color(0xff005473),
                                 ),
                                 children: [
                                   TextSpan(
@@ -1633,7 +1639,7 @@ class HomePage extends StatelessWidget {
                                       fontSize: 42 * ffem,
                                       fontWeight: FontWeight.w800,
                                       height: 1.2125 * ffem / fem,
-                                      color: Color(0xff005473),
+                                      color: const Color(0xff005473),
                                     ),
                                   ),
                                   TextSpan(
@@ -1643,7 +1649,7 @@ class HomePage extends StatelessWidget {
                                       fontSize: 42 * ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2125 * ffem / fem,
-                                      color: Color(0xfffbbc05),
+                                      color: const Color(0xfffbbc05),
                                     ),
                                   ),
                                 ],
@@ -1652,7 +1658,7 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                       Padding(
@@ -1664,7 +1670,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 36 * ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.2125 * ffem / fem,
-                            color: Color(0xff000000),
+                            color: const Color(0xff000000),
                           ),
                         ),
                       ),
@@ -1691,7 +1697,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Container(
@@ -1702,7 +1708,7 @@ class HomePage extends StatelessWidget {
             width: double.infinity,
             height: 291 * fem,
             decoration: BoxDecoration(
-              color: Color(0xffecfafc),
+              color: const Color(0xffecfafc),
               borderRadius: BorderRadius.circular(34 * fem),
             ),
             child: Row(
@@ -1734,7 +1740,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 40 * ffem,
                             fontWeight: FontWeight.w700,
                             height: 1.2102272034 * ffem / fem,
-                            color: Color(0xff005473),
+                            color: const Color(0xff005473),
                           ),
                           children: [
                             TextSpan(
@@ -1744,7 +1750,7 @@ class HomePage extends StatelessWidget {
                                 fontSize: 40 * ffem,
                                 fontWeight: FontWeight.w800,
                                 height: 1.2125 * ffem / fem,
-                                color: Color(0xff005473),
+                                color: const Color(0xff005473),
                               ),
                             ),
                             TextSpan(
@@ -1754,7 +1760,7 @@ class HomePage extends StatelessWidget {
                                 fontSize: 40 * ffem,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2125 * ffem / fem,
-                                color: Color(0xfffbbc05),
+                                color: const Color(0xfffbbc05),
                               ),
                             ),
                           ],
@@ -1782,7 +1788,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 50 * ffem,
                             fontWeight: FontWeight.w700,
                             height: 1.2125 * ffem / fem,
-                            color: Color(0xff005473),
+                            color: const Color(0xff005473),
                           ),
                         ),
                       ),
@@ -1798,7 +1804,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 36 * ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.2125 * ffem / fem,
-                            color: Color(0xff000000),
+                            color: const Color(0xff000000),
                           ),
                         ),
                       ),
@@ -1831,7 +1837,7 @@ class HomePage extends StatelessWidget {
                                   height: 174 * fem,
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0xff005473),
+                                      color: const Color(0xff005473),
                                       borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100 * fem),
                                         topRight: Radius.circular(100 * fem),
@@ -1867,7 +1873,7 @@ class HomePage extends StatelessWidget {
                           fontSize: 34 * ffem,
                           fontWeight: FontWeight.w600,
                           height: 1.2125 * ffem / fem,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ],
@@ -1884,7 +1890,7 @@ class HomePage extends StatelessWidget {
                       fontSize: 32 * ffem,
                       fontWeight: FontWeight.w600,
                       height: 1.2125 * ffem / fem,
-                      color: Color(0xff000000),
+                      color: const Color(0xff000000),
                     ),
                   ),
                 ),
@@ -1901,7 +1907,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Container(
@@ -1911,8 +1917,8 @@ class HomePage extends StatelessWidget {
             width: double.infinity,
             height: 480 * fem,
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xff73d7f7)),
-              color: Color(0xffecf9fb),
+              border: Border.all(color: const Color(0xff73d7f7)),
+              color: const Color(0xffecf9fb),
               borderRadius: BorderRadius.circular(34 * fem),
             ),
             child: Column(
@@ -1925,7 +1931,7 @@ class HomePage extends StatelessWidget {
                     fontSize: 45 * ffem,
                     fontWeight: FontWeight.w400,
                     height: 1.2125 * ffem / fem,
-                    color: Color(0xff000000),
+                    color: const Color(0xff000000),
                   ),
                 ),
                 Row(
@@ -1937,7 +1943,7 @@ class HomePage extends StatelessWidget {
                           fontSize: 45 * ffem,
                           fontWeight: FontWeight.w800,
                           height: 1.2102272727 * ffem / fem,
-                          color: Color(0xff052e44),
+                          color: const Color(0xff052e44),
                         ),
                         children: [
                           TextSpan(
@@ -1947,7 +1953,7 @@ class HomePage extends StatelessWidget {
                               fontSize: 45 * ffem,
                               fontWeight: FontWeight.w800,
                               height: 1.2125 * ffem / fem,
-                              color: Color(0xff005473),
+                              color: const Color(0xff005473),
                             ),
                           ),
                           TextSpan(
@@ -1957,7 +1963,7 @@ class HomePage extends StatelessWidget {
                               fontSize: 45 * ffem,
                               fontWeight: FontWeight.w800,
                               height: 1.2125 * ffem / fem,
-                              color: Color(0xff052e44),
+                              color: const Color(0xff052e44),
                             ),
                           ),
                           TextSpan(
@@ -1967,7 +1973,7 @@ class HomePage extends StatelessWidget {
                               fontSize: 45 * ffem,
                               fontWeight: FontWeight.w800,
                               height: 1.2125 * ffem / fem,
-                              color: Color(0xfffbbc05),
+                              color: const Color(0xfffbbc05),
                             ),
                           ),
                         ],
@@ -1980,7 +1986,7 @@ class HomePage extends StatelessWidget {
                         fontSize: 45 * ffem,
                         fontWeight: FontWeight.w400,
                         height: 1.2125 * ffem / fem,
-                        color: Color(0xff000000),
+                        color: const Color(0xff000000),
                       ),
                     ),
                   ],
@@ -1992,10 +1998,10 @@ class HomePage extends StatelessWidget {
                     fontSize: 45 * ffem,
                     fontWeight: FontWeight.w400,
                     height: 1.2125 * ffem / fem,
-                    color: Color(0xff000000),
+                    color: const Color(0xff000000),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -2027,7 +2033,7 @@ class HomePage extends StatelessWidget {
                                 fontSize: 45.1108283997 * ffem,
                                 fontWeight: FontWeight.w800,
                                 height: 1.2125 * ffem / fem,
-                                color: Color(0xff052e44),
+                                color: const Color(0xff052e44),
                               ),
                               children: [
                                 TextSpan(
@@ -2037,10 +2043,10 @@ class HomePage extends StatelessWidget {
                                     fontSize: 45.1108283997 * ffem,
                                     fontWeight: FontWeight.w800,
                                     height: 1.2125 * ffem / fem,
-                                    color: Color(0xff005473),
+                                    color: const Color(0xff005473),
                                   ),
                                 ),
-                                TextSpan(
+                                const TextSpan(
                                   text: ' ',
                                 ),
                                 TextSpan(
@@ -2050,7 +2056,7 @@ class HomePage extends StatelessWidget {
                                     fontSize: 45.1108283997 * ffem,
                                     fontWeight: FontWeight.w800,
                                     height: 1.2125 * ffem / fem,
-                                    color: Color(0xfffbbc05),
+                                    color: const Color(0xfffbbc05),
                                   ),
                                 ),
                               ],
@@ -2066,9 +2072,9 @@ class HomePage extends StatelessWidget {
                             1.71 * fem, 3.37 * fem, 1.52 * fem, 77 * fem),
                         width: 94 * fem,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff000000)),
+                          border: Border.all(color: const Color(0xff000000)),
                           borderRadius: BorderRadius.circular(10 * fem),
-                          gradient: RadialGradient(
+                          gradient: const RadialGradient(
                             center: Alignment(0.822, -1),
                             radius: 1.34,
                             colors: <Color>[
@@ -2103,7 +2109,7 @@ class HomePage extends StatelessWidget {
                                         fontSize: 3.9550652504 * ffem,
                                         fontWeight: FontWeight.w400,
                                         height: 1.1725 * ffem / fem,
-                                        color: Color(0xffffffff),
+                                        color: const Color(0xffffffff),
                                       ),
                                     ),
                                   ),
@@ -2169,7 +2175,7 @@ class HomePage extends StatelessWidget {
                                     fontSize: 10 * ffem,
                                     fontWeight: FontWeight.w800,
                                     height: 1.2125 * ffem / fem,
-                                    color: Color(0xff052e44),
+                                    color: const Color(0xff052e44),
                                   ),
                                   children: [
                                     TextSpan(
@@ -2179,10 +2185,10 @@ class HomePage extends StatelessWidget {
                                         fontSize: 10 * ffem,
                                         fontWeight: FontWeight.w800,
                                         height: 1.2125 * ffem / fem,
-                                        color: Color(0xff005473),
+                                        color: const Color(0xff005473),
                                       ),
                                     ),
-                                    TextSpan(
+                                    const TextSpan(
                                       text: ' ',
                                     ),
                                     TextSpan(
@@ -2192,7 +2198,7 @@ class HomePage extends StatelessWidget {
                                         fontSize: 10 * ffem,
                                         fontWeight: FontWeight.w800,
                                         height: 1.2125 * ffem / fem,
-                                        color: Color(0xfffbbc05),
+                                        color: const Color(0xfffbbc05),
                                       ),
                                     ),
                                   ],
@@ -2213,7 +2219,7 @@ class HomePage extends StatelessWidget {
                                   fontSize: 5 * ffem,
                                   fontWeight: FontWeight.w500,
                                   height: 1.2125 * ffem / fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -2229,7 +2235,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 55 * ffem,
                             fontWeight: FontWeight.w800,
                             height: 1.2125 * ffem / fem,
-                            color: Color(0xff000000),
+                            color: const Color(0xff000000),
                           ),
                         ),
                       ),
@@ -2239,11 +2245,36 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
+          // Container(
+
+          //   width: double.infinity,
+          //   height: 510 * fem,
+          //   decoration: const BoxDecoration(
+          //     gradient: RadialGradient(
+          //       center: Alignment(1.034, -0.142),
+          //       radius: 1.05,
+          //       colors: <Color>[
+          //         Color(0xff0f607d),
+          //         Color(0xff498f9d),
+          //         Color(0xff277692),
+          //         Color(0xff42869e),
+          //         Color(0xef0aa3b8)
+          //       ],
+          //       stops: <double>[0, 0.26, 0.495, 0.75, 1],
+          //     ),
+          //   ),
+          //   child: Column(
+
+          //   ),
+          // ),
+
           Container(
-            
+            // group2493a1X (257:531)
+            padding:
+                EdgeInsets.fromLTRB(128 * fem, 78 * fem, 430 * fem, 78 * fem),
             width: double.infinity,
             height: 510 * fem,
             decoration: BoxDecoration(
@@ -2259,6 +2290,102 @@ class HomePage extends StatelessWidget {
                 ],
                 stops: <double>[0, 0.26, 0.495, 0.75, 1],
               ),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  // aboutblogcareerspresscontactus (1741:5226)
+                  margin: EdgeInsets.fromLTRB(
+                      0 * fem, 0 * fem, 142 * fem, 80 * fem),
+                  constraints: BoxConstraints(
+                    maxWidth: 126 * fem,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Doc Search',
+                        style: SafeGoogleFont(
+                          'Inter',
+                          fontSize: 32 * ffem,
+                          fontWeight: FontWeight.w700,
+                          height: 1.2125 * ffem / fem,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'About \nBlog \nCareers\nPress\nContact us',
+                        style: SafeGoogleFont(
+                          'Inter',
+                          fontSize: 24 * ffem,
+                          fontWeight: FontWeight.w500,
+                          height: 1.2125 * ffem / fem,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  // autogroupergdVGu (MuzgZZbDK1UrcJZRjFERgd)
+                  margin: EdgeInsets.fromLTRB(
+                      0 * fem, 0 * fem, 107 * fem, 78 * fem),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        // forpatientsDyb (1741:5227)
+                        margin: EdgeInsets.fromLTRB(
+                            0 * fem, 0 * fem, 0 * fem, 17 * fem),
+                        child: Text(
+                          'For patients',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 32 * ffem,
+                            fontWeight: FontWeight.w700,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        // searchfordoctorssearchforclini (1741:5228)
+                        constraints: BoxConstraints(
+                          maxWidth: 319 * fem,
+                        ),
+                        child: Text(
+                          'Search for doctors\nSearch for clinics\nSearch for hospital\nSearch medical shop\nBook lab test\nBook full body checkups\nDoc Search health care plan',
+                          style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 24 * ffem,
+                            fontWeight: FontWeight.w400,
+                            height: 1.2125 * ffem / fem,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  // forhospitald1j (1741:5229)
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 315 * fem),
+                  child: Text(
+                    'For Hospital',
+                    style: SafeGoogleFont(
+                      'Inter',
+                      fontSize: 32 * ffem,
+                      fontWeight: FontWeight.w700,
+                      height: 1.2125 * ffem / fem,
+                      color: Color(0xffffffff),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
