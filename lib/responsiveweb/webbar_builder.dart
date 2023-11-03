@@ -83,9 +83,8 @@ class SlidingWebPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 14),
                         child: Container(
-                        
                           width: 300,
-                           height: 56 * fem,
+                          height: 56 * fem,
                           decoration: BoxDecoration(
                             border: Border.all(color: Color(0xffb3b3b3)),
                             color: Color(0xffffffff),
@@ -100,7 +99,8 @@ class SlidingWebPage extends StatelessWidget {
                                 child: Material(
                                   child: TextField(
                                     decoration: InputDecoration(
-                                      hintText: 'Search for doctors & hospitals',
+                                      hintText:
+                                          'Search for doctors & hospitals',
                                       hintStyle: TextStyle(
                                         fontSize: 18.7000007629 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -118,13 +118,13 @@ class SlidingWebPage extends StatelessWidget {
                                 // autogroupxmgdojX (MuzoorWuEXsUXYSk4qxMgd)
                                 padding: EdgeInsets.fromLTRB(29.05 * fem,
                                     22.95 * fem, 28.7 * fem, 11.8 * fem),
-                               
-                                 height: 56 * fem,
+
+                                height: 56 * fem,
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Color(0xffb3b3b3)),
                                   color: Color(0xffffffff),
-                                  borderRadius:
-                                      BorderRadius.circular(48.4500007629 * fem),
+                                  borderRadius: BorderRadius.circular(
+                                      48.4500007629 * fem),
                                 ),
                                 child: Center(
                                   // path26irV (1724:1495)
@@ -164,77 +164,93 @@ class SlidingWebPage extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.fromLTRB(
-                            12.96 * fem, 10.8 * fem, 12.06 * fem, 10.13 * fem),
-                        width: 54 * fem,
-                        height: 54 * fem,
-                        decoration: BoxDecoration(
-                          color: Color(0xffffffff),
-                          borderRadius: BorderRadius.circular(27 * fem),
-                        ),
-                        child: Center(
-                          // vector18m (1724:1499)
-                          child: SizedBox(
-                            width: 28.97 * fem,
-                            height: 33.08 * fem,
-                            child: Image.network(
-                              "assets/page-1/images/profilemain.png",
-                              width: 28.97 * fem,
-                              height: 33.08 * fem,
+                        width: 80 * fem,
+                        height: 48 * fem,
+                        color: Color(0xff000000),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Register",
+                                style: SafeGoogleFont(
+                                  'Inter',
+                                  fontSize: 17 * ffem,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.17 * ffem / fem,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
                             ),
-                          ),
+                            Text(
+                              "/",
+                              style: SafeGoogleFont(
+                                'Inter',
+                                fontSize: 17 * ffem,
+                                fontWeight: FontWeight.w400,
+                                height: 1.17* ffem / fem,
+                                color: Color(0xffffffff),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Login",
+                                style: SafeGoogleFont(
+                                  'Inter',
+                                  fontSize: 17* ffem,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.17 * ffem / fem,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 10,),
-                       Expanded(
-                    child:Obx(() =>  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        HorizontalListItem(
-
-                            text: 'Find Doctors',
-                            fem: ffem,
-                            onTap: () => sideBarController.index.value = 0,
-                            selected: sideBarController.index.value == 0),
-                        HorizontalListItem(
-
-                            text: 'Video consult',
-                            fem: ffem,
-                            onTap: () => sideBarController.index.value = 1,
-                            selected: sideBarController.index.value == 1),
-                        HorizontalListItem(
-
-                            text: 'Medicines',
-                            fem: ffem,
-                            onTap: () => sideBarController.index.value = 2,
-                            selected: sideBarController.index.value == 2),
-                        HorizontalListItem(
-
-                            text: 'Lab Test',
-                            fem: ffem,
-                            onTap: () => sideBarController.index.value = 3,
-                            selected: sideBarController.index.value == 3),
-                        HorizontalListItem(
-
-                            text: 'Hospital',
-                            fem: ffem,
-                            onTap: () => sideBarController.index.value = 4,
-                            selected: sideBarController.index.value == 4),
-
-                      ],
-                    ),
-                    )
+                SizedBox(
+                  height: 10,
+                ),
+                Expanded(
+                    child: Obx(
+                  () => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      HorizontalListItem(
+                          text: 'Find Doctors',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 0,
+                          selected: sideBarController.index.value == 0),
+                      HorizontalListItem(
+                          text: 'Video consult',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 1,
+                          selected: sideBarController.index.value == 1),
+                      HorizontalListItem(
+                          text: 'Medicines',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 2,
+                          selected: sideBarController.index.value == 2),
+                      HorizontalListItem(
+                          text: 'Lab Test',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 3,
+                          selected: sideBarController.index.value == 3),
+                      HorizontalListItem(
+                          text: 'Hospital',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 4,
+                          selected: sideBarController.index.value == 4),
+                    ],
                   ),
-                ],
-              ),
+                )),
+              ],
             ),
-           
-           
-           
-          
+          ),
           Expanded(
             flex: 8,
             child: Obx(
