@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
                   child: Align(
                     child: Container(
                       width: 1440 * fem,
-                      height: 2125 * fem,
+                      height: 1125 * fem,
                       color: Colors.white, // Set your desired background color
                     ),
                   ),
@@ -114,175 +114,136 @@ class HomePage extends StatelessWidget {
                                       ),
                                       //logo ends
                                       //search bar starts
-                                      Expanded(
-                                        child: Container(
-                                          margin: EdgeInsets.fromLTRB(0 * fem,
-                                              0 * fem, 109 * fem, 0 * fem),
-                                          height: 40 * fem,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xfff3f3f3),
-                                            borderRadius:
-                                                BorderRadius.circular(20 * fem),
-                                          ),
-                                          child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              const Icon(
-                                                Icons.search,
-                                                color: Color(0xff8b9799),
-                                              ),
-                                              SizedBox(width: 10 * fem),
-                                              Expanded(
-                                                child: Material(
-                                                  child: TextField(
-                                                    decoration: InputDecoration(
-                                                      hintText:
-                                                          'Search for doctors & hospitals',
-                                                      hintStyle: TextStyle(
-                                                        fontSize: 20 *
-                                                            ffem, // Adjust the font size as needed
-                                                        color: Colors
-                                                            .grey, // Adjust the color as needed
-                                                      ),
-                                                      border: InputBorder.none,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+
                                       //search bar ends
                                       // Contact us start
                                     
                                       //contact us ends
                                       //signup/login button starts
-                                      Container(
-                                        margin: EdgeInsets.fromLTRB(
-                                            0 * fem, 3 * fem, 0 * fem, 2 * fem),
-                                        width: 250 * fem,
-                                        height: double.infinity,
-                                        decoration: BoxDecoration(
-                                          color: Colors.blueAccent.shade100,
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const MakeUser()),
-                                                  );
-                                                },
-                                                child: Text(
-                                                  "Register",
-                                                  style: TextStyle(
-                                                    fontSize: 28 * ffem,
-                                                    fontWeight: FontWeight.w400,
-                                                    height: 1.2125 * ffem / fem,
-                                                    color:
-                                                        const Color(0xffffffff),
-                                                  ),
-                                                )),
-                                            Text(
-                                              "/",
-                                              style: TextStyle(
-                                                fontSize: 28 * ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.2125 * ffem / fem,
-                                                color: const Color(0xffffffff),
-                                              ),
-                                            ),
-                                            TextButton(
-                                                onPressed: () async {
-                                                  await showDialog<void>(
-                                                      context: context,
-                                                      builder:
-                                                          (context) =>
-                                                              AlertDialog(
-                                                                content: Stack(
-                                                                  clipBehavior:
-                                                                      Clip.none,
-                                                                  children: <Widget>[
-                                                                    Positioned(
-                                                                      right:
-                                                                          -40,
-                                                                      top: -40,
-                                                                      child:
-                                                                          InkResponse(
-                                                                        onTap:
-                                                                            () {
-                                                                          Navigator.of(context)
-                                                                              .pop();
-                                                                        },
-                                                                        child:
-                                                                            const CircleAvatar(
-                                                                          backgroundColor:
-                                                                              Colors.red,
-                                                                          child:
-                                                                              Icon(Icons.close),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Form(
-                                                                      key:
-                                                                          _formKey,
-                                                                      child:
-                                                                          Column(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.min,
-                                                                        children: <Widget>[
-                                                                          Padding(
-                                                                            padding:
-                                                                                const EdgeInsets.all(8),
-                                                                            child:
-                                                                                TextFormField(),
-                                                                          ),
-                                                                          Padding(
-                                                                            padding:
-                                                                                const EdgeInsets.all(8),
-                                                                            child:
-                                                                                TextFormField(),
-                                                                          ),
-                                                                          Padding(
-                                                                            padding:
-                                                                                const EdgeInsets.all(8),
-                                                                            child:
-                                                                                ElevatedButton(
-                                                                              child: const Text('Submitß'),
-                                                                              onPressed: () {
-                                                                                if (_formKey.currentState!.validate()) {
-                                                                                  _formKey.currentState!.save();
-                                                                                }
-                                                                              },
-                                                                            ),
-                                                                          )
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ));
-                                                },
-                                                child: Text(
-                                                  "LogIn",
-                                                  style: TextStyle(
-                                                    fontSize: 28 * ffem,
-                                                    fontWeight: FontWeight.w400,
-                                                    height: 1.2125 * ffem / fem,
-                                                    color:
-                                                        const Color(0xffffffff),
-                                                  ),
-                                                )),
-                                          ],
-                                        ),
-                                      ),
+                                      // Container(
+                                      //   margin: EdgeInsets.fromLTRB(
+                                      //       0 * fem, 3 * fem, 0 * fem, 2 * fem),
+                                      //   width: 250 * fem,
+                                      //   height: double.infinity,
+                                      //   decoration: BoxDecoration(
+                                      //     color: Colors.blueAccent.shade100,
+                                      //   ),
+                                      //   child: Row(
+                                      //     mainAxisAlignment:
+                                      //         MainAxisAlignment.start,
+                                      //     children: [
+                                      //       TextButton(
+                                      //           onPressed: () {
+                                      //             Navigator.push(
+                                      //               context,
+                                      //               MaterialPageRoute(
+                                      //                   builder: (context) =>
+                                      //                       const MakeUser()),
+                                      //             );
+                                      //           },
+                                      //           child: Text(
+                                      //             "Register",
+                                      //             style: TextStyle(
+                                      //               fontSize: 28 * ffem,
+                                      //               fontWeight: FontWeight.w400,
+                                      //               height: 1.2125 * ffem / fem,
+                                      //               color:
+                                      //                   const Color(0xffffffff),
+                                      //             ),
+                                      //           )),
+                                      //       Text(
+                                      //         "/",
+                                      //         style: TextStyle(
+                                      //           fontSize: 28 * ffem,
+                                      //           fontWeight: FontWeight.w400,
+                                      //           height: 1.2125 * ffem / fem,
+                                      //           color: const Color(0xffffffff),
+                                      //         ),
+                                      //       ),
+                                      //       TextButton(
+                                      //           onPressed: () async {
+                                      //             await showDialog<void>(
+                                      //                 context: context,
+                                      //                 builder:
+                                      //                     (context) =>
+                                      //                         AlertDialog(
+                                      //                           content: Stack(
+                                      //                             clipBehavior:
+                                      //                                 Clip.none,
+                                      //                             children: <Widget>[
+                                      //                               Positioned(
+                                      //                                 right:
+                                      //                                     -40,
+                                      //                                 top: -40,
+                                      //                                 child:
+                                      //                                     InkResponse(
+                                      //                                   onTap:
+                                      //                                       () {
+                                      //                                     Navigator.of(context)
+                                      //                                         .pop();
+                                      //                                   },
+                                      //                                   child:
+                                      //                                       const CircleAvatar(
+                                      //                                     backgroundColor:
+                                      //                                         Colors.red,
+                                      //                                     child:
+                                      //                                         Icon(Icons.close),
+                                      //                                   ),
+                                      //                                 ),
+                                      //                               ),
+                                      //                               Form(
+                                      //                                 key:
+                                      //                                     _formKey,
+                                      //                                 child:
+                                      //                                     Column(
+                                      //                                   mainAxisSize:
+                                      //                                       MainAxisSize.min,
+                                      //                                   children: <Widget>[
+                                      //                                     Padding(
+                                      //                                       padding:
+                                      //                                           const EdgeInsets.all(8),
+                                      //                                       child:
+                                      //                                           TextFormField(),
+                                      //                                     ),
+                                      //                                     Padding(
+                                      //                                       padding:
+                                      //                                           const EdgeInsets.all(8),
+                                      //                                       child:
+                                      //                                           TextFormField(),
+                                      //                                     ),
+                                      //                                     Padding(
+                                      //                                       padding:
+                                      //                                           const EdgeInsets.all(8),
+                                      //                                       child:
+                                      //                                           ElevatedButton(
+                                      //                                         child: const Text('Submitß'),
+                                      //                                         onPressed: () {
+                                      //                                           if (_formKey.currentState!.validate()) {
+                                      //                                             _formKey.currentState!.save();
+                                      //                                           }
+                                      //                                         },
+                                      //                                       ),
+                                      //                                     )
+                                      //                                   ],
+                                      //                                 ),
+                                      //                               ),
+                                      //                             ],
+                                      //                           ),
+                                      //                         ));
+                                      //           },
+                                      //           child: Text(
+                                      //             "LogIn",
+                                      //             style: TextStyle(
+                                      //               fontSize: 28 * ffem,
+                                      //               fontWeight: FontWeight.w400,
+                                      //               height: 1.2125 * ffem / fem,
+                                      //               color:
+                                      //                   const Color(0xffffffff),
+                                      //             ),
+                                      //           )),
+                                      //     ],
+                                      //   ),
+                                      // ),
                                       //sign up log in button ends
                                     ],
                                   ),
@@ -574,253 +535,256 @@ class HomePage extends StatelessWidget {
                                 //     ),
                                 //   ],
                                 // ),
-                                Container(
-                                  // autogroup977vf2p (3Yb4ejm91xVKXk544z977V)
-                                  width: double.infinity,
-                                  height: 586.8 * fem,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        // vectorD4L (16:32)
-                                        left: 1375 * fem,
-                                        top: 130 * fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 22.8 * fem,
-                                            height: 40 * fem,
-                                            child: Image.asset(
-                                              'assets/page-1/images/vector-Ho6.png',
+                                Expanded(
+                                  child: Container(
+
+                                    // autogroup977vf2p (3Yb4ejm91xVKXk544z977V)
+                                    width: double.infinity,
+                                    height: 586.8 * fem,
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                          // vectorD4L (16:32)
+                                          left: 1375 * fem,
+                                          top: 130 * fem,
+                                          child: Align(
+                                            child: SizedBox(
                                               width: 22.8 * fem,
                                               height: 40 * fem,
+                                              child: Image.asset(
+                                                'assets/page-1/images/vector-Ho6.png',
+                                                width: 22.8 * fem,
+                                                height: 40 * fem,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Positioned(
-                                        // group2428Xap (21:196)
-                                        left: 0 * fem,
-                                        top: 0 * fem,
-                                        child: Container(
-                                          width: 1440 * fem,
-                                          height: 586.8 * fem,
-                                          child: Stack(
-                                            children: [
-                                              Positioned(
-                                                // rectangle173evL (16:21)
-                                                left: 0 * fem,
-                                                top: 0 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 1440 * fem,
-                                                    height: 586 * fem,
-                                                    child: Container(
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                        color:
-                                                            Color(0xffecf9fb),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Positioned(
-                                                // weareprovidingthebesthealthser (16:22)
-                                                left: 68 * fem,
-                                                top: 118 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 569 * fem,
-                                                    height: 134 * fem,
-                                                    child: RichText(
-                                                      text: TextSpan(
-                                                        style: SafeGoogleFont(
-                                                          'Inter',
-                                                          fontSize: 55 * ffem,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          height: 1.2125 *
-                                                              ffem /
-                                                              fem,
-                                                          color: const Color(
-                                                              0xff000000),
+                                        Positioned(
+                                          // group2428Xap (21:196)
+                                          left: 0 * fem,
+                                          top: 0 * fem,
+                                          child: Container(
+                                            width: 1440 * fem,
+                                            height: 586.8 * fem,
+                                            child: Stack(
+                                              children: [
+                                                Positioned(
+                                                  // rectangle173evL (16:21)
+                                                  left: 0 * fem,
+                                                  top: 0 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 1440 * fem,
+                                                      height: 586 * fem,
+                                                      child: Container(
+                                                        decoration:
+                                                            const BoxDecoration(
+                                                          color:
+                                                              Color(0xffecf9fb),
                                                         ),
-                                                        children: [
-                                                          const TextSpan(
-                                                            text: 'We are ',
-                                                          ),
-                                                          TextSpan(
-                                                            text: 'providing',
-                                                            style:
-                                                                SafeGoogleFont(
-                                                              'Inter',
-                                                              fontSize:
-                                                                  55 * ffem,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
-                                                              height: 1.2125 *
-                                                                  ffem /
-                                                                  fem,
-                                                              color: const Color(
-                                                                  0xfffbbc05),
-                                                            ),
-                                                          ),
-                                                          const TextSpan(
-                                                            text: ' the \nbest',
-                                                          ),
-                                                          TextSpan(
-                                                            text: ' health ',
-                                                            style:
-                                                                SafeGoogleFont(
-                                                              'Inter',
-                                                              fontSize:
-                                                                  55 * ffem,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
-                                                              height: 1.2125 *
-                                                                  ffem /
-                                                                  fem,
-                                                              color: const Color(
-                                                                  0xff005473),
-                                                            ),
-                                                          ),
-                                                          const TextSpan(
-                                                            text: 'services  ',
-                                                          ),
-                                                        ],
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Positioned(
-                                                // rectangle170aL8 (16:35)
-                                                left: 804 * fem,
-                                                top: 46 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 500 * fem,
-                                                    height: 500 * fem,
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(
-                                                                    320 * fem),
-                                                        border: Border.all(
+                                                Positioned(
+                                                  // weareprovidingthebesthealthser (16:22)
+                                                  left: 68 * fem,
+                                                  top: 118 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 569 * fem,
+                                                      height: 134 * fem,
+                                                      child: RichText(
+                                                        text: TextSpan(
+                                                          style: SafeGoogleFont(
+                                                            'Inter',
+                                                            fontSize: 55 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            height: 1.2125 *
+                                                                ffem /
+                                                                fem,
                                                             color: const Color(
-                                                                0xff005473)),
-                                                        color: const Color(
-                                                            0xff42869e),
+                                                                0xff000000),
+                                                          ),
+                                                          children: [
+                                                            const TextSpan(
+                                                              text: 'We are ',
+                                                            ),
+                                                            TextSpan(
+                                                              text: 'providing',
+                                                              style:
+                                                                  SafeGoogleFont(
+                                                                'Inter',
+                                                                fontSize:
+                                                                    55 * ffem,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w700,
+                                                                height: 1.2125 *
+                                                                    ffem /
+                                                                    fem,
+                                                                color: const Color(
+                                                                    0xfffbbc05),
+                                                              ),
+                                                            ),
+                                                            const TextSpan(
+                                                              text: ' the \nbest',
+                                                            ),
+                                                            TextSpan(
+                                                              text: ' health ',
+                                                              style:
+                                                                  SafeGoogleFont(
+                                                                'Inter',
+                                                                fontSize:
+                                                                    55 * ffem,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w700,
+                                                                height: 1.2125 *
+                                                                    ffem /
+                                                                    fem,
+                                                                color: const Color(
+                                                                    0xff005473),
+                                                              ),
+                                                            ),
+                                                            const TextSpan(
+                                                              text: 'services  ',
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Positioned(
-                                                // image3463a (16:36)
-                                                left: 662 * fem,
-                                                top: 130 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 672 * fem,
-                                                    height: 456.8 * fem,
-                                                    child: Image.asset(
-                                                      'assets/page-1/images/image-34.png',
-                                                      fit: BoxFit.cover,
+                                                Positioned(
+                                                  // rectangle170aL8 (16:35)
+                                                  left: 804 * fem,
+                                                  top: 46 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 500 * fem,
+                                                      height: 500 * fem,
+                                                      child: Container(
+                                                        decoration: BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      320 * fem),
+                                                          border: Border.all(
+                                                              color: const Color(
+                                                                  0xff005473)),
+                                                          color: const Color(
+                                                              0xff42869e),
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Positioned(
-                                                // rectangle171DP6 (16:37)
-                                                left: 75 * fem,
-                                                top: 421 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 386 * fem,
-                                                    height: 84 * fem,
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(
-                                                                    34 * fem),
-                                                        border: Border.all(
+                                                Positioned(
+                                                  // image3463a (16:36)
+                                                  left: 662 * fem,
+                                                  top: 130 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 672 * fem,
+                                                      height: 456.8 * fem,
+                                                      child: Image.asset(
+                                                        'assets/page-1/images/image-34.png',
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Positioned(
+                                                  // rectangle171DP6 (16:37)
+                                                  left: 75 * fem,
+                                                  top: 421 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 386 * fem,
+                                                      height: 84 * fem,
+                                                      child: Container(
+                                                        decoration: BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      34 * fem),
+                                                          border: Border.all(
+                                                              color: const Color(
+                                                                  0xff005473)),
+                                                          color: const Color(
+                                                              0xffffffff),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Positioned(
+                                                  // signuptodayj6Y (16:38)
+                                                  left: 167 * fem,
+                                                  top: 444 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 202 * fem,
+                                                      height: 39 * fem,
+                                                      child: TextButton(
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder: (context) =>
+                                                                    const MakeUser()),
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          'Signup today',
+                                                          style: SafeGoogleFont(
+                                                            'Inter',
+                                                            fontSize: 32 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            height: 1.2125 *
+                                                                ffem /
+                                                                fem,
                                                             color: const Color(
-                                                                0xff005473)),
-                                                        color: const Color(
-                                                            0xffffffff),
+                                                                0xff005473),
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Positioned(
-                                                // signuptodayj6Y (16:38)
-                                                left: 167 * fem,
-                                                top: 444 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 202 * fem,
-                                                    height: 39 * fem,
-                                                    child: TextButton(
-                                                      onPressed: () {
-                                                        Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  const MakeUser()),
-                                                        );
-                                                      },
+                                                Positioned(
+                                                  // alwayscaringaboutyourhealthfin (16:48)
+                                                  left: 76 * fem,
+                                                  top: 270 * fem,
+                                                  child: Align(
+                                                    child: SizedBox(
+                                                      width: 371 * fem,
+                                                      height: 88 * fem,
                                                       child: Text(
-                                                        'Signup today',
+                                                        'Always caring about your health,\nFind your doctors and make an \nappointment',
                                                         style: SafeGoogleFont(
                                                           'Inter',
-                                                          fontSize: 32 * ffem,
+                                                          fontSize: 24 * ffem,
                                                           fontWeight:
-                                                              FontWeight.w500,
-                                                          height: 1.2125 *
-                                                              ffem /
-                                                              fem,
+                                                              FontWeight.w400,
+                                                          height:
+                                                              1.2125 * ffem / fem,
                                                           color: const Color(
-                                                              0xff005473),
+                                                              0xff1b3033),
                                                         ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Positioned(
-                                                // alwayscaringaboutyourhealthfin (16:48)
-                                                left: 76 * fem,
-                                                top: 270 * fem,
-                                                child: Align(
-                                                  child: SizedBox(
-                                                    width: 371 * fem,
-                                                    height: 88 * fem,
-                                                    child: Text(
-                                                      'Always caring about your health,\nFind your doctors and make an \nappointment',
-                                                      style: SafeGoogleFont(
-                                                        'Inter',
-                                                        fontSize: 24 * ffem,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        height:
-                                                            1.2125 * ffem / fem,
-                                                        color: const Color(
-                                                            0xff1b3033),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Container(

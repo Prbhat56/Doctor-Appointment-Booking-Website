@@ -10,7 +10,7 @@ class SlidingWebPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double baseWidth = 1440;
+    double baseWidth = 1120;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     SideBarController sideBarController = Get.put(SideBarController());
