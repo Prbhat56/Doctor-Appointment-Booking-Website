@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/controller/sidebar_controller.dart';
+import 'package:myapp/new_page.dart';
 
 import '../constant/horizontal_list.dart';
 import '../utils.dart';
@@ -143,14 +144,27 @@ class SlidingWebPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Text(
-                        'Home',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 24 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: Color(0xffffffff),
+                      Material(
+                        child: TextButton(
+                          onPressed: (){
+                                   Navigator.push(
+                                                                  context,
+                                                                  MaterialPageRoute(
+                                                                      builder:
+                                                                          (context) =>
+                                                                              const HomePage()),
+                                                                );
+                          },
+                          child: Text(
+                            'Home',
+                            style: SafeGoogleFont(
+                              'Inter',
+                              fontSize: 24 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2125 * ffem / fem,
+                              color: Color(0xffffffff),
+                            ),
+                          ),
                         ),
                       ),
                       Text(
