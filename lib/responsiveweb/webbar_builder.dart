@@ -144,29 +144,7 @@ class SlidingWebPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Material(
-                        child: TextButton(
-                          onPressed: (){
-                                   Navigator.push(
-                                                                  context,
-                                                                  MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const HomePage()),
-                                                                );
-                          },
-                          child: Text(
-                            'Home',
-                            style: SafeGoogleFont(
-                              'Inter',
-                              fontSize: 24 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125 * ffem / fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                      ),
+                 
                       Text(
                         'Contact us',
                         style: SafeGoogleFont(
@@ -234,31 +212,36 @@ class SlidingWebPage extends StatelessWidget {
                   () => Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      HorizontalListItem(
-                          text: 'Find Doctors',
+                        HorizontalListItem(
+                          text: 'Home',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 0,
                           selected: sideBarController.index.value == 0),
                       HorizontalListItem(
-                          text: 'Video consult',
+                          text: 'Find Doctors',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 1,
                           selected: sideBarController.index.value == 1),
                       HorizontalListItem(
-                          text: 'Medicines',
+                          text: 'Video consult',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 2,
                           selected: sideBarController.index.value == 2),
                       HorizontalListItem(
-                          text: 'Lab Test',
+                          text: 'Medicines',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 3,
                           selected: sideBarController.index.value == 3),
                       HorizontalListItem(
-                          text: 'Hospital',
+                          text: 'Lab Test',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 4,
                           selected: sideBarController.index.value == 4),
+                      HorizontalListItem(
+                          text: 'Hospital',
+                          fem: ffem,
+                          onTap: () => sideBarController.index.value = 5,
+                          selected: sideBarController.index.value == 5),
                     ],
                   ),
                 )),
