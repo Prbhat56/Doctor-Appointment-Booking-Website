@@ -8,6 +8,7 @@ import 'package:myapp/doctor/doctor_login_page.dart';
 import 'package:myapp/doctor/doctor_otp_page.dart';
 import 'package:myapp/doctor/doctor_registration_page.dart';
 import 'package:myapp/doctor/doctor_reset_password.dart';
+import 'package:myapp/doctor/new_doctor_detail_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/doctor_profile_page.dart';
 import 'package:myapp/doctormenu/sidebar/sidebar_page.dart';

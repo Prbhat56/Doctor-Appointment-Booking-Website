@@ -146,6 +146,12 @@ flutter:
     - assets/page-1/images/logonew.png
     - assets/page-1/images/searchicon.png
     - assets/page-1/images/profilemain.png
+    - assets/page-1/images/arrowfinal.png
+    - assets/page-1/images/finalarrow.png
+    - assets/page-1/images/lady.png
+    - assets/page-1/images/newtick.png
+    - assets/page-1/images/newlike.png
+    - assets/page-1/images/newstar.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

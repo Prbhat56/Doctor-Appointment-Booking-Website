@@ -12,11 +12,10 @@ class SideBarController extends GetxController {
   RxInt index = 0.obs;
 
   var pages = [
-    HomePage(),
+     DoctorFindPage(),
      ConsultNowPage(),
-    SearchChemist(),
-    SearchLab(),
-    FindHospitalPage(),
-    ProfilePage(),
+     SearchChemist(),
+     SearchLab(),
+     FindHospitalPage(),
   ];
 }

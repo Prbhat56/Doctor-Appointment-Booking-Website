@@ -35,575 +35,640 @@ class DoctorFindPage extends StatelessWidget {
         width: double.infinity,
         height: 2000 * fem,
         decoration: const BoxDecoration(
-          color: Color.fromRGBO(255, 255, 255, 0.702),
+          color: Colors.white,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 400),
-              child: Column(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'Search Doctors and specialities',
-                    style: SafeGoogleFont(
-                      'Inter',
-                      fontSize: 40 * ffem,
-                      fontWeight: FontWeight.w400,
-                      height: 1.2125 * ffem / fem,
-                      color: Colors.blueAccent,
+                  Container(
+                    // findyourdoctorandbook5jw (1736:2183)
+                    margin: EdgeInsets.fromLTRB(
+                        0 * fem, 0 * fem, 27.72 * fem, 58.5 * fem),
+                    child: Text(
+                      'FIND YOUR DOCTOR AND BOOK',
+                      style: SafeGoogleFont(
+                        'Inter',
+                        fontSize: 24 * ffem,
+                        fontWeight: FontWeight.w600,
+                        height: 1.2125 * ffem / fem,
+                        color: const Color(0xff005473),
+                      ),
                     ),
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 650 * fem,
+                        height: 60 * fem,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: const Color(0xff54a7c4)),
+                          color: const Color(0xff005473),
+                          borderRadius: BorderRadius.circular(25.5 * fem),
+                        ),
+                        child: const Material(
+                          color: Color(0xff005473),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search Location',
+                              hintStyle: TextStyle(
+                                fontSize: 18.5,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xffaeaeae),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.search,
+                                color: Colors.white,
+                              ),
+                              suffixIcon: Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
 
                   const SizedBox(height: 50),
                   // Text field for entering phone number
+
                   Container(
-                    width: 650 * fem, // Adjust the width as needed
-                    child: Material(
-                      elevation: 3, // Add elevation for a card-like appearance
-                      shadowColor: Colors.grey,
-                      borderRadius:
-                          BorderRadius.circular(10), // Add rounded corners
+                    width: 650 * fem,
+                    height: 60 * fem,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: const Color(0xff54a7c4)),
+                      color: const Color(0xff005473),
+                      borderRadius: BorderRadius.circular(25.5 * fem),
+                    ),
+                    child: const Material(
+                      color: Color(0xff005473),
                       child: TextField(
-                        controller: locationController,
-                        keyboardType: TextInputType.phone,
-                        style: TextStyle(
-                          fontSize: 20 * ffem,
-                          color: const Color(0xff000000),
-                        ),
                         decoration: InputDecoration(
-                          labelText: 'Enter Your Location',
-                          labelStyle: TextStyle(
-                            color: locationController.text.isEmpty
-                                ? const Color(0xff42869E)
-                                : Colors.transparent,
+                          hintText: 'Search Doctors and specialities',
+                          hintStyle: TextStyle(
+                            fontSize: 18.5,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xffaeaeae),
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Color(0xff42869E)),
-                            borderRadius: BorderRadius.circular(
-                                10), // Match the border radius
+                          prefixIcon: Icon(
+                            Icons.location_on,
+                            color: Colors.white,
                           ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Color(0xff42869E)),
-                            borderRadius: BorderRadius.circular(
-                                10), // Match the border radius
+                          suffixIcon: Icon(
+                            Icons.arrow_drop_down,
+                            color: Colors.white,
                           ),
-                          prefixIcon: const Icon(
-                            Icons
-                                .location_on, // You can change the icon as needed
-                            color: Color(0xff42869E),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
                         ),
                       ),
                     ),
                   ),
 
-                  const SizedBox(height: 30),
                   // Text field for entering phone number
-                  Container(
-                    width: 650 * fem, // Adjust the width as needed
-                    child: Material(
-                      elevation: 3, // Add elevation for a card-like appearance
-                      shadowColor: Colors.grey,
-                      borderRadius:
-                          BorderRadius.circular(10), // Add rounded corners
-                      child: TextField(
-                        controller: specialController,
-                        keyboardType: TextInputType.phone,
-                        style: TextStyle(
-                          fontSize: 20 * ffem,
-                          color: const Color(0xff000000),
-                        ),
-                        decoration: InputDecoration(
-                          labelText: 'Enter the Speciality',
-                          labelStyle: TextStyle(
-                            color: specialController.text.isEmpty
-                                ? const Color(0xff42869E)
-                                : Colors.transparent,
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Positioned(
+                    // group49BM3 (1736:2194)
+                    left: 278 * fem,
+                    top: 526 * fem,
+                    child: Container(
+                      width: 884.25 * fem,
+                      height: 221.85 * fem,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            // talktothedoctorsfromthecomfort (1736:2216)
+                            margin: EdgeInsets.fromLTRB(
+                                3.38 * fem, 0 * fem, 0 * fem, 40.65 * fem),
+                            child: Text(
+                              'Talk to the doctors from the comfort of your home easily',
+                              style: SafeGoogleFont(
+                                'Inter',
+                                fontSize: 23.9999828339 * ffem,
+                                fontWeight: FontWeight.w600,
+                                height: 1.2125 * ffem / fem,
+                                color: const Color(0xff005473),
+                              ),
+                            ),
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Color(0xff42869E)),
-                            borderRadius: BorderRadius.circular(
-                                10), // Match the border radius
+                          Container(
+                            // group24QUh (1736:2195)
+                            padding: EdgeInsets.fromLTRB(39.75 * fem,
+                                14.85 * fem, 27.75 * fem, 14.85 * fem),
+                            width: double.infinity,
+                            height: 151.2 * fem,
+                            decoration: BoxDecoration(
+                              border:
+                                  Border.all(color: const Color(0xff005473)),
+                              color: const Color(0xffecfafc),
+                              borderRadius:
+                                  BorderRadius.circular(22.9499816895 * fem),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: const Color(0x3f000000),
+                                  offset: Offset(0 * fem, 2.6999979019 * fem),
+                                  blurRadius: 1.349998951 * fem,
+                                ),
+                                BoxShadow(
+                                  color: const Color(0x3f000000),
+                                  offset: Offset(0 * fem, -2.2499983311 * fem),
+                                  blurRadius: 1.4999989271 * fem,
+                                ),
+                              ],
+                            ),
+                            child: Container(
+                              // group23rbb (1736:2197)
+                              width: double.infinity,
+                              height: double.infinity,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    // group201UV (1736:2199)
+                                    margin: EdgeInsets.fromLTRB(
+                                        0 * fem, 0 * fem, 44 * fem, 0 * fem),
+                                    height: double.infinity,
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          // group17Lmf (1736:2200)
+                                          margin: EdgeInsets.fromLTRB(0 * fem,
+                                              0 * fem, 11.05 * fem, 0 * fem),
+                                          height: double.infinity,
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                // group3021smb (1736:2202)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0 * fem,
+                                                    0 * fem,
+                                                    12.22 * fem,
+                                                    0 * fem),
+                                                padding: EdgeInsets.fromLTRB(
+                                                    26.25 * fem,
+                                                    44.25 * fem,
+                                                    26.25 * fem,
+                                                    44.25 * fem),
+                                                width: 121.5 * fem,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                      color: const Color(
+                                                          0xff498f9d)),
+                                                  color:
+                                                      const Color(0xff005473),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          60.75 * fem),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: const Color(
+                                                          0xffdceff6),
+                                                      offset: Offset(0 * fem,
+                                                          4.0499968529 * fem),
+                                                      blurRadius:
+                                                          1.349998951 * fem,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  // entersymptomsL9P (1736:2204)
+                                                  child: SizedBox(
+                                                    child: Container(
+                                                      constraints:
+                                                          BoxConstraints(
+                                                        maxWidth: 69 * fem,
+                                                      ),
+                                                      child: Text(
+                                                        'Enter \nsymptoms',
+                                                        style: SafeGoogleFont(
+                                                          'Inter',
+                                                          fontSize:
+                                                              13.4999904633 *
+                                                                  ffem,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          height: 1.2125 *
+                                                              ffem /
+                                                              fem,
+                                                          color: const Color(
+                                                              0xffffffff),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                // arrow3RRj (1736:2209)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0 * fem,
+                                                    0 * fem,
+                                                    17.51 * fem,
+                                                    0.14 * fem),
+                                                width: 94.77 * fem,
+                                                height: 1.21 * fem,
+                                                child: Image.network(
+                                                  "assets/page-1/images/finalarrow.png",
+                                                  width: 94.77 * fem,
+                                                  height: 1.21 * fem,
+                                                ),
+                                              ),
+                                              Container(
+                                                // group21wus (1736:2205)
+                                                padding: EdgeInsets.fromLTRB(
+                                                    22.5 * fem,
+                                                    44.25 * fem,
+                                                    21 * fem,
+                                                    44.25 * fem),
+                                                width: 121.5 * fem,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                      color: const Color(
+                                                          0xff498f9d)),
+                                                  color:
+                                                      const Color(0xff005473),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          60.75 * fem),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: const Color(
+                                                          0xffdceff6),
+                                                      offset: Offset(0 * fem,
+                                                          4.0499968529 * fem),
+                                                      blurRadius:
+                                                          1.349998951 * fem,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  // understandcauseepH (1736:2207)
+                                                  child: SizedBox(
+                                                    child: Container(
+                                                      constraints:
+                                                          BoxConstraints(
+                                                        maxWidth: 78 * fem,
+                                                      ),
+                                                      child: Text(
+                                                        'Understand\n cause',
+                                                        style: SafeGoogleFont(
+                                                          'Inter',
+                                                          fontSize:
+                                                              13.4999904633 *
+                                                                  ffem,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          height: 1.2125 *
+                                                              ffem /
+                                                              fem,
+                                                          color: const Color(
+                                                              0xffffffff),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          // arrow2NEV (1736:2208)
+                                          margin: EdgeInsets.fromLTRB(0 * fem,
+                                              0 * fem, 8.18 * fem, 0 * fem),
+                                          width: 94.77 * fem,
+                                          height: 1.21 * fem,
+                                          child: Image.network(
+                                            "assets/page-1/images/finalarrow.png",
+                                            width: 94.77 * fem,
+                                            height: 1.21 * fem,
+                                          ),
+                                        ),
+                                        Container(
+                                          // group3020tid (1736:2211)
+                                          padding: EdgeInsets.fromLTRB(
+                                              36 * fem,
+                                              44.25 * fem,
+                                              36.5 * fem,
+                                              44.25 * fem),
+                                          width: 121.5 * fem,
+                                          height: double.infinity,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: const Color(0xff498f9d)),
+                                            color: const Color(0xff005473),
+                                            borderRadius: BorderRadius.circular(
+                                                60.75 * fem),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: const Color(0xffdceff6),
+                                                offset: Offset(0 * fem,
+                                                    4.0499968529 * fem),
+                                                blurRadius: 1.349998951 * fem,
+                                              ),
+                                            ],
+                                          ),
+                                          child: Center(
+                                            // bookconsultm1j (1736:2213)
+                                            child: SizedBox(
+                                              child: Container(
+                                                constraints: BoxConstraints(
+                                                  maxWidth: 49 * fem,
+                                                ),
+                                                child: Text(
+                                                  'Book\nconsult',
+                                                  style: SafeGoogleFont(
+                                                    'Inter',
+                                                    fontSize:
+                                                        13.4999904633 * ffem,
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 1.2125 * ffem / fem,
+                                                    color:
+                                                        const Color(0xffffffff),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    // getstarted5HK (1736:2214)
+                                    margin: EdgeInsets.fromLTRB(0 * fem,
+                                        0 * fem, 34.25 * fem, 2.3 * fem),
+                                    child: Text(
+                                      'GET STARTED',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 16.9999866486 * ffem,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xff005473),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    // vectorCMw (1736:2215)
+                                    margin: EdgeInsets.fromLTRB(
+                                        0 * fem, 0 * fem, 0 * fem, 1.45 * fem),
+                                    width: 10.5 * fem,
+                                    height: 15.05 * fem,
+                                    child: Image.network(
+                                      "assets/page-1/images/arrowfinal.png",
+                                      width: 10.5 * fem,
+                                      height: 15.05 * fem,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Color(0xff42869E)),
-                            borderRadius: BorderRadius.circular(
-                                10), // Match the border radius
-                          ),
-                          prefixIcon: const Icon(
-                            Icons
-                                .medical_information, // You can change the icon as needed
-                            color: Color(0xff42869E),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
+                        ],
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 50),
-              child: Container(
-                // group56smm (163:131)
-                margin:
-                    EdgeInsets.fromLTRB(4 * fem, 0 * fem, 0 * fem, 47 * fem),
-                padding: EdgeInsets.fromLTRB(
-                    77 * fem, 69 * fem, 77 * fem, 69.2 * fem),
-                width: 1333 * fem,
-                height: 434 * fem,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(21 * fem),
-                    color: Colors.lime.shade50),
-                child: Container(
-                  // group49uyM (158:71)
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        // talktothedoctorsfromthecomfort (72:93)
-                        margin: EdgeInsets.fromLTRB(
-                            4.5 * fem, 0 * fem, 0 * fem, 50.2 * fem),
-                        child: Text(
-                          'Talk to the doctors from the comfort of your home easily',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 36 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.2125 * ffem / fem,
-                            color: Colors.indigo,
+              const SizedBox(
+                height: 50,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 20),
+                    Positioned(
+                      // group55fr9 (1736:2151)
+                      left: 278 * fem,
+                      top: 956 * fem,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(
+                            38 * fem, 33 * fem, 49.5 * fem, 0 * fem),
+                        width: 884.25 * fem,
+                        height: 102.75 * fem,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: const Color(0xffe1d8d8)),
+                          borderRadius:
+                              BorderRadius.circular(30.0000019073 * fem),
+                          gradient: const LinearGradient(
+                            begin: Alignment(0, -1),
+                            end: Alignment(0, 1),
+                            colors: <Color>[
+                              Color(0xff005473),
+                              Color(0xff0481af)
+                            ],
+                            stops: <double>[0, 1],
                           ),
                         ),
-                      ),
-                      Container(
-                        // group24xgj (72:91)
-                        padding: EdgeInsets.fromLTRB(
-                            53.1 * fem, 19.8 * fem, 36.54 * fem, 19.8 * fem),
-                        width: double.infinity,
-                        height: 201.6 * fem,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xffecfafc)),
-                          color: const Color(0xffecfafc),
-                          borderRadius:
-                              BorderRadius.circular(30.5999984741 * fem),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0x3f000000),
-                              offset: Offset(0 * fem, 3.5999999046 * fem),
-                              blurRadius: 1.7999999523 * fem,
-                            ),
-                            BoxShadow(
-                              color: const Color(0x3f000000),
-                              offset: Offset(0 * fem, -3 * fem),
-                              blurRadius: 2 * fem,
-                            ),
-                          ],
-                        ),
                         child: Container(
-                          // group23pU3 (72:90)
+                          // group3033Ju7 (1736:2153)
                           width: double.infinity,
                           height: double.infinity,
                           child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                // group20y63 (72:76)
+                                // findadoctornearbyinjust3steps4 (1736:2154)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 59.04 * fem, 0 * fem),
-                                height: double.infinity,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      // group17hnj (72:62)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 14.58 * fem, 0 * fem),
-                                      height: double.infinity,
-                                      child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            // group18qP9 (72:71)
-                                            margin: EdgeInsets.fromLTRB(0 * fem,
-                                                0 * fem, 16.2 * fem, 0 * fem),
-                                            padding: EdgeInsets.fromLTRB(
-                                                33.21 * fem,
-                                                57.51 * fem,
-                                                18.79 * fem,
-                                                51.49 * fem),
-                                            width: 162 * fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                  color: const Color(0xff498f9d)),
-                                              color: const Color(0xffffffff),
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                      81 * fem),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: const Color(0xffdceff6),
-                                                  offset: Offset(0 * fem,
-                                                      5.3999996185 * fem),
-                                                  blurRadius:
-                                                      1.7999999523 * fem,
-                                                ),
-                                              ],
-                                            ),
-                                            child: Center(
-                                              // entersymptomst6X (72:61)
-                                              child: SizedBox(
-                                                child: Container(
-                                                  constraints: BoxConstraints(
-                                                    maxWidth: 110 * fem,
-                                                  ),
-                                                  child: Text(
-                                                    'Enter \nsymptoms',
-                                                    style: SafeGoogleFont(
-                                                      'Inter',
-                                                      fontSize:
-                                                          21.5999984741 * ffem,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      height:
-                                                          1.2125 * ffem / fem,
-                                                      color: const Color(0xff005473),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Container(
-                                            // arrow3yNs (72:94)
-                                            margin: EdgeInsets.fromLTRB(
-                                                0 * fem,
-                                                0 * fem,
-                                                23.49 * fem,
-                                                0.18 * fem),
-                                            width: 126.36 * fem,
-                                            height: 1.62 * fem,
-                                            child: Image.network(
-                                              "",
-                                              width: 126.36 * fem,
-                                              height: 1.62 * fem,
-                                            ),
-                                          ),
-                                          Container(
-                                            // group21HeT (72:77)
-                                            padding: EdgeInsets.fromLTRB(
-                                                25.92 * fem,
-                                                58.32 * fem,
-                                                12.08 * fem,
-                                                50.68 * fem),
-                                            width: 162 * fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                  color: const Color(0xff498f9d)),
-                                              color: const Color(0xffffffff),
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                      81 * fem),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: const Color(0xffdceff6),
-                                                  offset: Offset(0 * fem,
-                                                      5.3999996185 * fem),
-                                                  blurRadius:
-                                                      1.7999999523 * fem,
-                                                ),
-                                              ],
-                                            ),
-                                            child: Center(
-                                              // understandcauseBE3 (72:70)
-                                              child: SizedBox(
-                                                child: Container(
-                                                  constraints: BoxConstraints(
-                                                    maxWidth: 124 * fem,
-                                                  ),
-                                                  child: Text(
-                                                    'Understand\n cause',
-                                                    style: SafeGoogleFont(
-                                                      'Inter',
-                                                      fontSize:
-                                                          21.5999984741 * ffem,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      height:
-                                                          1.2125 * ffem / fem,
-                                                      color: const Color(0xff005473),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      // arrow2H2B (72:72)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 10.53 * fem, 0 * fem),
-                                      width: 126.36 * fem,
-                                      height: 1.62 * fem,
-                                      child: Image.network(
-                                        "",
-                                        width: 126.36 * fem,
-                                        height: 1.62 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // group22zhH (72:78)
-                                      padding: EdgeInsets.fromLTRB(
-                                          47.79 * fem,
-                                          57.51 * fem,
-                                          36.21 * fem,
-                                          51.49 * fem),
-                                      width: 162 * fem,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: const Color(0xff498f9d)),
-                                        color: const Color(0xffffffff),
-                                        borderRadius:
-                                            BorderRadius.circular(81 * fem),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: const Color(0xffdceff6),
-                                            offset: Offset(
-                                                0 * fem, 5.3999996185 * fem),
-                                            blurRadius: 1.7999999523 * fem,
-                                          ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        // bookconsultgq1 (72:74)
-                                        child: SizedBox(
-                                          child: Container(
-                                            constraints: BoxConstraints(
-                                              maxWidth: 78 * fem,
-                                            ),
-                                            child: Text(
-                                              'Book\nconsult',
-                                              style: SafeGoogleFont(
-                                                'Inter',
-                                                fontSize: 21.5999984741 * ffem,
-                                                fontWeight: FontWeight.w600,
-                                                height: 1.2125 * ffem / fem,
-                                                color: const Color(0xff005473),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                    0 * fem, 0 * fem, 220 * fem, 0 * fem),
+                                child: Text(
+                                  'Find a doctor near by in just 3 steps',
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 30.0000019073 * ffem,
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.2125 * ffem / fem,
+                                    color: const Color(0xffffffff),
+                                  ),
                                 ),
                               ),
                               Container(
-                                // getstartedCHZ (72:79)
+                                // image52AAd (1736:2155)
                                 margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 0 * fem, 34.7 * fem, 1.4 * fem),
-                                child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const DetailPage()),
-                                    );
-                                  },
-                                  child: Text(
-                                    'GET STARTED',
-                                    style: SafeGoogleFont(
-                                      'Inter',
-                                      fontSize: 25.1999988556 * ffem,
-                                      fontWeight: FontWeight.w800,
-                                      height: 1.2125 * ffem / fem,
-                                      color: const Color(0xff005473),
-                                    ),
-                                  ),
+                                    0 * fem, 6 * fem, 0 * fem, 0 * fem),
+                                width: 63.75 * fem,
+                                height: 63.75 * fem,
+                                child: Image.network(
+                                  "assets/page-1/images/lady.png",
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Find a doctor nearby in just 3 steps',
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 40 * ffem,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.blueAccent,
-                        ),
-                      ),
-                      Container(
-                        width: 128 * fem,
-                        height: 128 * fem,
-                        child: Image.network(
-                          "assets/page-1/images/image-36.png",
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'Your area/pincode',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 32 * ffem,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.blueAccent,
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                  Container(
-                    width: 500 * fem,
-                    child: Material(
-                      child: TextField(
-                        controller: locationController,
-                        keyboardType: TextInputType.phone,
-                        style: TextStyle(
-                          fontSize: 20 * ffem,
-                          color: const Color(0xff000000),
-                        ),
-                        decoration: InputDecoration(
-                          labelText: 'Enter Your Location',
-                          labelStyle: TextStyle(
-                            color: specialController.text.isEmpty
-                                ? const Color(0xff42869E)
-                                : Colors.transparent,
-                          ),
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff42869E)),
-                          ),
-                          enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff42869E)),
-                          ),
-                          prefixIcon: const Icon(
-                            Icons.person,
-                            color: Color(0xff42869E),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'Your area/ pincode',
+                      style: SafeGoogleFont(
+                        'Inter',
+                        fontSize: 22.5000019073 * ffem,
+                        fontWeight: FontWeight.w600,
+                        height: 1.2125 * ffem / fem,
+                        color: const Color(0xff005473),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 30),
-                  Text(
-                    'Search specialities',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 32 * ffem,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.blueAccent,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Container(
-                    width: 500 * fem,
-                    child: Material(
-                      child: TextField(
-                        controller: specialController,
-                        keyboardType: TextInputType.phone,
-                        style: TextStyle(
-                          fontSize: 20 * ffem,
-                          color: const Color(0xff000000),
-                        ),
-                        decoration: InputDecoration(
-                          labelText: 'Enter Specialities of doctor',
-                          labelStyle: TextStyle(
-                            color: specialController.text.isEmpty
-                                ? const Color(0xff42869E)
-                                : Colors.transparent,
-                          ),
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff42869E)),
-                          ),
-                          enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff42869E)),
-                          ),
-                          prefixIcon: const Icon(
-                            Icons.person,
-                            color: Color(0xff42869E),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 30),
-             
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                  
-                      Material(
-                        color: Colors.black87,
-                        borderRadius: BorderRadius.circular(30),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DetailPage()),
-                            );
-                          },
-                          borderRadius: BorderRadius.circular(30),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 14,
-                              horizontal: 28,
+                    const SizedBox(height: 20),
+                    Container(
+                      // vectorZs7 (1736:2160)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 22.75 * fem, 3 * fem),
+                      width: 500 * fem,
+                      height: 58 * fem,
+                      child: Material(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search Location',
+                            hintStyle: TextStyle(
+                              fontSize: 21.0000019073 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2125 * ffem / fem,
+                              color: const Color(0xff949494),
                             ),
-                            child: Text(
-                              "Submit",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                            prefixIcon: const Icon(
+                              Icons
+                                  .location_on, // You can use any location icon here
+                              color: Colors.blue, // Set the color of the icon
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    Text(
+                      'Search specialities',
+                      style: SafeGoogleFont(
+                        'Inter',
+                        fontSize: 22.5000019073 * ffem,
+                        fontWeight: FontWeight.w600,
+                        height: 1.2125 * ffem / fem,
+                        color: const Color(0xff005473),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      // vectorZs7 (1736:2160)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 22.75 * fem, 3 * fem),
+                      width: 500 * fem,
+                      height: 58 * fem,
+                      child: Material(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Cardiologist',
+                            hintStyle: TextStyle(
+                              fontSize: 21.0000019073 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2125 * ffem / fem,
+                              color: const Color(0xff949494),
+                            ),
+                            suffixIcon: DropdownButton<String>(
+                              items: <String>[
+                                'Option 1',
+                                'Option 2',
+                                'Option 3'
+                              ].map((String value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(value),
+                                );
+                              }).toList(),
+                              onChanged: (String? newValue) {},
+
+                              icon: const Icon(
+                                  Icons.arrow_drop_down), // Dropdown arrow icon
+                              underline:
+                                  Container(), // Remove the default underline
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Material(
+                          color: Colors.black87,
+                          borderRadius: BorderRadius.circular(30),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const DetailPage()),
+                              );
+                            },
+                            borderRadius: BorderRadius.circular(30),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 14,
+                                horizontal: 28,
+                              ),
+                              child: Text(
+                                "Submit",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                // group2493g8y (1736:2217)
+                width: double.infinity,
+                height: 510 * fem,
+                decoration: const BoxDecoration(
+                  gradient: RadialGradient(
+                    center: Alignment(1.034, -0.142),
+                    radius: 1.05,
+                    colors: <Color>[
+                      Color(0xff0f607d),
+                      Color(0xff498f9d),
+                      Color(0xff277692),
+                      Color(0xff42869e),
+                      Color(0xef0aa3b8)
+                    ],
+                    stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/doctor/new_doctor_detail_page.dart';
 
 import 'package:myapp/utils.dart';
 
@@ -257,7 +258,7 @@ class _DetailPageState extends State<DetailPage> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const DoctorProfilePage()),
+                                                    const NewDoctorDetailPage()),
                                           );
                     },
                     child: Container(
