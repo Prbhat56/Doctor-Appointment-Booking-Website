@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/lab/lab_display_page.dart';
-import 'package:myapp/medical_shop_page.dart';
-import 'package:myapp/utils.dart';
+import 'package:myapp/responsiveweb/responsive.dart';
+
+import '../utils.dart';
 
 class SearchLab extends StatefulWidget {
   const SearchLab({super.key});
@@ -12,31 +13,43 @@ class SearchLab extends StatefulWidget {
 
 class _SearchLabState extends State<SearchLab> {
   String? dropdownValue;
+
   @override
   Widget build(BuildContext context) {
     TextEditingController locController = TextEditingController();
     double baseWidth = 1440;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
+
+    return Responsive(
+      largeScreen: buildLargeScreen(fem, ffem, locController),
+      meduimScreen: buildMediumScreen(fem, ffem, locController),
+      smallScreen: buildSmallScreen(fem, ffem, locController), 
+    );
+  }
+
+  Widget buildLargeScreen(double fem, double ffem, TextEditingController locController) {
+       double baseWidth = 1440;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
         height: 2000 * fem,
-        decoration: BoxDecoration(color: Colors.indigo.shade100),
+        decoration: BoxDecoration(color: Colors.white),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.all(50),
               child: Container(
-                margin:
-                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 217 * fem),
+                margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 217 * fem),
                 width: double.infinity,
-                height: 168 * fem,
+                height: 130 * fem,
                 decoration: BoxDecoration(
                   border: Border.all(color: Color(0xffe1d8d8)),
                   borderRadius: BorderRadius.circular(40 * fem),
-                 color: Colors.pink.shade50,
+                  color: Colors.pink.shade50,
                 ),
                 child: Center(
                   child: Text(
@@ -44,9 +57,9 @@ class _SearchLabState extends State<SearchLab> {
                     textAlign: TextAlign.center,
                     style: SafeGoogleFont(
                       'Roboto',
-                      fontSize: 60 * ffem,
+                      fontSize: 50 * ffem,
                       fontWeight: FontWeight.w600,
-                      height: 1.1725 * ffem / fem,
+                      height: 1.13 * ffem / fem,
                       color: Colors.pink.shade900,
                     ),
                   ),
@@ -56,9 +69,8 @@ class _SearchLabState extends State<SearchLab> {
             SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 260),
-              child: Column(
+        
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
@@ -68,7 +80,6 @@ class _SearchLabState extends State<SearchLab> {
                       shadowColor: Colors.grey,
                       borderRadius: BorderRadius.circular(10),
                       child: Row(
-                        // Wrap the TextField and DropdownButton in a Row
                         children: [
                           Expanded(
                             child: TextField(
@@ -86,13 +97,11 @@ class _SearchLabState extends State<SearchLab> {
                                       : Colors.transparent,
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Color(0xff42869E)),
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Color(0xff42869E)),
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 prefixIcon: Icon(
@@ -105,18 +114,20 @@ class _SearchLabState extends State<SearchLab> {
                             ),
                           ),
                           DropdownButton<String>(
-                            // Add a DropdownButton
-                            value: dropdownValue, // Set the selected value
+                            value: dropdownValue,
                             onChanged: (String? newValue) {
-                              // Handle dropdown selection
                               setState(() {
-                                dropdownValue = newValue ??
-                                    ''; // Default value is an empty string
+                                dropdownValue = newValue ?? '';
                               });
                             },
-
-                            items: <String>['lab In Delhi', 'lab In Delhi', 'lab In Delhi','lab In Delhi','lab In Delhi']
-                                .map<DropdownMenuItem<String>>((String value) {
+                            items: <String>[
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi'
+                            ].map<DropdownMenuItem<String>>(
+                                (String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),
@@ -127,9 +138,14 @@ class _SearchLabState extends State<SearchLab> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 50,
-                  ),
+                
+                ],
+              ),
+              SizedBox(height: 50,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+             
                   Material(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(30),
@@ -138,7 +154,7 @@ class _SearchLabState extends State<SearchLab> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LabDisplayPage()),
+                              builder: (context) => const LabSDisplayPage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -158,8 +174,318 @@ class _SearchLabState extends State<SearchLab> {
                     ),
                   ),
                 ],
+              )
+          
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildMediumScreen(double fem, double ffem, TextEditingController locController) {
+        double baseWidth = 1440*0.8;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        height: 2000 * fem,
+        decoration: BoxDecoration(color: Colors.white),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 217 * fem),
+                width: double.infinity,
+                height: 130 * fem,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Color(0xffe1d8d8)),
+                  borderRadius: BorderRadius.circular(40 * fem),
+                  color: Colors.pink.shade50,
+                ),
+                child: Center(
+                  child: Text(
+                    'Find Lab in India ',
+                    textAlign: TextAlign.center,
+                    style: SafeGoogleFont(
+                      'Roboto',
+                      fontSize: 50 * ffem,
+                      fontWeight: FontWeight.w600,
+                      height: 1.13 * ffem / fem,
+                      color: Colors.pink.shade900,
+                    ),
+                  ),
+                ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 50,
+            ),
+        
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 700 * fem,
+                    child: Material(
+                      elevation: 3,
+                      shadowColor: Colors.grey,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              controller: locController,
+                              keyboardType: TextInputType.phone,
+                              style: TextStyle(
+                                fontSize: 20 * ffem,
+                                color: const Color(0xff000000),
+                              ),
+                              decoration: InputDecoration(
+                                labelText: 'Enter Your Location',
+                                labelStyle: TextStyle(
+                                  color: locController.text.isEmpty
+                                      ? const Color(0xff42869E)
+                                      : Colors.transparent,
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                prefixIcon: Icon(
+                                  Icons.location_on,
+                                  color: Color(0xff42869E),
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                              ),
+                            ),
+                          ),
+                          DropdownButton<String>(
+                            value: dropdownValue,
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                dropdownValue = newValue ?? '';
+                              });
+                            },
+                            items: <String>[
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi'
+                            ].map<DropdownMenuItem<String>>(
+                                (String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                
+                ],
+              ),
+              SizedBox(height: 50,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+             
+                  Material(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(30),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LabSDisplayPage()),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 22,
+                          horizontal: 44,
+                        ),
+                        child: Text(
+                          "Search",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+          
+          ],
+        ),
+      ),
+    );
+ 
+  }
+
+  Widget buildSmallScreen(double fem, double ffem, TextEditingController locController) {
+  
+         double baseWidth = 1440*0.6;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        height: 2000 * fem,
+        decoration: BoxDecoration(color: Colors.white),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 217 * fem),
+                width: double.infinity,
+                height: 130 * fem,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Color(0xffe1d8d8)),
+                  borderRadius: BorderRadius.circular(40 * fem),
+                  color: Colors.pink.shade50,
+                ),
+                child: Center(
+                  child: Text(
+                    'Find Lab in India ',
+                    textAlign: TextAlign.center,
+                    style: SafeGoogleFont(
+                      'Roboto',
+                      fontSize: 50 * ffem,
+                      fontWeight: FontWeight.w600,
+                      height: 1.13 * ffem / fem,
+                      color: Colors.pink.shade900,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+        
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 700 * fem,
+                    child: Material(
+                      elevation: 3,
+                      shadowColor: Colors.grey,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              controller: locController,
+                              keyboardType: TextInputType.phone,
+                              style: TextStyle(
+                                fontSize: 20 * ffem,
+                                color: const Color(0xff000000),
+                              ),
+                              decoration: InputDecoration(
+                                labelText: 'Enter Your Location',
+                                labelStyle: TextStyle(
+                                  color: locController.text.isEmpty
+                                      ? const Color(0xff42869E)
+                                      : Colors.transparent,
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Color(0xff42869E)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                prefixIcon: Icon(
+                                  Icons.location_on,
+                                  color: Color(0xff42869E),
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                              ),
+                            ),
+                          ),
+                          DropdownButton<String>(
+                            value: dropdownValue,
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                dropdownValue = newValue ?? '';
+                              });
+                            },
+                            items: <String>[
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi',
+                              'lab In Delhi'
+                            ].map<DropdownMenuItem<String>>(
+                                (String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                
+                ],
+              ),
+              SizedBox(height: 50,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+             
+                  Material(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(30),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LabSDisplayPage()),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 22,
+                          horizontal: 44,
+                        ),
+                        child: Text(
+                          "Search",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+          
           ],
         ),
       ),
