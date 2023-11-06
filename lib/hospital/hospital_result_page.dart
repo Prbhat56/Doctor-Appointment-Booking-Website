@@ -229,7 +229,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HospitalDetailPage()),
+                              builder: (context) => const HospitalDetailpage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -257,7 +257,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HospitalDetailPage()),
+                              builder: (context) => const HospitalDetailpage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -389,7 +389,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HospitalDetailPage()),
+                              builder: (context) => const HospitalDetailpage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),
@@ -417,7 +417,7 @@ class _HospitalResultPageState extends State<HospitalResultPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HospitalDetailPage()),
+                              builder: (context) => const HospitalDetailpage()),
                         );
                       },
                       borderRadius: BorderRadius.circular(30),

@@ -13,6 +13,7 @@ import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/doctor_profile_page.dart';
 import 'package:myapp/doctormenu/sidebar/sidebar_page.dart';
 import 'package:myapp/find_chemist.dart';
+import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/hospital/hospital_detail_page.dart';
 import 'package:myapp/hospital/hospital_display_page.dart';
 import 'package:myapp/hospital/hospital_result_page.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:DetailPage(),
+		home:FindHospitalPage(),
 	);
 	}
 }
