@@ -23,7 +23,7 @@ class SlidingWebPage extends StatelessWidget {
           return Dialog(
             // Use a Container with a background image as the dialog's child
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/background_image.png'), // Your image path
                   fit: BoxFit.cover, // Cover the entire dialog
@@ -32,12 +32,12 @@ class SlidingWebPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   // Add content for your dialog here
-                  Text('Custom Dialog Content'),
+                  const Text('Custom Dialog Content'),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: Text('Close Dialog'),
+                    child: const Text('Close Dialog'),
                   ),
                 ],
               ),
@@ -53,7 +53,7 @@ class SlidingWebPage extends StatelessWidget {
           return AlertDialog(
             content: Container(
               width: double.infinity, // Set width to occupy the entire AlertDialog
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/background_image.jpg'), // Replace with your image asset path
                   fit: BoxFit.cover, // You can adjust the fit as needed
@@ -63,12 +63,12 @@ class SlidingWebPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   // Add your content here, such as text, buttons, or other widgets
-                  Text('Custom AlertDialog with Background Image'),
+                  const Text('Custom AlertDialog with Background Image'),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop(); // Close the dialog
                     },
-                    child: Text('Close'),
+                    child: const Text('Close'),
                   ),
                 ],
               ),
@@ -89,7 +89,7 @@ class SlidingWebPage extends StatelessWidget {
                 Container(
                   width: 1441 * fem,
                   height: 124 * fem,
-                  color: Color(0xff005473),
+                  color: const Color(0xff005473),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +113,7 @@ class SlidingWebPage extends StatelessWidget {
                                     fontSize: 32 * ffem,
                                     fontWeight: FontWeight.w700,
                                     height: 1.2102272511 * ffem / fem,
-                                    color: Color(0xff005473),
+                                    color: const Color(0xff005473),
                                   ),
                                   children: [
                                     TextSpan(
@@ -123,7 +123,7 @@ class SlidingWebPage extends StatelessWidget {
                                         fontSize: 32 * ffem,
                                         fontWeight: FontWeight.w800,
                                         height: 1.2125 * ffem / fem,
-                                        color: Color(0xffff2828),
+                                        color: const Color(0xffff2828),
                                       ),
                                     ),
                                     TextSpan(
@@ -133,7 +133,7 @@ class SlidingWebPage extends StatelessWidget {
                                         fontSize: 32 * ffem,
                                         fontWeight: FontWeight.w500,
                                         height: 1.2125 * ffem / fem,
-                                        color: Color(0xfffbbc05),
+                                        color: const Color(0xfffbbc05),
                                       ),
                                     ),
                                   ],
@@ -149,8 +149,8 @@ class SlidingWebPage extends StatelessWidget {
                           width: 300,
                           height: 56 * fem,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Color(0xffb3b3b3)),
-                            color: Color(0xffffffff),
+                            border: Border.all(color: const Color(0xffb3b3b3)),
+                            color: const Color(0xffffffff),
                             borderRadius:
                                 BorderRadius.circular(48.4500007629 * fem),
                           ),
@@ -168,7 +168,7 @@ class SlidingWebPage extends StatelessWidget {
                                         fontSize: 18.7000007629 * ffem,
                                         fontWeight: FontWeight.w400,
                                         height: 1.2125 * ffem / fem,
-                                        color: Color(
+                                        color: const Color(
                                             0x56151515), // Adjust the color as needed
                                       ),
                                       border: InputBorder.none,
@@ -184,8 +184,8 @@ class SlidingWebPage extends StatelessWidget {
 
                                 height: 56 * fem,
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xffb3b3b3)),
-                                  color: Color(0xffffffff),
+                                  border: Border.all(color: const Color(0xffb3b3b3)),
+                                  color: const Color(0xffffffff),
                                   borderRadius: BorderRadius.circular(
                                       48.4500007629 * fem),
                                 ),
@@ -214,7 +214,7 @@ class SlidingWebPage extends StatelessWidget {
                           fontSize: 24 * ffem,
                           fontWeight: FontWeight.w400,
                           height: 1.2125 * ffem / fem,
-                          color: Color(0xffffffff),
+                          color: const Color(0xffffffff),
                         ),
                       ),
                       Row(
@@ -250,7 +250,7 @@ class SlidingWebPage extends StatelessWidget {
                                 Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: 'Name',
                                       border: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -264,7 +264,7 @@ class SlidingWebPage extends StatelessWidget {
                                 Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: 'Address',
                                       border: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -278,7 +278,7 @@ class SlidingWebPage extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.all(8),
                                     child: TextFormField(
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                           hintText: 'Mobile Number',
                                           border: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -292,7 +292,7 @@ class SlidingWebPage extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.all(8),
                                     child: TextFormField(
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                           hintText: 'Verify Otp',
                                           border: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -352,7 +352,7 @@ class SlidingWebPage extends StatelessWidget {
                                   fontSize: 17 * ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.17 * ffem / fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -364,7 +364,7 @@ class SlidingWebPage extends StatelessWidget {
                               fontSize: 17 * ffem,
                               fontWeight: FontWeight.w400,
                               height: 1.17* ffem / fem,
-                              color: Color(0xffffffff),
+                              color: const Color(0xffffffff),
                             ),
                           ),
                           Material(
@@ -399,7 +399,7 @@ class SlidingWebPage extends StatelessWidget {
                                 Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: 'Mobile Number',
                                     border: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -413,7 +413,7 @@ class SlidingWebPage extends StatelessWidget {
                                 Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: 'Verify Code',
                                       border: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -427,7 +427,7 @@ class SlidingWebPage extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8),
                                   child: ElevatedButton(
-                                    child: Text('GET Otp'),
+                                    child: const Text('GET Otp'),
                                     onPressed: (){},
                                   ),
                                 ),
@@ -463,7 +463,7 @@ class SlidingWebPage extends StatelessWidget {
                                   fontSize: 17* ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.17 * ffem / fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -473,7 +473,7 @@ class SlidingWebPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Expanded(
@@ -513,7 +513,8 @@ class SlidingWebPage extends StatelessWidget {
                           selected: sideBarController.index.value == 5),
                     ],
                   ),
-                )),
+                )
+                ),
               ],
             ),
           ),

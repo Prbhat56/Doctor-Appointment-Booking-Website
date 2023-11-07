@@ -152,6 +152,8 @@ flutter:
     - assets/page-1/images/newtick.png
     - assets/page-1/images/newlike.png
     - assets/page-1/images/newstar.png
+    - assets/page-1/images/no_appointment.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Form/confirm_clinic_visit.dart';
 import 'package:myapp/Form/else_confirm_page.dart';
+import 'package:myapp/Patient/book_appointment.dart';
+import 'package:myapp/Patient/non_empty_appointment_page.dart';
+import 'package:myapp/constant/upper_bar.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/create_user.dart';
 import 'package:myapp/doctor/doctor_login_page.dart';
@@ -11,7 +14,7 @@ import 'package:myapp/doctor/doctor_reset_password.dart';
 import 'package:myapp/doctor/new_doctor_detail_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/doctor_profile_page.dart';
-import 'package:myapp/doctormenu/sidebar/sidebar_page.dart';
+
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/hospital/hospital_detail_page.dart';
@@ -25,6 +28,7 @@ import 'package:myapp/login_screen.dart';
 
 import 'package:myapp/medical_shop_page.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/patient_Details/no_appointment_page.dart';
 
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
@@ -48,7 +52,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:SlidingWebPage(),
+		home:SelectableContainerRow(),
 	);
 	}
 }
