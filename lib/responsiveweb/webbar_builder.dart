@@ -16,6 +16,68 @@ class SlidingWebPage extends StatelessWidget {
     double ffem = fem * 0.97;
     SideBarController sideBarController = Get.put(SideBarController());
     final _formKey = GlobalKey<FormState>();
+    void _showCustomDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+            // Use a Container with a background image as the dialog's child
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/background_image.png'), // Your image path
+                  fit: BoxFit.cover, // Cover the entire dialog
+                ),
+              ),
+              child: Column(
+                children: <Widget>[
+                  // Add content for your dialog here
+                  Text('Custom Dialog Content'),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('Close Dialog'),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
+    void showCustomAlertDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Container(
+              width: double.infinity, // Set width to occupy the entire AlertDialog
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/background_image.jpg'), // Replace with your image asset path
+                  fit: BoxFit.cover, // You can adjust the fit as needed
+                ),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  // Add your content here, such as text, buttons, or other widgets
+                  Text('Custom AlertDialog with Background Image'),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(); // Close the dialog
+                    },
+                    child: Text('Close'),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
+
 
     return Scaffold(
       body: Column(
@@ -155,15 +217,134 @@ class SlidingWebPage extends StatelessWidget {
                           color: Color(0xffffffff),
                         ),
                       ),
-                      Container(
-                        width: 80 * fem,
-                        height: 48 * fem,
-                        color: Color(0xff000000),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                              onPressed: () {},
+                      Row(
+                        children: [
+                          Material(
+                            color: Colors.blue,
+                            child: TextButton(
+                              onPressed: () async{
+                                await showDialog<void>(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                content: Stack(
+                                clipBehavior: Clip.none,
+                                children: <Widget>[
+                                Positioned(
+                                right: -40,
+                                top: -40,
+                                child: InkResponse(
+                                onTap: () {
+                                Navigator.of(context).pop();
+                                },
+                                child: const CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: Icon(Icons.close),
+                                ),
+                                ),
+                                ),
+                                Form(
+                                key: _formKey,
+                                child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                      hintText: 'Name',
+                                      border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Colors.black, // Border color
+                                          width: 2.0, // Border width
+                                        ),
+                                      )
+                                  ),
+                                ),
+                                ),
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                      hintText: 'Address',
+                                      border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Colors.black, // Border color
+                                          width: 2.0, // Border width
+                                        ),
+                                      )
+                                  ),
+                                ),
+                                ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8),
+                                    child: TextFormField(
+                                      decoration: InputDecoration(
+                                          hintText: 'Mobile Number',
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black, // Border color
+                                              width: 2.0, // Border width
+                                            ),
+                                          )
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8),
+                                    child: TextFormField(
+                                      decoration: InputDecoration(
+                                          hintText: 'Verify Otp',
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black, // Border color
+                                              width: 2.0, // Border width
+                                            ),
+                                          )
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8),
+                                    child: SizedBox(
+                                      width: 100,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.blue, // Background color
+                                          onPrimary: Colors.white, // Text color
+                                        ),
+                                        child: const Text('Get Otp'),
+                                        onPressed: () {
+
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: SizedBox(
+                                  width: 500,
+                                  child: ElevatedButton(
+
+                                    style: ElevatedButton.styleFrom(
+                                      primary: Colors.red, // Background color
+                                       // Text color
+                                    ),
+                                  child: const Text('Submit'),
+                                  onPressed: () {
+                                  if (_formKey.currentState!.validate()) {
+                                  _formKey.currentState!.save();
+                                  }
+                                  },
+                                  ),
+                                ),
+                                )
+                                ],
+                                ),
+                                ),
+                                ],
+                                ),
+                                ));
+                              },
                               child: Text(
                                 "Register",
                                 style: SafeGoogleFont(
@@ -175,18 +356,106 @@ class SlidingWebPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Text(
-                              "/",
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.17* ffem / fem,
-                                color: Color(0xffffffff),
-                              ),
+                          ),
+                          Text(
+                            "/",
+                            style: SafeGoogleFont(
+                              'Inter',
+                              fontSize: 17 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.17* ffem / fem,
+                              color: Color(0xffffffff),
                             ),
-                            TextButton(
-                              onPressed: () {},
+                          ),
+                          Material(
+                            color: Colors.blue,
+                            child: TextButton(
+
+                              onPressed: () async{
+                                await showDialog<void>(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                content: Stack(
+                                clipBehavior: Clip.none,
+                                children: <Widget>[
+                                Positioned(
+                                right: -40,
+                                top: -40,
+                                child: InkResponse(
+                                onTap: () {
+                                Navigator.of(context).pop();
+                                },
+                                child: const CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: Icon(Icons.close),
+                                ),
+                                ),
+                                ),
+                                Form(
+                                key: _formKey,
+                                child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                      hintText: 'Mobile Number',
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.black, // Border color
+                                        width: 2.0, // Border width
+                                      ),
+                                    )
+                                  ),
+                                ),
+                                ),
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                      hintText: 'Verify Code',
+                                      border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Colors.black, // Border color
+                                          width: 2.0, // Border width
+                                        ),
+                                      )
+                                  ),
+                                ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8),
+                                  child: ElevatedButton(
+                                    child: Text('GET Otp'),
+                                    onPressed: (){},
+                                  ),
+                                ),
+                                Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: SizedBox(
+                                  width: 200,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      primary: Colors.red, // Background color
+                                      // Text color
+                                    ),
+                                  child: const Text('Submit'),
+                                  onPressed: () {
+                                  if (_formKey.currentState!.validate()) {
+                                  _formKey.currentState!.save();
+                                  }
+                                  },
+                                  ),
+                                ),
+                                )
+                                ],
+                                ),
+                                ),
+                                ],
+                                ),
+                                ));
+                              },
                               child: Text(
                                 "Login",
                                 style: SafeGoogleFont(
@@ -198,8 +467,8 @@ class SlidingWebPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
