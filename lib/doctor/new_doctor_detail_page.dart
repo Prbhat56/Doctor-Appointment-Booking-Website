@@ -582,7 +582,7 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 21 * fem,
                         height: 19 * fem,
                         child: Image.network(
-                         "assets/page-1/images/newstar.png",
+                          "assets/page-1/images/newstar.png",
                           width: 21 * fem,
                           height: 19 * fem,
                         ),
@@ -598,7 +598,7 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 21 * fem,
                         height: 19 * fem,
                         child: Image.network(
-                         "assets/page-1/images/newstar.png",
+                          "assets/page-1/images/newstar.png",
                           width: 21 * fem,
                           height: 19 * fem,
                         ),
@@ -614,7 +614,7 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 21 * fem,
                         height: 19 * fem,
                         child: Image.network(
-                      "assets/page-1/images/newstar.png",
+                          "assets/page-1/images/newstar.png",
                           width: 21 * fem,
                           height: 19 * fem,
                         ),
@@ -630,7 +630,7 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 21 * fem,
                         height: 19 * fem,
                         child: Image.network(
-                        "assets/page-1/images/newstar.png",
+                          "assets/page-1/images/newstar.png",
                           width: 21 * fem,
                           height: 19 * fem,
                         ),
@@ -1596,15 +1596,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 413 * fem,
                         height: 86 * fem,
                         child: Container(
-                        decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
-                      
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              center: Alignment(1.034, -0.142),
+                              radius: 1.05,
+                              colors: <Color>[
+                                Color(0xff0f607d),
+                                Color(0xff498f9d),
+                                Color(0xff277692),
+                                Color(0xff42869e),
+                                Color(0xef0aa3b8)
+                              ],
+                              stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -1618,14 +1623,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 521 * fem,
                         height: 66 * fem,
                         child: Container(
-                      decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              center: Alignment(1.034, -0.142),
+                              radius: 1.05,
+                              colors: <Color>[
+                                Color(0xff0f607d),
+                                Color(0xff498f9d),
+                                Color(0xff277692),
+                                Color(0xff42869e),
+                                Color(0xef0aa3b8)
+                              ],
+                              stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -1639,14 +1650,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 146 * fem,
                         height: 54 * fem,
                         child: Container(
-                    decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              center: Alignment(1.034, -0.142),
+                              radius: 1.05,
+                              colors: <Color>[
+                                Color(0xff0f607d),
+                                Color(0xff498f9d),
+                                Color(0xff277692),
+                                Color(0xff42869e),
+                                Color(0xef0aa3b8)
+                              ],
+                              stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -1660,14 +1677,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 66 * fem,
                         height: 34 * fem,
                         child: Container(
-               decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              center: Alignment(1.034, -0.142),
+                              radius: 1.05,
+                              colors: <Color>[
+                                Color(0xff0f607d),
+                                Color(0xff498f9d),
+                                Color(0xff277692),
+                                Color(0xff42869e),
+                                Color(0xef0aa3b8)
+                              ],
+                              stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -1723,7 +1746,7 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 18 * fem,
                         height: 25 * fem,
                         child: Image.network(
-                         "assets/page-1/images/rupee.png",
+                          "assets/page-1/images/rupee.png",
                           width: 18 * fem,
                           height: 25 * fem,
                         ),
@@ -1813,14 +1836,16 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                         width: 104 * fem,
                         height: 47 * fem,
                         child: Material(
+                          color: Colors.indigoAccent.shade100,
                           child: TextButton(
                             
-                            onPressed: (){
-                                  Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ConfirmClinicVisitPage()),
-                                );
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ConfirmClinicVisitPage()),
+                              );
                             },
                             child: Text(
                               'Book Now',
@@ -1870,14 +1895,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
               padding:
                   EdgeInsets.fromLTRB(21 * fem, 15 * fem, 72 * fem, 13 * fem),
               width: double.infinity,
-             decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: Alignment(1.034, -0.142),
+                  radius: 1.05,
+                  colors: <Color>[
+                    Color(0xff0f607d),
+                    Color(0xff498f9d),
+                    Color(0xff277692),
+                    Color(0xff42869e),
+                    Color(0xef0aa3b8)
+                  ],
+                  stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                ),
+              ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -1924,14 +1955,20 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                     padding: EdgeInsets.fromLTRB(
                         21 * fem, 13 * fem, 102 * fem, 15 * fem),
                     height: double.infinity,
-                  decoration:  BoxDecoration (
-    gradient:  RadialGradient (
-      center:  Alignment(1.034, -0.142),
-      radius:  1.05,
-      colors:  <Color>[Color(0xff0f607d), Color(0xff498f9d), Color(0xff277692), Color(0xff42869e), Color(0xef0aa3b8)],
-      stops:  <double>[0, 0.26, 0.495, 0.75, 1],
-    ),
-  ),
+                    decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                        center: Alignment(1.034, -0.142),
+                        radius: 1.05,
+                        colors: <Color>[
+                          Color(0xff0f607d),
+                          Color(0xff498f9d),
+                          Color(0xff277692),
+                          Color(0xff42869e),
+                          Color(0xef0aa3b8)
+                        ],
+                        stops: <double>[0, 0.26, 0.495, 0.75, 1],
+                      ),
+                    ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [

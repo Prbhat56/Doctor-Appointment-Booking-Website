@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/constant/drawer.dart';
 import 'package:myapp/upload_description.dart';
 import 'package:myapp/utils.dart';
@@ -222,7 +223,7 @@ class SearchMedicalShop extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'Ankita G',
+                          'Prabhat',
                           style: SafeGoogleFont(
                             'Inter',
                             fontSize: 30 * ffem,
@@ -238,7 +239,7 @@ class SearchMedicalShop extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      MyDrawer()),
+                                                      SideBarPage()),
                                             );
                               },
                               icon: const Icon(

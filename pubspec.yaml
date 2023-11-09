@@ -40,12 +40,13 @@ dependencies:
   google_fonts: ^6.1.0
   get: ^4.6.6
   image_picker: ^1.0.4
-  firebase_core: ^2.20.0
-  firebase_auth: ^4.12.0
+  firebase_core: ^2.21.0
+  firebase_auth: ^4.12.1
   fluttertoast: ^8.2.2
   flutter_image_slideshow: ^0.1.6
   pinput: ^3.0.1
   url_launcher: ^6.2.1
+  cloud_firestore: ^4.12.2
 
 
 

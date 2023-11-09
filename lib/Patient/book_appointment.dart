@@ -49,7 +49,7 @@ class _SideBarPageState extends State<SideBarPage> {
                       Column(
                         children: [
                           Text(
-                            'Ankita gupta',
+                            'Prabhat',
                             style: SafeGoogleFont(
                               'Inter',
                               fontSize: 19 * ffem,

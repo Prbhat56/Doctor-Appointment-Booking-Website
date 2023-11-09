@@ -1,16 +1,33 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/Round_button.dart';
 import 'package:myapp/controller/sidebar_controller.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/utils2.dart';
 
 import '../constant/horizontal_list.dart';
 import '../utils.dart';
 
-class SlidingWebPage extends StatelessWidget {
-  const SlidingWebPage({super.key});
+class SlidingWebPage extends StatefulWidget {
+  @override
+  State<SlidingWebPage> createState() => _SlidingWebPageState();
+}
 
+class _SlidingWebPageState extends State<SlidingWebPage> {
   @override
   Widget build(BuildContext context) {
+    bool loading = false;
+
+    final phoneNumberController = TextEditingController();
+    final verificationCodeController = TextEditingController();
+    final nameController = TextEditingController();
+    final addressController = TextEditingController();
+    final mobileController = TextEditingController();
+    final fireStore =
+        FirebaseFirestore.instance.collection('Patient Registration');
+    final auth = FirebaseAuth.instance;
     double baseWidth = 1120;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -25,7 +42,8 @@ class SlidingWebPage extends StatelessWidget {
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/background_image.png'), // Your image path
+                  image: AssetImage(
+                      'assets/background_image.png'), // Your image path
                   fit: BoxFit.cover, // Cover the entire dialog
                 ),
               ),
@@ -46,16 +64,19 @@ class SlidingWebPage extends StatelessWidget {
         },
       );
     }
+
     void showCustomAlertDialog(BuildContext context) {
       showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
             content: Container(
-              width: double.infinity, // Set width to occupy the entire AlertDialog
+              width:
+                  double.infinity, // Set width to occupy the entire AlertDialog
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/background_image.jpg'), // Replace with your image asset path
+                  image: AssetImage(
+                      'assets/background_image.jpg'), // Replace with your image asset path
                   fit: BoxFit.cover, // You can adjust the fit as needed
                 ),
               ),
@@ -78,7 +99,6 @@ class SlidingWebPage extends StatelessWidget {
       );
     }
 
-
     return Scaffold(
       body: Column(
         children: [
@@ -88,7 +108,7 @@ class SlidingWebPage extends StatelessWidget {
               children: [
                 Container(
                   width: 1441 * fem,
-                  height: 124 * fem,
+                  height: 110 * fem,
                   color: const Color(0xff005473),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -184,7 +204,8 @@ class SlidingWebPage extends StatelessWidget {
 
                                 height: 56 * fem,
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: const Color(0xffb3b3b3)),
+                                  border: Border.all(
+                                      color: const Color(0xffb3b3b3)),
                                   color: const Color(0xffffffff),
                                   borderRadius: BorderRadius.circular(
                                       48.4500007629 * fem),
@@ -206,7 +227,6 @@ class SlidingWebPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                 
                       Text(
                         'Contact us',
                         style: SafeGoogleFont(
@@ -222,128 +242,244 @@ class SlidingWebPage extends StatelessWidget {
                           Material(
                             color: Colors.blue,
                             child: TextButton(
-                              onPressed: () async{
+                              onPressed: () async {
                                 await showDialog<void>(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                content: Stack(
-                                clipBehavior: Clip.none,
-                                children: <Widget>[
-                                Positioned(
-                                right: -40,
-                                top: -40,
-                                child: InkResponse(
-                                onTap: () {
-                                Navigator.of(context).pop();
-                                },
-                                child: const CircleAvatar(
-                                backgroundColor: Colors.red,
-                                child: Icon(Icons.close),
-                                ),
-                                ),
-                                ),
-                                Form(
-                                key: _formKey,
-                                child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: TextFormField(
-                                  decoration: const InputDecoration(
-                                      hintText: 'Name',
-                                      border: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Colors.black, // Border color
-                                          width: 2.0, // Border width
-                                        ),
-                                      )
-                                  ),
-                                ),
-                                ),
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: TextFormField(
-                                  decoration: const InputDecoration(
-                                      hintText: 'Address',
-                                      border: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Colors.black, // Border color
-                                          width: 2.0, // Border width
-                                        ),
-                                      )
-                                  ),
-                                ),
-                                ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8),
-                                    child: TextFormField(
-                                      decoration: const InputDecoration(
-                                          hintText: 'Mobile Number',
-                                          border: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Colors.black, // Border color
-                                              width: 2.0, // Border width
+                                    context: context,
+                                    builder: (context) {
+                                      late String vId;
+                                      int myToken;
+                                      return AlertDialog(
+                                        content: Stack(
+                                          clipBehavior: Clip.none,
+                                          children: <Widget>[
+                                            Positioned(
+                                              right: -40,
+                                              top: -40,
+                                              child: InkResponse(
+                                                onTap: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: const CircleAvatar(
+                                                  backgroundColor: Colors.red,
+                                                  child: Icon(Icons.close),
+                                                ),
+                                              ),
                                             ),
-                                          )
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8),
-                                    child: TextFormField(
-                                      decoration: const InputDecoration(
-                                          hintText: 'Verify Otp',
-                                          border: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Colors.black, // Border color
-                                              width: 2.0, // Border width
+                                            Form(
+                                              key: _formKey,
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: TextFormField(
+                                                      controller:
+                                                          nameController,
+                                                      decoration:
+                                                          const InputDecoration(
+                                                              hintText: 'Name',
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Colors
+                                                                      .black, // Border color
+                                                                  width:
+                                                                      2.0, // Border width
+                                                                ),
+                                                              )),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: TextFormField(
+                                                      controller:
+                                                          addressController,
+                                                      decoration:
+                                                          const InputDecoration(
+                                                              hintText:
+                                                                  'Address',
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Colors
+                                                                      .black, // Border color
+                                                                  width:
+                                                                      2.0, // Border width
+                                                                ),
+                                                              )),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: TextFormField(
+                                                      controller:
+                                                          mobileController,
+                                                      decoration:
+                                                          const InputDecoration(
+                                                              hintText:
+                                                                  'Mobile Number',
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Colors
+                                                                      .black, // Border color
+                                                                  width:
+                                                                      2.0, // Border width
+                                                                ),
+                                                              )),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: TextFormField(
+                                                      decoration:
+                                                          const InputDecoration(
+                                                              hintText:
+                                                                  'Verify Otp',
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Colors
+                                                                      .black, // Border color
+                                                                  width:
+                                                                      2.0, // Border width
+                                                                ),
+                                                              )),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: SizedBox(
+                                                      width: 100,
+                                                      child: RoundButton(
+                                                          title: 'Get Otp',
+                                                          loading: loading,
+                                                          onTap: () {
+                                                            setState(() {
+                                                              loading = true;
+                                                            });
+
+                                                            auth
+                                                                .verifyPhoneNumber(
+                                                                    phoneNumber:
+                                                                        "+91${mobileController.text.toString()}",
+                                                                    verificationCompleted:
+                                                                        (_) {
+                                                                      setState(
+                                                                          () {
+                                                                        loading =
+                                                                            false;
+                                                                      });
+                                                                    },
+                                                                    verificationFailed:
+                                                                        (e) {
+                                                                      utilss().toastMessage(
+                                                                          e.toString());
+                                                                    },
+                                                                    codeSent: (String
+                                                                            verificationId,
+                                                                        int?
+                                                                            token) {
+                                                                      vId =
+                                                                          verificationId;
+                                                                      myToken =
+                                                                          token!;
+                                                                      setState(
+                                                                          () {
+                                                                        loading =
+                                                                            false;
+                                                                        // Navigator.push(context,
+                                                                        //     MaterialPageRoute(
+                                                                        //         builder: (context)=>VerifyCodeScreen(verificartionId2:verificationId)));
+                                                                      });
+                                                                    },
+                                                                    codeAutoRetrievalTimeout:
+                                                                        (e) {
+                                                                      utilss().toastMessage(
+                                                                          e.toString());
+                                                                      setState(
+                                                                          () {
+                                                                        loading =
+                                                                            false;
+                                                                      });
+                                                                    });
+                                                          }),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8),
+                                                    child: SizedBox(
+                                                      width: 500,
+                                                      // child: RoundButton(
+                                                      //   title: 'Submit',
+                                                      //   loading: loading,
+                                                      //   onTap: (){
+                                                      //    setState(() {
+                                                      //      loading = true;
+                                                      //
+                                                      //    });
+                                                      //    String id = DateTime.now().millisecondsSinceEpoch.toString();
+                                                      //    fireStore.doc(id).set({
+                                                      //      'title1':nameController.text.toString(),
+                                                      //      'title2':addressController.text.toString(),
+                                                      //      'title2':mobileController.text.toString(),
+                                                      //      'id' :id
+                                                      //    }).then((value) {
+                                                      //
+                                                      //    }).onError((error, stackTrace) {
+                                                      //      utilss().toastMessage(error.toString());
+                                                      //    });
+                                                      //   },
+                                                      // )
+                                                      child: RoundButton(
+                                                          title: 'submit',
+                                                          loading: loading,
+                                                          onTap: () async {
+                                                            setState(() {
+                                                              loading = true;
+                                                            });
+
+                                                            final crendital =
+                                                                PhoneAuthProvider.credential(
+                                                                    verificationId:
+                                                                        vId,
+                                                                    smsCode: verificationCodeController
+                                                                        .text
+                                                                        .toString());
+
+                                                            try {
+                                                              await auth
+                                                                  .signInWithCredential(
+                                                                      crendital);
+                                                              // Navigator.push(context,
+                                                              //     MaterialPageRoute(builder: (context) => SlidingWebPage(verificartionId: vId)));
+                                                            } catch (e) {
+                                                              setState(() {
+                                                                loading = true;
+                                                              });
+                                                              utilss().toastMessage(
+                                                                  e.toString());
+                                                            }
+                                                          }),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
                                             ),
-                                          )
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8),
-                                    child: SizedBox(
-                                      width: 100,
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue, // Background color
-                                          onPrimary: Colors.white, // Text color
+                                          ],
                                         ),
-                                        child: const Text('Get Otp'),
-                                        onPressed: () {
-
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: SizedBox(
-                                  width: 500,
-                                  child: ElevatedButton(
-
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Colors.red, // Background color
-                                       // Text color
-                                    ),
-                                  child: const Text('Submit'),
-                                  onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                  _formKey.currentState!.save();
-                                  }
-                                  },
-                                  ),
-                                ),
-                                )
-                                ],
-                                ),
-                                ),
-                                ],
-                                ),
-                                ));
+                                      );
+                                    });
                               },
                               child: Text(
                                 "Register",
@@ -363,104 +499,130 @@ class SlidingWebPage extends StatelessWidget {
                               'Inter',
                               fontSize: 17 * ffem,
                               fontWeight: FontWeight.w400,
-                              height: 1.17* ffem / fem,
+                              height: 1.17 * ffem / fem,
                               color: const Color(0xffffffff),
                             ),
                           ),
                           Material(
                             color: Colors.blue,
                             child: TextButton(
-
-                              onPressed: () async{
+                              onPressed: () async {
                                 await showDialog<void>(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                content: Stack(
-                                clipBehavior: Clip.none,
-                                children: <Widget>[
-                                Positioned(
-                                right: -40,
-                                top: -40,
-                                child: InkResponse(
-                                onTap: () {
-                                Navigator.of(context).pop();
-                                },
-                                child: const CircleAvatar(
-                                backgroundColor: Colors.red,
-                                child: Icon(Icons.close),
-                                ),
-                                ),
-                                ),
-                                Form(
-                                key: _formKey,
-                                child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: TextFormField(
-                                  decoration: const InputDecoration(
-                                      hintText: 'Mobile Number',
-                                    border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Colors.black, // Border color
-                                        width: 2.0, // Border width
-                                      ),
-                                    )
-                                  ),
-                                ),
-                                ),
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: TextFormField(
-                                  decoration: const InputDecoration(
-                                      hintText: 'Verify Code',
-                                      border: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Colors.black, // Border color
-                                          width: 2.0, // Border width
-                                        ),
-                                      )
-                                  ),
-                                ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8),
-                                  child: ElevatedButton(
-                                    child: const Text('GET Otp'),
-                                    onPressed: (){},
-                                  ),
-                                ),
-                                Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: SizedBox(
-                                  width: 200,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Colors.red, // Background color
-                                      // Text color
-                                    ),
-                                  child: const Text('Submit'),
-                                  onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                  _formKey.currentState!.save();
-                                  }
-                                  },
-                                  ),
-                                ),
-                                )
-                                ],
-                                ),
-                                ),
-                                ],
-                                ),
-                                ));
+                                    context: context,
+                                    builder: (context) => AlertDialog(
+                                          content: Stack(
+                                            clipBehavior: Clip.none,
+                                            children: <Widget>[
+                                              Positioned(
+                                                right: -40,
+                                                top: -40,
+                                                child: InkResponse(
+                                                  onTap: () {
+                                                    Navigator.of(context).pop();
+                                                  },
+                                                  child: const CircleAvatar(
+                                                    backgroundColor: Colors.red,
+                                                    child: Icon(Icons.close),
+                                                  ),
+                                                ),
+                                              ),
+                                              Form(
+                                                key: _formKey,
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: <Widget>[
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              8),
+                                                      child: TextFormField(
+                                                        decoration:
+                                                            const InputDecoration(
+                                                                hintText:
+                                                                    'Mobile Number',
+                                                                border:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Colors
+                                                                        .black, // Border color
+                                                                    width:
+                                                                        2.0, // Border width
+                                                                  ),
+                                                                )),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              8),
+                                                      child: TextFormField(
+                                                        decoration:
+                                                            const InputDecoration(
+                                                                hintText:
+                                                                    'Verify Code',
+                                                                border:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Colors
+                                                                        .black, // Border color
+                                                                    width:
+                                                                        2.0, // Border width
+                                                                  ),
+                                                                )),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              8),
+                                                      child: ElevatedButton(
+                                                        child: const Text(
+                                                            'GET Otp'),
+                                                        onPressed: () {},
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              8),
+                                                      child: SizedBox(
+                                                        width: 200,
+                                                        child: ElevatedButton(
+                                                          style: ElevatedButton
+                                                              .styleFrom(
+                                                            primary: Colors
+                                                                .red, // Background color
+                                                            // Text color
+                                                          ),
+                                                          child: const Text(
+                                                              'Submit'),
+                                                          onPressed: () {
+                                                            if (_formKey
+                                                                .currentState!
+                                                                .validate()) {
+                                                              _formKey
+                                                                  .currentState!
+                                                                  .save();
+                                                            }
+                                                          },
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ));
                               },
                               child: Text(
                                 "Login",
                                 style: SafeGoogleFont(
                                   'Inter',
-                                  fontSize: 17* ffem,
+                                  fontSize: 17 * ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.17 * ffem / fem,
                                   color: const Color(0xffffffff),
@@ -479,10 +641,9 @@ class SlidingWebPage extends StatelessWidget {
                 Expanded(
                     child: Obx(
                   () => Row(
-                    
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                        HorizontalListItem(
+                      HorizontalListItem(
                           text: 'Home',
                           fem: ffem,
                           onTap: () => sideBarController.index.value = 0,
@@ -514,8 +675,7 @@ class SlidingWebPage extends StatelessWidget {
                           selected: sideBarController.index.value == 5),
                     ],
                   ),
-                )
-                ),
+                )),
               ],
             ),
           ),
