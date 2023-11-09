@@ -35,8 +35,8 @@ class _NoAppointmentPgaeState extends State<NoAppointmentPgae> {
                   image: DecorationImage(
                     
                     fit: BoxFit.cover,
-                    image: AssetImage(
-                      "assets/no_appointment.png",
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1471970394675-613138e45da3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG5vJTIwYXBwb2ludG1lbnQlMjB3cml0dGVuJTIwb24lMjBhcGdlfGVufDB8fDB8fHww",
                     ),
                   ),
                 ),

@@ -38,6 +38,8 @@ import 'package:myapp/upload_description.dart';
 
 import 'package:myapp/utils.dart';
 
+import 'doctor/doctor_registration_form_page.dart';
+
 
 
 void main() => runApp(MyApp());
@@ -52,7 +54,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:SelectableContainerRow(),
+		home:DoctorRegistrationFormPage(),
 	);
 	}
 }

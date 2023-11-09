@@ -479,6 +479,7 @@ class SlidingWebPage extends StatelessWidget {
                 Expanded(
                     child: Obx(
                   () => Row(
+                    
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                         HorizontalListItem(
