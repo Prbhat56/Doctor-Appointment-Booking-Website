@@ -6,7 +6,10 @@ import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
 import 'package:myapp/medical_shop_page.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/patient_Details/familytree/family_tree_addmore_page.dart';
 import 'package:myapp/patient_Details/no_appointment_page.dart';
+import 'package:myapp/patient_Details/no_order_page.dart';
+import 'package:myapp/patient_Details/subscription_detail_page.dart';
 
 import 'package:myapp/search_doctor.dart';
 
@@ -15,6 +18,9 @@ class VerticalSideBarController extends GetxController {
 
   var pages = [
     NonEmptyAppointmentPage(),
+    NoOrderPage(),
+    SubscriptionIntroductionPage(),
+    FamilyTreeAddMorePage(),
     
    
   ];

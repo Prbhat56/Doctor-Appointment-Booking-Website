@@ -154,6 +154,14 @@ flutter:
     - assets/page-1/images/newlike.png
     - assets/page-1/images/newstar.png
     - assets/page-1/images/no_appointment.png
+    - assets/page-1/images/noorder.png
+    - assets/page-1/images/family.png
+    - assets/page-1/images/rectangle.png
+    - assets/page-1/images/tickbox.png
+    - assets/page-1/images/dottedline.png
+    - assets/page-1/images/circlenew.png
+
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

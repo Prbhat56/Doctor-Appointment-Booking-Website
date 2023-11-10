@@ -108,7 +108,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
               children: [
                 Container(
                   width: 1441 * fem,
-                  height: 110 * fem,
+                  height: 105 * fem,
                   color: const Color(0xff005473),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

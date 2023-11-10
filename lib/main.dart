@@ -29,7 +29,12 @@ import 'package:myapp/login_screen.dart';
 
 import 'package:myapp/medical_shop_page.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/patient_Details/booking_confirmed_page.dart';
+import 'package:myapp/patient_Details/bronze_plan_page.dart';
+import 'package:myapp/patient_Details/familytree/family_tree_doctor_detail_page.dart';
+import 'package:myapp/patient_Details/familytree/family_tree_first_page.dart';
 import 'package:myapp/patient_Details/no_appointment_page.dart';
+import 'package:myapp/patient_Details/silver_plan_page.dart';
 
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
@@ -59,7 +64,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:SlidingWebPage(),
+		home:FamilyTreeDoctorDetailPage(),
 	);
 	}
 }
