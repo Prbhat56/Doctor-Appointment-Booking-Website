@@ -72,7 +72,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
           return AlertDialog(
             content: Container(
               width:
-                  double.infinity, // Set width to occupy the entire AlertDialog
+                  double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(

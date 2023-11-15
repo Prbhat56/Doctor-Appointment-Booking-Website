@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Form/confirm_clinic_visit.dart';
 import 'package:myapp/Form/else_confirm_page.dart';
+import 'package:myapp/Patient/about_us_page.dart';
 import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/Patient/non_empty_appointment_page.dart';
 import 'package:myapp/constant/upper_bar.dart';
@@ -15,6 +16,9 @@ import 'package:myapp/doctor/doctor_reset_password.dart';
 import 'package:myapp/doctor/new_doctor_detail_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/doctor_profile_page.dart';
+import 'package:myapp/doctorpart/doctor_dasboard.dart';
+import 'package:myapp/doctorpart/online%20consultation/no_online_consulatation_page.dart';
+import 'package:myapp/doctorpart/set_time_and_day.dart';
 
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
@@ -64,7 +68,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:SideBarPage(),
+		home:NoOnlineConsultationPage(),
 	);
 	}
 }
