@@ -4,6 +4,8 @@ import 'package:myapp/constant/drawer.dart';
 
 import 'package:myapp/utils.dart';
 
+import 'constant/footer_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -827,8 +829,11 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
-          ]),
+            ),
+               SizedBox(height:25 ,),
+          PatientFooterPage(),
+          ]
+          ),
         ),
       ),
     );

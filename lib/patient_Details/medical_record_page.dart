@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class MedicalRecordPage extends StatefulWidget {
@@ -970,6 +971,7 @@ class _MedicalRecordPageState extends State<MedicalRecordPage> {
                   ],
                 ),
               ),
+          
             ],
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/patient_Details/bronze_plan_page.dart';
 import 'package:myapp/patient_Details/silver_plan_page.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class SubscriptionIntroductionPage extends StatefulWidget {
@@ -1666,6 +1667,7 @@ class _SubscriptionIntroductionPageState
                 ],
               ),
             ),
+           
           ],
         ),
       ),

@@ -3,6 +3,8 @@ import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/constant/drawer.dart';
 import 'package:myapp/utils.dart';
 
+import 'constant/footer_page.dart';
+
 class UploadPrescriptionPage extends StatelessWidget {
   const UploadPrescriptionPage({super.key});
 
@@ -14,8 +16,8 @@ class UploadPrescriptionPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
-        decoration: BoxDecoration(color: Colors.indigo.shade100),
+        height: 2500 * fem,
+        decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -458,7 +460,9 @@ class UploadPrescriptionPage extends StatelessWidget {
                   ],
                 )
               ],
-            )
+            ),
+               SizedBox(height:25 ,),
+          PatientFooterPage(),
           ],
         ),
       ),

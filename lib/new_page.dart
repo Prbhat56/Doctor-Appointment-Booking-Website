@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_notifier.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/image_slide_show.dart';
 
 import 'package:myapp/create_user.dart';
@@ -2248,146 +2249,9 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          // Container(
+        PatientFooterPage(),
 
-          //   width: double.infinity,
-          //   height: 510 * fem,
-          //   decoration: const BoxDecoration(
-          //     gradient: RadialGradient(
-          //       center: Alignment(1.034, -0.142),
-          //       radius: 1.05,
-          //       colors: <Color>[
-          //         Color(0xff0f607d),
-          //         Color(0xff498f9d),
-          //         Color(0xff277692),
-          //         Color(0xff42869e),
-          //         Color(0xef0aa3b8)
-          //       ],
-          //       stops: <double>[0, 0.26, 0.495, 0.75, 1],
-          //     ),
-          //   ),
-          //   child: Column(
-
-          //   ),
-          // ),
-
-          Container(
-            // group2493a1X (257:531)
-            padding:
-                EdgeInsets.fromLTRB(128 * fem, 78 * fem, 430 * fem, 78 * fem),
-            width: double.infinity,
-            height: 510 * fem,
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: Alignment(1.034, -0.142),
-                radius: 1.05,
-                colors: <Color>[
-                  Color(0xff0f607d),
-                  Color(0xff498f9d),
-                  Color(0xff277692),
-                  Color(0xff42869e),
-                  Color(0xef0aa3b8)
-                ],
-                stops: <double>[0, 0.26, 0.495, 0.75, 1],
-              ),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  // aboutblogcareerspresscontactus (1741:5226)
-                  margin: EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 142 * fem, 80 * fem),
-                  constraints: BoxConstraints(
-                    maxWidth: 126 * fem,
-                  ),
-                  child: Column(
-                    children: [
-                      Text(
-                        'Doc Search',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 32 * ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.2125 * ffem / fem,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Text(
-                        'About \nBlog \nCareers\nPress\nContact us',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 24 * ffem,
-                          fontWeight: FontWeight.w500,
-                          height: 1.2125 * ffem / fem,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  // autogroupergdVGu (MuzgZZbDK1UrcJZRjFERgd)
-                  margin: EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 107 * fem, 78 * fem),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        // forpatientsDyb (1741:5227)
-                        margin: EdgeInsets.fromLTRB(
-                            0 * fem, 0 * fem, 0 * fem, 17 * fem),
-                        child: Text(
-                          'For patients',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 32 * ffem,
-                            fontWeight: FontWeight.w700,
-                            height: 1.2125 * ffem / fem,
-                            color: Color(0xffffffff),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        // searchfordoctorssearchforclini (1741:5228)
-                        constraints: BoxConstraints(
-                          maxWidth: 319 * fem,
-                        ),
-                        child: Text(
-                          'Search for doctors\nSearch for clinics\nSearch for hospital\nSearch medical shop\nBook lab test\nBook full body checkups\nDoc Search health care plan',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 24 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: Color(0xffffffff),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  // forhospitald1j (1741:5229)
-                  margin:
-                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 315 * fem),
-                  child: Text(
-                    'For Hospital',
-                    style: SafeGoogleFont(
-                      'Inter',
-                      fontSize: 32 * ffem,
-                      fontWeight: FontWeight.w700,
-                      height: 1.2125 * ffem / fem,
-                      color: Color(0xffffffff),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+         
         ],
       ),
     );

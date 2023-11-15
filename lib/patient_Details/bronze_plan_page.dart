@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class BronzeYearPlanPage extends StatefulWidget {
@@ -367,6 +368,7 @@ class _BronzeYearPlanPageState extends State<BronzeYearPlanPage> {
                   ),
                 ],
               ),
+      
             ],
           ),
         ),

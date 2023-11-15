@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class AppointmentConfirmedPage extends StatefulWidget {
@@ -492,8 +493,9 @@ class _AppointmentConfirmedPageState extends State<AppointmentConfirmedPage> {
                           ],
                         ),
                       ],
-                    )
-            
+                    ),
+                   SizedBox(height:25 ,),
+          PatientFooterPage(),
             ],
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/patient_Details/familytree/family_tree_doctor_detail_page.dart';
 
+import '../../constant/footer_page.dart';
 import '../../utils.dart';
 
 class FamilyTreeFirstPage extends StatefulWidget {
@@ -597,7 +598,8 @@ class _FamilyTreeFirstPageState extends State<FamilyTreeFirstPage> {
                     ),
                   ),
                 ],
-              )
+              ),
+       
             ],
           ),
         ),

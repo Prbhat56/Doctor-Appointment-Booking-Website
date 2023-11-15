@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class PastAppointmentPage extends StatefulWidget {
@@ -750,6 +751,7 @@ class _PastAppointmentPageState extends State<PastAppointmentPage> {
                   ],
                 ),
               ),
+         
             ],
           ),
         ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:myapp/Form/else_confirm_page.dart';
+import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/constant/drawer.dart';
+import 'package:myapp/constant/footer_page.dart';
 
 import '../utils.dart';
 
@@ -17,8 +19,8 @@ class ConfirmClinicVisitPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
-        decoration: BoxDecoration(color: Colors.indigo.shade100),
+        height: 2600 * fem,
+        decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -241,7 +243,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      MyDrawer()),
+                                                      SideBarPage()),
                                             );
                               },
                               icon: const Icon(
@@ -848,6 +850,8 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 30,),
+            PatientFooterPage()
           ],
         ),
       ),

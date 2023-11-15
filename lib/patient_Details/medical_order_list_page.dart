@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/patient_Details/medical_record_page.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class MedicalOrderListPage extends StatefulWidget {
@@ -815,6 +816,7 @@ class _MedicalOrderListPageState extends State<MedicalOrderListPage> {
                   ],
                 ),
               ),
+       
             ],
           ),
         ),

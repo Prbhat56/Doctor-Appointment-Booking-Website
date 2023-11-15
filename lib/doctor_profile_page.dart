@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:myapp/Form/confirm_clinic_visit.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/utils.dart';
 
 class DoctorProfilePage extends StatelessWidget {
@@ -1671,6 +1672,8 @@ class DoctorProfilePage extends StatelessWidget {
                 ),
               ),
             ),
+               SizedBox(height:25 ,),
+          PatientFooterPage(),
           ],
         ),
       ),

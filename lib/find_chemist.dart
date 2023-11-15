@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/medical_shop_page.dart';
 import 'package:myapp/utils.dart';
 
@@ -145,7 +146,9 @@ class SearchChemist extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+               SizedBox(height:25 ,),
+          PatientFooterPage(),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Form/confirm_clinic_visit.dart';
+import 'package:myapp/constant/footer_page.dart';
 
 import '../utils.dart';
 
@@ -2022,6 +2023,8 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
                 ],
               ),
             ),
+            SizedBox(height: 30,),
+            PatientFooterPage()
           ],
         ),
       ),

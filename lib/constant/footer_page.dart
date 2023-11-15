@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Patient/about_us_page.dart';
 
 import '../utils.dart';
 
@@ -110,15 +111,59 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             constraints: BoxConstraints(
                               maxWidth: 89 * fem,
                             ),
-                            child: Text(
-                              'About \nBlog \nCareers\nPress\nContact us',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
-                              ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                            
+                                  TextButton(
+                                    onPressed: () {
+                                        Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) => const AboutUsPage()),
+                                                      );
+                                    },
+                                    child: Text(
+                                      'About',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                
+                            
+                                   TextButton(
+                                    onPressed: () {
+                                     
+                                    },
+                                    child: Text(
+                                      'Contact us',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                
+                                // Add the remaining lines for 'Blog', 'Careers', 'Press', if needed
+                                Text(
+                                  'Blog\nCareers\nPress',
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 17 * ffem,
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.2125 * ffem / fem,
+                                    color: const Color(0xffffffff),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

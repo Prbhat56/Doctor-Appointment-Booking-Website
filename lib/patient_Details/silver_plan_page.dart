@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../constant/footer_page.dart';
 import '../utils.dart';
 
 class SilverPlanPage extends StatefulWidget {
@@ -998,7 +999,9 @@ class _SilverPlanPageState extends State<SilverPlanPage> {
                     ),
                   ],
                 ),
-              )
+              ),
+                 SizedBox(height:25 ,),
+          PatientFooterPage(),
             ],
           ),
         ),

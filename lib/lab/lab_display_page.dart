@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/lab/lab_detail_page.dart';
 import 'package:myapp/lab/lab_result_page.dart';
 import 'package:myapp/responsiveweb/responsive.dart';
@@ -612,6 +613,8 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                     ),
                   ],
                 ),
+                SizedBox(height: 25,),
+                PatientFooterPage()
               ],
             ),
           ),
@@ -1204,6 +1207,10 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                     ),
                   ],
                 ),
+                     SizedBox(
+              height: 25,
+            ),
+            PatientFooterPage(),
               ],
             ),
           ),
@@ -1797,6 +1804,10 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                     ),
                   ],
                 ),
+                     SizedBox(
+              height: 25,
+            ),
+            PatientFooterPage(),
               ],
             ),
           ),

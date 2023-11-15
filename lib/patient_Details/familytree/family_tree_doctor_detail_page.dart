@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../../constant/footer_page.dart';
 import '../../utils.dart';
 
 class FamilyTreeDoctorDetailPage extends StatefulWidget {
@@ -748,7 +749,8 @@ class _FamilyTreeDoctorDetailPageState
                     ),
                   ),
                 ],
-              )
+              ),
+         
             ],
           ),
         ),

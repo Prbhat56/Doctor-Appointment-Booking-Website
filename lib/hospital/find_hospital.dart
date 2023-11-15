@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/constant/footer_page.dart';
 
 import '../constant/image_slide_show.dart';
 import '../responsiveweb/responsive.dart';
@@ -610,6 +611,8 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 25,),
+                                PatientFooterPage()
           
           ],
         ),

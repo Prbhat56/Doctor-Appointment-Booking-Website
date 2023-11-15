@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/patient_Details/familytree/family_tree_doctor_detail_page.dart';
 import 'package:myapp/patient_Details/familytree/family_tree_first_page.dart';
 
+import '../../constant/footer_page.dart';
 import '../../utils.dart';
 
 class FamilyTreeAddMorePage extends StatefulWidget {
@@ -394,7 +395,8 @@ class _FamilyTreeAddMorePageState extends State<FamilyTreeAddMorePage> {
                     ),
                   ),
                 ],
-              )
+              ),
+       
             ],
           ),
         ),

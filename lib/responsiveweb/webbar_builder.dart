@@ -7,6 +7,7 @@ import 'package:myapp/controller/sidebar_controller.dart';
 import 'package:myapp/new_page.dart';
 import 'package:myapp/utils2.dart';
 
+import '../constant/footer_page.dart';
 import '../constant/horizontal_list.dart';
 import '../utils.dart';
 
@@ -300,7 +301,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                       decoration:
                                                           const InputDecoration(
                                                               hintText:
-                                                                  'Address',
+                                                                  'City',
                                                               border:
                                                                   OutlineInputBorder(
                                                                 borderSide:
@@ -684,6 +685,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
             child: Obx(
                 () => sideBarController.pages[sideBarController.index.value]),
           ),
+           
         ],
       ),
     );

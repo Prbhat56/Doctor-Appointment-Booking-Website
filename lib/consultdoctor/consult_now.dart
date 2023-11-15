@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/search_doctor.dart';
 
 import '../utils.dart';
@@ -16,7 +17,7 @@ class ConsultNowPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2280 * fem,
+        height: 3000 * fem,
         decoration: const BoxDecoration(
           color: Color.fromRGBO(255, 255, 255, 0.702),
         ),
@@ -586,6 +587,8 @@ class ConsultNowPage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 25,),
+              PatientFooterPage(),
             ],
           ),
         ),

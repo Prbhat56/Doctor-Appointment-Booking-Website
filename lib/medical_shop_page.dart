@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/constant/drawer.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/upload_description.dart';
 import 'package:myapp/utils.dart';
 
@@ -15,8 +16,8 @@ class SearchMedicalShop extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2200 * fem,
-        decoration: BoxDecoration(color: Colors.indigo.shade100),
+        height: 2800 * fem,
+        decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -617,7 +618,8 @@ class SearchMedicalShop extends StatelessWidget {
                 ),
               ],
             ),
-            
+               SizedBox(height:25 ,),
+          PatientFooterPage(),
           ],
         ),
       ),
