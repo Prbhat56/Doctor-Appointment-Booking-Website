@@ -37,7 +37,7 @@ class ProfilePage extends StatelessWidget {
     TextEditingController stateController = TextEditingController();
     TextEditingController countryController = TextEditingController();
     TextEditingController pincodeController = TextEditingController();
-    double baseWidth = 1440;
+    double baseWidth = 2100;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
@@ -45,7 +45,7 @@ class ProfilePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          height: 2200 * fem,
+          height: 2800 * fem,
           decoration: BoxDecoration(color: Colors.indigo.shade100),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -93,7 +93,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 800,
+                        width: 480,
                       ),
                       TextButton(
                         onPressed: () {},
@@ -130,12 +130,12 @@ class ProfilePage extends StatelessWidget {
                     onPressed: () {},
                     padding: EdgeInsets.zero,
                     child: CircleAvatar(
-                      radius: 70,
+                      radius: 40,
                       backgroundColor: Colors.grey,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   Text(
                     'Prabhat Kumar',
@@ -151,7 +151,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -169,7 +169,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 270,
+                    width: 180,
                   ),
                   Text(
                     'Email Address',
@@ -182,7 +182,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 270,
+                    width: 180,
                   ),
                   Text(
                     'Gender',
@@ -198,7 +198,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5,
             ),
             Padding(
               padding: EdgeInsets.only(left: 10),
@@ -239,7 +239,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -275,7 +275,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -313,7 +313,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -331,7 +331,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 285,
+                    width: 180,
                   ),
                   Text(
                     'Blood Group',
@@ -344,7 +344,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 295,
+                    width: 180,
                   ),
                   Text(
                     'Language',
@@ -360,7 +360,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5,
             ),
             Padding(
               padding: EdgeInsets.only(left: 10),
@@ -401,7 +401,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -437,7 +437,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -475,7 +475,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 100,
+              height: 60,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -493,7 +493,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 180,
+                    width: 120,
                   ),
                   Text(
                     'Landmark',
@@ -506,7 +506,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 305,
+                    width: 250,
                   ),
                   Text(
                     'City',
@@ -522,7 +522,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5,
             ),
             Padding(
               padding: EdgeInsets.only(left: 10),
@@ -563,7 +563,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -599,7 +599,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -637,7 +637,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -655,7 +655,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 390,
+                    width: 210,
                   ),
                   Text(
                     'Country',
@@ -668,7 +668,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 340,
+                    width: 200,
                   ),
                   Text(
                     'Pincode',
@@ -684,7 +684,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 5,
             ),
             Padding(
               padding: EdgeInsets.only(left: 10),
@@ -725,7 +725,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -761,7 +761,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
+                    width: 120,
                   ),
                   Container(
                     width: 300 * fem, // Set a smaller width
@@ -799,7 +799,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 70,
+              height: 40,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -830,7 +830,7 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-               SizedBox(height:25 ,),
+               SizedBox(height:18 ,),
           PatientFooterPage(),
           ]
           ),

@@ -16,6 +16,8 @@ import 'package:myapp/doctor/doctor_reset_password.dart';
 import 'package:myapp/doctor/new_doctor_detail_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/doctor_profile_page.dart';
+import 'package:myapp/doctorpart/communication/communication_detail_page.dart';
+import 'package:myapp/doctorpart/communication/communication_view_page.dart';
 import 'package:myapp/doctorpart/doctor_dasboard.dart';
 import 'package:myapp/doctorpart/online%20consultation/booked_appointment_page.dart';
 import 'package:myapp/doctorpart/online%20consultation/no_online_consulatation_page.dart';
@@ -69,7 +71,7 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:SlidingWebPage(),
+		home:CommunicationDetailPage(),
 	);
 	}
 }
