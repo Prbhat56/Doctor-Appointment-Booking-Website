@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
+import 'package:myapp/saima/lab_test.dart';
+import 'package:myapp/saima/lab_test_two.dart';
 import 'package:myapp/test/patient_test.dart';
 import 'package:myapp/utils.dart';
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyTest(),
+      home: LabTestTwo(),
     );
   }
 }
