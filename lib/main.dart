@@ -47,8 +47,14 @@ import 'package:myapp/patient_Details/silver_plan_page.dart';
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
+
 import 'package:myapp/search_doctor.dart';
 import 'package:myapp/upload_description.dart';
+
+
+import 'package:myapp/saima/lab_test.dart';
+import 'package:myapp/saima/lab_test_two.dart';
+import 'package:myapp/test/patient_test.dart';
 
 import 'package:myapp/utils.dart';
 
@@ -63,6 +69,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+
 	@override
 	Widget build(BuildContext context) {
 	return  MaterialApp(
@@ -76,3 +83,17 @@ class MyApp extends StatelessWidget {
 	);
 	}
 }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Doc Search',
+      debugShowCheckedModeBanner: false,
+      scrollBehavior: MyCustomScrollBehavior(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LabTestTwo(),
+    );
+  }
+
