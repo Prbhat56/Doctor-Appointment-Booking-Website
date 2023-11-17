@@ -12,6 +12,7 @@ import 'package:myapp/patient_Details/no_appointment_page.dart';
 import 'package:myapp/patient_Details/no_order_page.dart';
 import 'package:myapp/patient_Details/order_history_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
+import 'package:myapp/profile_page.dart';
 
 import 'package:myapp/search_doctor.dart';
 
@@ -19,11 +20,12 @@ class VerticalSideBarController extends GetxController {
   RxInt index = 0.obs;
 
   var pages = [
-    NonEmptyAppointmentPage(),
-    NoOrderPage(),
-    SubscriptionIntroductionPage(),
-    FamilyTreeAddMorePage(),
-    PatientOrderHistoryPage(),
+    const NonEmptyAppointmentPage(),
+    const NoOrderPage(),
+    const SubscriptionIntroductionPage(),
+    const FamilyTreeAddMorePage(),
+    const PatientOrderHistoryPage(),
+     ProfilePage(),
     
     
    
