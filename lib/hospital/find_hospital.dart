@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/constant/footer_page.dart';
+import 'package:myapp/constant/search_model.dart';
 
 import '../constant/image_slide_show.dart';
 import '../responsiveweb/responsive.dart';
@@ -8,7 +9,7 @@ import '../utils.dart';
 import 'hospital_display_page.dart';
 
 class FindHospitalPage extends StatefulWidget {
-  const FindHospitalPage({super.key});
+  const FindHospitalPage( {super.key});
 
   @override
   State<FindHospitalPage> createState() => _FindHospitalPageState();

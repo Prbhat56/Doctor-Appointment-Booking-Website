@@ -14,11 +14,11 @@ class SideBarController extends GetxController {
 
   var pages = [
     HomePage(),
-     DoctorFindPage(),
+      DoctorFindPage(),
      ConsultNowPage(),
      SearchChemist(),
      SearchLab(),
-     FindHospitalPage(),
+      FindHospitalPage(),
     
   ];
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/constant/search_model.dart';
 import 'package:myapp/doctor_detail_page.dart';
 
 import 'constant/footer_page.dart';
@@ -6,7 +7,7 @@ import 'responsiveweb/responsive.dart';
 import 'utils.dart';
 
 class DoctorFindPage extends StatefulWidget {
-  const DoctorFindPage({super.key});
+  const DoctorFindPage( {super.key});
 
   @override
   State<DoctorFindPage> createState() => _DoctorFindPageState();

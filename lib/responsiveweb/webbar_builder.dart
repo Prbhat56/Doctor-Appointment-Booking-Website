@@ -3,8 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Round_button.dart';
+import 'package:myapp/constant/search_model.dart';
 import 'package:myapp/controller/sidebar_controller.dart';
+import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/search_doctor.dart';
 import 'package:myapp/utils2.dart';
 
 import '../constant/footer_page.dart';
@@ -17,6 +20,71 @@ class SlidingWebPage extends StatefulWidget {
 }
 
 class _SlidingWebPageState extends State<SlidingWebPage> {
+  late List<SearchModel> main_search_item;
+  late List<SearchModel> display_list;
+
+  @override
+  void initState() {
+    super.initState();
+
+    main_search_item = [
+      SearchModel("find doctor", "20000+ alraedy found"),
+      SearchModel("Search Hospital", "50k+ visited yet"),
+      SearchModel("Search Lab", "40 labs available now"),
+      SearchModel("Get Premuim", "300+ premuim user "),
+      SearchModel("Video consult", "70+ doctor available"),
+      SearchModel("Register as doctor", "480 doctor availble"),
+      SearchModel("Register as lab", "40 lab is already under providing service"),
+      SearchModel("Register as Hospital", "60+ hospital registered"),
+      SearchModel("Go to Home page", "60k+ already connected with us "),
+      SearchModel("Know More About us", "50k+ service provided yet"),
+    ];
+
+    display_list = List.from(main_search_item);
+  }
+
+  void updateList(String value) {
+    setState(() {
+      display_list = main_search_item
+          .where((element) =>
+              element.service_title!.toLowerCase().contains(value.toLowerCase()))
+          .toList();
+    });
+  }
+
+  void showSimpleDialog(BuildContext context) => showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          double baseWidth = 1120;
+          double fem = MediaQuery.of(context).size.width / baseWidth;
+          double ffem = fem * 0.97;
+          return AlertDialog(
+            content: Container(
+              width: 500 * fem,
+              child: Material(
+                child: ListView.builder(
+                  itemCount: display_list.length,
+                  itemBuilder: (context, index) => ListTile(
+                    contentPadding: EdgeInsets.all(8.0),
+                    title: Text(
+                      display_list[index].service_title!,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      display_list[index].trusteduser!,
+                      style: TextStyle(color: Colors.black.withOpacity(0.7)),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+      );
+
   @override
   Widget build(BuildContext context) {
     bool loading = false;
@@ -72,8 +140,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
         builder: (context) {
           return AlertDialog(
             content: Container(
-              width:
-                  double.infinity,
+              width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -181,7 +248,15 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                               SizedBox(width: 10 * fem),
                               Expanded(
                                 child: Material(
+                                  
                                   child: TextField(
+                                         onChanged: (value) {
+        updateList(value);
+        showSimpleDialog(context); 
+      },
+
+
+
                                     decoration: InputDecoration(
                                       hintText:
                                           'Search for doctors & hospitals',
@@ -300,8 +375,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                           addressController,
                                                       decoration:
                                                           const InputDecoration(
-                                                              hintText:
-                                                                  'City',
+                                                              hintText: 'City',
                                                               border:
                                                                   OutlineInputBorder(
                                                                 borderSide:
@@ -685,7 +759,6 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
             child: Obx(
                 () => sideBarController.pages[sideBarController.index.value]),
           ),
-           
         ],
       ),
     );

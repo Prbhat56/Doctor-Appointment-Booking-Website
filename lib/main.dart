@@ -6,6 +6,7 @@ import 'package:myapp/Form/else_confirm_page.dart';
 import 'package:myapp/Patient/about_us_page.dart';
 import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/Patient/non_empty_appointment_page.dart';
+import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/upper_bar.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/create_user.dart';
@@ -51,7 +52,6 @@ import 'package:myapp/responsiveweb/webbar_builder.dart';
 import 'package:myapp/search_doctor.dart';
 import 'package:myapp/upload_description.dart';
 
-
 import 'package:myapp/saima/lab_test.dart';
 import 'package:myapp/saima/lab_test_two.dart';
 import 'package:myapp/test/patient_test.dart';
@@ -61,29 +61,15 @@ import 'package:myapp/utils.dart';
 import 'firebase_options.dart';
 
 void main() async {
-	WidgetsFlutterBinding.ensureInitialized();
-	await Firebase.initializeApp(
-		options: DefaultFirebaseOptions.currentPlatform,
-	);
-	runApp( MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-	@override
-	Widget build(BuildContext context) {
-	return  MaterialApp(
-		title: 'Flutter',
-		debugShowCheckedModeBanner: false,
-		scrollBehavior: MyCustomScrollBehavior(),
-		theme: ThemeData(
-		primarySwatch: Colors.blue,
-		),
-		home:NoCommunicationPage(),
-	);
-	}
-}
-
+  @override
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -93,7 +79,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LabTestTwo(),
+      home: PatientFooterPage(),
     );
   }
-
+}

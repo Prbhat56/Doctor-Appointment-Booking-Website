@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Patient/about_us_page.dart';
+import 'package:myapp/consultdoctor/consult_now.dart';
+import 'package:myapp/doctor_detail_page.dart';
+import 'package:myapp/find_chemist.dart';
+import 'package:myapp/hospital/find_hospital.dart';
+import 'package:myapp/lab/find_lab.dart';
+import 'package:myapp/lab/lab_display_page.dart';
+import 'package:myapp/lab/lab_result_page.dart';
+import 'package:myapp/new_page.dart';
+import 'package:myapp/patient_Details/subscription_detail_page.dart';
+import 'package:myapp/search_doctor.dart';
 
 import '../utils.dart';
 
@@ -114,44 +124,41 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                            
-                                  TextButton(
-                                    onPressed: () {
-                                        Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) => const AboutUsPage()),
-                                                      );
-                                    },
-                                    child: Text(
-                                      'About',
-                                      style: SafeGoogleFont(
-                                        'Inter',
-                                        fontSize: 17 * ffem,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.2125 * ffem / fem,
-                                        color: const Color(0xffffffff),
-                                      ),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AboutUsPage()),
+                                    );
+                                  },
+                                  child: Text(
+                                    'About',
+                                    style: SafeGoogleFont(
+                                      'Inter',
+                                      fontSize: 17 * ffem,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.2125 * ffem / fem,
+                                      color: const Color(0xffffffff),
                                     ),
                                   ),
-                                
-                            
-                                   TextButton(
-                                    onPressed: () {
-                                     
-                                    },
-                                    child: Text(
-                                      'Contact us',
-                                      style: SafeGoogleFont(
-                                        'Inter',
-                                        fontSize: 17 * ffem,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.2125 * ffem / fem,
-                                        color: const Color(0xffffffff),
-                                      ),
+                                ),
+
+                                TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Contact us',
+                                    style: SafeGoogleFont(
+                                      'Inter',
+                                      fontSize: 17 * ffem,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.2125 * ffem / fem,
+                                      color: const Color(0xffffffff),
                                     ),
                                   ),
-                                
+                                ),
+
                                 // Add the remaining lines for 'Blog', 'Careers', 'Press', if needed
                                 Text(
                                   'Blog\nCareers\nPress',
@@ -176,18 +183,21 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            // forpatientsP9d (145:16608)
-                            margin: EdgeInsets.fromLTRB(
-                                6 * fem, 0 * fem, 0 * fem, 31 * fem),
-                            child: Text(
-                              'For patients',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 20 * ffem,
-                                fontWeight: FontWeight.w700,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Container(
+                              // forpatientsP9d (145:16608)
+                              margin: EdgeInsets.fromLTRB(
+                                  6 * fem, 0 * fem, 0 * fem, 31 * fem),
+                              child: Text(
+                                'For patients',
+                                style: SafeGoogleFont(
+                                  'Inter',
+                                  fontSize: 20 * ffem,
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.2125 * ffem / fem,
+                                  color: const Color(0xffffffff),
+                                ),
                               ),
                             ),
                           ),
@@ -196,15 +206,123 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             constraints: BoxConstraints(
                               maxWidth: 226 * fem,
                             ),
-                            child: Text(
-                              'Search for doctors\nSearch for hospital\nSearch medical shop\nBook lab test\nBook full body checkups\nDoc Search health care plan',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
-                              ),
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const DoctorFindPage()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Search for doctors",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.19 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const FindHospitalPage()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Search for Hospital",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const SearchChemist()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Serach for medical shop",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const SearchLab()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Book Lab test",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const DoctorFindPage()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Book full body check up",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                                GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const SubscriptionIntroductionPage()),
+                                      );
+                                    },
+                                    child: Text(
+                                      "Doc Search health care plan",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    )),
+                              ],
                             ),
                           ),
                         ],
@@ -233,23 +351,101 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             ),
                           ),
                           Container(
-                            // docregistrationformdocsearchco (145:16600)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 34 * fem),
-                            constraints: BoxConstraints(
-                              maxWidth: 189 * fem,
-                            ),
-                            child: Text(
-                              'Doc Registration form\nDoc Search consult\nDoc Search health feed\nDoc Dearch profile',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
+                              // docregistrationformdocsearchco (145:16600)
+                              margin: EdgeInsets.fromLTRB(
+                                  0 * fem, 0 * fem, 0 * fem, 34 * fem),
+                              constraints: BoxConstraints(
+                                maxWidth: 189 * fem,
                               ),
-                            ),
-                          ),
+                              child: Column(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const SubscriptionIntroductionPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Registration form",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search consult",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Health Feed",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search profile",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
                           Container(
                             // forlabTSK (145:16599)
                             margin: EdgeInsets.fromLTRB(
@@ -266,21 +462,99 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             ),
                           ),
                           Container(
-                            // labregistrationformdocsearchco (145:16601)
-                            constraints: BoxConstraints(
-                              maxWidth: 189 * fem,
-                            ),
-                            child: Text(
-                              'Lab Registration form\nDoc Search consult\nDoc Search health feed\nDoc Dearch profile',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
+                              // labregistrationformdocsearchco (145:16601)
+                              constraints: BoxConstraints(
+                                maxWidth: 189 * fem,
                               ),
-                            ),
-                          ),
+                              child: Column(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Lab Registration Form",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const LabResultPage()));
+                                    },
+                                    child: Text(
+                                      "Lab List",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const LabSDisplayPage()));
+                                    },
+                                    child: Text(
+                                      "Lab Serach Page",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search Profile",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
                         ],
                       ),
                     ),
@@ -307,23 +581,101 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                             ),
                           ),
                           Container(
-                            // docsearchconsultdocsearchhealt (145:16607)
-                            margin: EdgeInsets.fromLTRB(
-                                2 * fem, 0 * fem, 0 * fem, 38 * fem),
-                            constraints: BoxConstraints(
-                              maxWidth: 209 * fem,
-                            ),
-                            child: Text(
-                              'Doc Search consult\nDoc Search health feed\nDoc Dearch profile\nHospital Registration form',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 17 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
+                              // docsearchconsultdocsearchhealt (145:16607)
+                              margin: EdgeInsets.fromLTRB(
+                                  2 * fem, 0 * fem, 0 * fem, 38 * fem),
+                              constraints: BoxConstraints(
+                                maxWidth: 209 * fem,
                               ),
-                            ),
-                          ),
+                              child: Column(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search consult",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search health feed",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()));
+                                    },
+                                    child: Text(
+                                      "Doc Dearch profile",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()));
+                                    },
+                                    child: Text(
+                                      "Hospital Registration form",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
                           Container(
                             // group3283zUB (145:16602)
                             margin: EdgeInsets.fromLTRB(
@@ -351,16 +703,97 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                   constraints: BoxConstraints(
                                     maxWidth: 206 * fem,
                                   ),
-                                  child: Text(
-                                    'Medical Registration form\nDoc Search consult\nDoc Search health feed\nDoc Dearch profile',
-                                    style: SafeGoogleFont(
-                                      'Inter',
-                                      fontSize: 17 * ffem,
-                                      fontWeight: FontWeight.w400,
-                                      height: 1.2125 * ffem / fem,
-                                      color: const Color(0xffffffff),
+                                  child: 
+                                  Column(
+                                    children: [
+                                             GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()));
+                                    },
+                                    child: Text(
+                                      "Medical Registration form",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
                                     ),
                                   ),
+                                         SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search consult",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                               SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ConsultNowPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Search health feed",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                                    SizedBox(
+                                    height: 1,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const DetailPage()));
+                                    },
+                                    child: Text(
+                                      "Doc Dearch profile",
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 17 * ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125 * ffem / fem,
+                                        color: const Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                    ],
+                                  )
+                            
                                 ),
                               ],
                             ),
