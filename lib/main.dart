@@ -47,6 +47,8 @@ import 'package:myapp/patient_Details/silver_plan_page.dart';
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
+import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
+import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
 
 import 'package:myapp/search_doctor.dart';
 import 'package:myapp/upload_description.dart';
@@ -81,21 +83,8 @@ class MyApp extends StatelessWidget {
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
-		home:NoCommunicationPage(),
+		home:HospitalRegistration(),
 	);
 	}
 }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Doc Search',
-      debugShowCheckedModeBanner: false,
-      scrollBehavior: MyCustomScrollBehavior(),
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MedicalRecordDoctor(),
-    );
-  }
 
