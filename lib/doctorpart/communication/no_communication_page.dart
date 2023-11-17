@@ -29,7 +29,7 @@ class _NoCommunicationPageState extends State<NoCommunicationPage> {
                 width: 510 * fem,
                 height: 518 * fem,
                 child: Image.network(
-                  "assets/page-1/images/53.png",
+                  "https://drive.google.com/file/d/10o2psc-KfKkMWaqMevLplppHqEgjabGl/view?usp=sharing",
                   fit: BoxFit.cover,
                 ),
               ),
