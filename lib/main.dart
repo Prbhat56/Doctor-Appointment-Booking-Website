@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
 import 'package:myapp/saima/lab_test.dart';
 import 'package:myapp/saima/lab_test_two.dart';
+import 'package:myapp/saima/medicalrecord/medical_record.dart';
 import 'package:myapp/test/patient_test.dart';
 import 'package:myapp/utils.dart';
 
+import 'MedicalRecord/patient_medical_record.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LabTestTwo(),
+      home: MedicalRecordDoctor(),
     );
   }
 }
