@@ -47,7 +47,7 @@ class _LabTestTwoState extends State<LabTestTwo> {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 20),
+                      padding: EdgeInsets.only(left: 400),
                       child: Container(
                           width: 70,
                           height: 25,
@@ -59,7 +59,9 @@ class _LabTestTwoState extends State<LabTestTwo> {
                           ),
                           child: Center(child: Text('All',style: TextStyle(color: Colors.white),))),
                     ),
-                    Spacer(),
+                   SizedBox(
+                     width: 40,
+                   ),
                     Container(
                         width: 70,
                         height: 25,
@@ -70,7 +72,9 @@ class _LabTestTwoState extends State<LabTestTwo> {
                             )
                         ),
                         child: Center(child: Text('Online',style: TextStyle(color: Colors.white),))),
-                    Spacer(),
+                    SizedBox(
+                      width: 40,
+                    ),
                     Container(
                         width: 70,
                         height: 25,
@@ -81,7 +85,9 @@ class _LabTestTwoState extends State<LabTestTwo> {
                             )
                         ),
                         child: Center(child: Text('Date',style: TextStyle(color: Colors.white),))),
-                    Spacer(),
+                    SizedBox(
+                      width: 40,
+                    ),
                     Container(
                       width: 70,
                         height: 25,
@@ -92,9 +98,92 @@ class _LabTestTwoState extends State<LabTestTwo> {
                             )
                         ),
                         child: Center(child: Text('English',style: TextStyle(color: Colors.white),))),
+                    SizedBox(
+                      width: 40,
+                    ),
 
-                    Spacer(),
                     Icon(Icons.notifications),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Column(
+                  children: [
+                    DataTable(
+                      columns: const <DataColumn>[
+                        DataColumn(
+                          label: Text(
+                            'Date',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Time',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Name',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Status',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Re-Scheduling',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            '',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
+                      rows: const <DataRow>[
+                        DataRow(
+                          cells: <DataCell>[
+                            DataCell(Text('25.10.23')),
+                            DataCell(Text('11:20 am')),
+                            DataCell(Text('Viksah Sharma')),
+                            DataCell(Text('Completed',style: TextStyle(color: Colors.green),)),
+                            DataCell(Text('-')),
+                            DataCell( Icon(Icons.delete)),
+
+                          ],
+                        ),
+                        DataRow(
+                          cells: <DataCell>[
+                            DataCell(Text('25.10.23')),
+                            DataCell(Text('11:20 am')),
+                            DataCell(Text('Viksah Sharma')),
+                            DataCell(Text('Pending',style: TextStyle(color: Colors.red),)),
+                            DataCell(Text('-')),
+                            DataCell( Icon(Icons.delete)),
+                          ],
+                        ),
+
+                        DataRow(
+                          cells: <DataCell>[
+                            DataCell(Text('25.10.23')),
+                            DataCell(Text('11:20 am')),
+                            DataCell(Text('Viksah Sharma')),
+                            DataCell(Text('Completed',style: TextStyle(color: Colors.green),)),
+                            DataCell(Text('-')),
+                            DataCell( Icon(Icons.delete)),
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 )
               ],

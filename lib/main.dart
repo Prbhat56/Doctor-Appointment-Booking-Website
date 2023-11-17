@@ -48,16 +48,20 @@ import 'package:myapp/patient_Details/silver_plan_page.dart';
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
+import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
+import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
 
 import 'package:myapp/search_doctor.dart';
 import 'package:myapp/upload_description.dart';
 
 import 'package:myapp/saima/lab_test.dart';
 import 'package:myapp/saima/lab_test_two.dart';
+import 'package:myapp/saima/medicalrecord/medical_record.dart';
 import 'package:myapp/test/patient_test.dart';
 
 import 'package:myapp/utils.dart';
 
+import 'MedicalRecord/patient_medical_record.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -69,7 +73,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  @override
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -83,3 +87,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
