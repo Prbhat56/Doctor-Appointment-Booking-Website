@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Patient/about_us_page.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
+import 'package:myapp/doctor/doctor_registration_form_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
@@ -9,6 +10,8 @@ import 'package:myapp/lab/lab_display_page.dart';
 import 'package:myapp/lab/lab_result_page.dart';
 import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
+import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
+import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
 import 'package:myapp/search_doctor.dart';
 
 import '../utils.dart';
@@ -365,7 +368,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const SubscriptionIntroductionPage()));
+                                                  const DoctorRegistrationFormPage()));
                                     },
                                     child: Text(
                                       "Doc Registration form",
@@ -474,7 +477,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const ConsultNowPage()));
+                                                  const LabRegistrationPage()));
                                     },
                                     child: Text(
                                       "Lab Registration Form",
@@ -661,7 +664,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const HomePage()));
+                                                  const HospitalRegistration()));
                                     },
                                     child: Text(
                                       "Hospital Registration form",

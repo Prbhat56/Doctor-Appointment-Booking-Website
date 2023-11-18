@@ -2,11 +2,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/Patient/about_us_page.dart';
 import 'package:myapp/Round_button.dart';
 import 'package:myapp/constant/search_model.dart';
+import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/controller/sidebar_controller.dart';
+import 'package:myapp/doctor/doctor_registration_page.dart';
 import 'package:myapp/hospital/find_hospital.dart';
+import 'package:myapp/lab/find_lab.dart';
 import 'package:myapp/new_page.dart';
+import 'package:myapp/patient_Details/subscription_detail_page.dart';
+import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
+import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
 import 'package:myapp/search_doctor.dart';
 import 'package:myapp/utils2.dart';
 
@@ -28,16 +35,46 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
     super.initState();
 
     main_search_item = [
-      SearchModel("find doctor", "20000+ alraedy found"),
-      SearchModel("Search Hospital", "50k+ visited yet"),
-      SearchModel("Search Lab", "40 labs available now"),
-      SearchModel("Get Premuim", "300+ premuim user "),
-      SearchModel("Video consult", "70+ doctor available"),
-      SearchModel("Register as doctor", "480 doctor availble"),
-      SearchModel("Register as lab", "40 lab is already under providing service"),
-      SearchModel("Register as Hospital", "60+ hospital registered"),
-      SearchModel("Go to Home page", "60k+ already connected with us "),
-      SearchModel("Know More About us", "50k+ service provided yet"),
+      SearchModel("find doctor", "20000+ alraedy found",(){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorFindPage()));
+      }
+      ),
+      SearchModel("Search Hospital", "50k+ visited yet",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => FindHospitalPage()));
+      }),
+      SearchModel("Search Lab", "40 labs available now",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>SearchLab()));
+      }),
+      SearchModel("Get Premuim", "300+ premuim user ",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SubscriptionIntroductionPage()));
+      }),
+      SearchModel("Video consult", "70+ doctor available",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ConsultNowPage()));
+      }),
+      SearchModel("Register as doctor", "480 doctor availble",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorRegistrationPage()));
+      }),
+      SearchModel("Register as lab", "40 lab is already under providing service",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => LabRegistrationPage()));
+      }),
+      SearchModel("Register as Hospital", "60+ hospital registered",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HospitalRegistration()));
+      }),
+      SearchModel("Go to Home page", "60k+ already connected with us ",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+      }),
+      SearchModel("Know More About us", "50k+ service provided yet",
+      (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => AboutUsPage()));
+      }),
     ];
 
     display_list = List.from(main_search_item);
@@ -77,6 +114,10 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                       display_list[index].trusteduser!,
                       style: TextStyle(color: Colors.black.withOpacity(0.7)),
                     ),
+                       onTap: () {
+                    
+                    display_list[index].onPressedFunction.call();
+                  },
                   ),
                 ),
               ),
