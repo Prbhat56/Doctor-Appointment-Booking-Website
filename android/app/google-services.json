@@ -1,88 +1,27 @@
 {
   "project_info": {
-    "project_number": "580876700157",
-    "firebase_url": "https://tearberg-8fba6-default-rtdb.firebaseio.com",
-    "project_id": "tearberg-8fba6",
-    "storage_bucket": "tearberg-8fba6.appspot.com"
+    "project_number": "477470132170",
+    "firebase_url": "https://docsearchweb-780db-default-rtdb.firebaseio.com",
+    "project_id": "docsearchweb-780db",
+    "storage_bucket": "docsearchweb-780db.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:580876700157:android:97da481a7ca3e790357194",
+        "mobilesdk_app_id": "1:477470132170:android:04e830130f151f2320f133",
         "android_client_info": {
           "package_name": "com.example.test"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "580876700157-0si4ukgvvmilt0dhs93nldu3v3rqjgq5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDnKbewoE-bOG3tyy-5Hx474voZ81X2MJc"
+          "current_key": "AIzaSyDvtNQiY2KQBVhNjkaXlQgueoXAKTNEfKY"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "580876700157-0si4ukgvvmilt0dhs93nldu3v3rqjgq5.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "580876700157-0u0k5rti84juf188htmdqfjg1lb9p1sl.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.loginpagedesign"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:580876700157:android:b23dd10aee177875357194",
-        "android_client_info": {
-          "package_name": "com.tearbergs.docsearch"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "580876700157-7ga09k6farcgd6oc0e0k3pvpi699o0fk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tearbergs.docsearch",
-            "certificate_hash": "fc550865ebb69e7da40d558eceabdd07b5180ebe"
-          }
-        },
-        {
-          "client_id": "580876700157-0si4ukgvvmilt0dhs93nldu3v3rqjgq5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDnKbewoE-bOG3tyy-5Hx474voZ81X2MJc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "580876700157-0si4ukgvvmilt0dhs93nldu3v3rqjgq5.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "580876700157-0u0k5rti84juf188htmdqfjg1lb9p1sl.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.loginpagedesign"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
