@@ -30,6 +30,7 @@ class SlidingWebPage extends StatefulWidget {
 class _SlidingWebPageState extends State<SlidingWebPage> {
   late List<SearchModel> main_search_item;
   late List<SearchModel> display_list;
+  bool isValidate = false;
 
   @override
   void initState() {
@@ -566,18 +567,20 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                               loading = true;
                                                             });
 
-                                                            final crendital =
+                                                            final PhoneAuthCredential crendital =
                                                                 PhoneAuthProvider.credential(
                                                                     verificationId:
                                                                         vId,
-                                                                    smsCode: verificationCodeController
-                                                                        .text
-                                                                        .toString());
+                                                                    smsCode:"$verificationCodeController.text"
+                                                                        );
 
                                                             try {
                                                               await auth
                                                                   .signInWithCredential(
                                                                       crendital);
+                                                              setState(() {
+                                                                isValidate = true;
+                                                              });
                                                               // Navigator.push(context,
                                                               //     MaterialPageRoute(builder: (context) => SlidingWebPage(verificartionId: vId)));
                                                             } catch (e) {
@@ -598,8 +601,10 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                       );
                                     });
                               },
+
                               child: Text(
-                                "Register",
+                                isValidate ==false?
+                                "Register":"$nameController",
                                 style: SafeGoogleFont(
                                   'Inter',
                                   fontSize: 17 * ffem,
@@ -610,8 +615,10 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                               ),
                             ),
                           ),
+
                           Text(
-                            "/",
+                            isValidate ==false?
+                            "/":"",
                             style: SafeGoogleFont(
                               'Inter',
                               fontSize: 17 * ffem,
@@ -736,7 +743,8 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                         ));
                               },
                               child: Text(
-                                "Login",
+                                isValidate ==false?
+                                "Login":"",
                                 style: SafeGoogleFont(
                                   'Inter',
                                   fontSize: 17 * ffem,

@@ -23,15 +23,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -50,22 +44,41 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD7BWjZgmc9_65G5bNmbLashwQii7jf1tI',
-    appId: '1:580876700157:web:2195ca65a92e9b42357194',
-    messagingSenderId: '580876700157',
-    projectId: 'tearberg-8fba6',
-    authDomain: 'tearberg-8fba6.firebaseapp.com',
-    databaseURL: 'https://tearberg-8fba6-default-rtdb.firebaseio.com',
-    storageBucket: 'tearberg-8fba6.appspot.com',
-    measurementId: 'G-Q3CYN7EHLN',
+    apiKey: 'AIzaSyBvtY6lzdQjG_2D9MZEqlw_n7393MkPrHU',
+    appId: '1:477470132170:web:3933b1b2189a052d20f133',
+    messagingSenderId: '477470132170',
+    projectId: 'docsearchweb-780db',
+    authDomain: 'docsearchweb-780db.firebaseapp.com',
+    databaseURL: 'https://docsearchweb-780db-default-rtdb.firebaseio.com',
+    storageBucket: 'docsearchweb-780db.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDnKbewoE-bOG3tyy-5Hx474voZ81X2MJc',
-    appId: '1:580876700157:android:97da481a7ca3e790357194',
-    messagingSenderId: '580876700157',
-    projectId: 'tearberg-8fba6',
-    databaseURL: 'https://tearberg-8fba6-default-rtdb.firebaseio.com',
-    storageBucket: 'tearberg-8fba6.appspot.com',
+    apiKey: 'AIzaSyDvtNQiY2KQBVhNjkaXlQgueoXAKTNEfKY',
+    appId: '1:477470132170:android:04e830130f151f2320f133',
+    messagingSenderId: '477470132170',
+    projectId: 'docsearchweb-780db',
+    databaseURL: 'https://docsearchweb-780db-default-rtdb.firebaseio.com',
+    storageBucket: 'docsearchweb-780db.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAkIvDwPDtctVTVmX35tWdPo9poLbY0wNk',
+    appId: '1:477470132170:ios:ecb2188811f82b1520f133',
+    messagingSenderId: '477470132170',
+    projectId: 'docsearchweb-780db',
+    databaseURL: 'https://docsearchweb-780db-default-rtdb.firebaseio.com',
+    storageBucket: 'docsearchweb-780db.appspot.com',
+    iosBundleId: 'com.example.test',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAkIvDwPDtctVTVmX35tWdPo9poLbY0wNk',
+    appId: '1:477470132170:ios:ecb2188811f82b1520f133',
+    messagingSenderId: '477470132170',
+    projectId: 'docsearchweb-780db',
+    databaseURL: 'https://docsearchweb-780db-default-rtdb.firebaseio.com',
+    storageBucket: 'docsearchweb-780db.appspot.com',
+    iosBundleId: 'com.example.test',
   );
 }
