@@ -108,7 +108,7 @@ class _LabResultPageState extends State<LabResultPage> {
                 margin:
                     EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 43 * fem),
                 width: double.infinity,
-                height: 127 * fem,
+                height: 70 * fem,
                 decoration: BoxDecoration(
                   border: Border.all(color: const Color(0xffe1d8d8)),
                   borderRadius: BorderRadius.circular(40 * fem),
@@ -124,9 +124,9 @@ class _LabResultPageState extends State<LabResultPage> {
                     'Found 6 Result Near You',
                     style: SafeGoogleFont(
                       'Inter',
-                      fontSize: 65 * ffem,
+                      fontSize: 38 * ffem,
                       fontWeight: FontWeight.w600,
-                      height: 1.2125 * ffem / fem,
+                      height: 1.15 * ffem / fem,
                       letterSpacing: -1.2349999845 * fem,
                       color: const Color(0xffffffff),
                     ),
@@ -455,7 +455,7 @@ class _LabResultPageState extends State<LabResultPage> {
               ),
             ],
           ),
-          SizedBox(height: 25,),
+          SizedBox(height: 125,),
           PatientFooterPage()
         ]
         ),
@@ -543,7 +543,7 @@ class _LabResultPageState extends State<LabResultPage> {
                 margin:
                     EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 43 * fem),
                 width: double.infinity,
-                height: 127 * fem,
+                height: 70 * fem,
                 decoration: BoxDecoration(
                   border: Border.all(color: const Color(0xffe1d8d8)),
                   borderRadius: BorderRadius.circular(40 * fem),
@@ -559,9 +559,9 @@ class _LabResultPageState extends State<LabResultPage> {
                     'Found 6 Result Near You',
                     style: SafeGoogleFont(
                       'Inter',
-                      fontSize: 65 * ffem,
+                      fontSize: 38 * ffem,
                       fontWeight: FontWeight.w600,
-                      height: 1.2125 * ffem / fem,
+                      height: 1.15 * ffem / fem,
                       letterSpacing: -1.2349999845 * fem,
                       color: const Color(0xffffffff),
                     ),
@@ -890,7 +890,7 @@ class _LabResultPageState extends State<LabResultPage> {
               ),
             ],
           ),
-            SizedBox(height: 25,),
+            SizedBox(height: 125,),
           PatientFooterPage()
         ]
         ),
@@ -978,7 +978,7 @@ class _LabResultPageState extends State<LabResultPage> {
                 margin:
                     EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 43 * fem),
                 width: double.infinity,
-                height: 127 * fem,
+                height: 70 * fem,
                 decoration: BoxDecoration(
                   border: Border.all(color: const Color(0xffe1d8d8)),
                   borderRadius: BorderRadius.circular(40 * fem),
@@ -994,9 +994,9 @@ class _LabResultPageState extends State<LabResultPage> {
                     'Found 6 Result Near You',
                     style: SafeGoogleFont(
                       'Inter',
-                      fontSize: 65 * ffem,
+                      fontSize: 38 * ffem,
                       fontWeight: FontWeight.w600,
-                      height: 1.2125 * ffem / fem,
+                      height: 1.15 * ffem / fem,
                       letterSpacing: -1.2349999845 * fem,
                       color: const Color(0xffffffff),
                     ),
@@ -1325,7 +1325,7 @@ class _LabResultPageState extends State<LabResultPage> {
               ),
             ],
           ),
-            SizedBox(height: 25,),
+            SizedBox(height: 125,),
           PatientFooterPage()
         ]
         ),

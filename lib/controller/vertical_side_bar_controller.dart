@@ -17,7 +17,7 @@ import 'package:myapp/patientrefer/patient_refer.dart';
 import 'package:myapp/patientsettings/patient_settings.dart';
 import 'package:myapp/profile_page.dart';
 
-import 'package:myapp/search_doctor.dart';
+
 import 'package:myapp/test/patient_test.dart';
 
 class VerticalSideBarController extends GetxController {

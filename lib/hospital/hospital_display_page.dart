@@ -113,7 +113,7 @@ class _HospitalDisplayPageState extends State<HospitalDisplayPage> {
                       margin: EdgeInsets.fromLTRB(
                           0 * fem, 0 * fem, 0 * fem, 43 * fem),
                       width: double.infinity,
-                      height: 110 * fem,
+                      height: 70 * fem,
                       decoration: BoxDecoration(
                         border: Border.all(color: const Color(0xffe1d8d8)),
                         borderRadius: BorderRadius.circular(40 * fem),

@@ -8,13 +8,14 @@ import 'package:myapp/constant/search_model.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/controller/sidebar_controller.dart';
 import 'package:myapp/doctor/doctor_registration_page.dart';
+import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
 import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
 import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
 import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
-import 'package:myapp/search_doctor.dart';
+
 import 'package:myapp/utils2.dart';
 
 import '../constant/footer_page.dart';
@@ -36,7 +37,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
 
     main_search_item = [
       SearchModel("find doctor", "20000+ alraedy found",(){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorFindPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => FinalDoctorFindPage()));
       }
       ),
       SearchModel("Search Hospital", "50k+ visited yet",

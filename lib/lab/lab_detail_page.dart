@@ -104,7 +104,7 @@ class _LabDetailPageState extends State<LabDetailPage> {
               children: [
                 Container(
                   width: 1028 * fem,
-                  height: 127 * fem,
+                  height: 70* fem,
                   decoration: BoxDecoration(
                     border: Border.all(color: const Color(0xffe1d8d8)),
                     borderRadius: BorderRadius.circular(40 * fem),
@@ -121,9 +121,9 @@ class _LabDetailPageState extends State<LabDetailPage> {
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont(
                         'Roboto',
-                        fontSize: 65 * ffem,
+                        fontSize: 38 * ffem,
                         fontWeight: FontWeight.w600,
-                        height: 1.1725 * ffem / fem,
+                        height: 1.15 * ffem / fem,
                         color: const Color(0xffffffff),
                       ),
                     ),
@@ -267,7 +267,7 @@ class _LabDetailPageState extends State<LabDetailPage> {
                 ),
               ],
             ),
-            SizedBox(height: 25,),
+            SizedBox(height: 225,),
             PatientFooterPage()
           ],
         ),
@@ -351,7 +351,7 @@ class _LabDetailPageState extends State<LabDetailPage> {
               children: [
                 Container(
                   width: 1028 * fem,
-                  height: 127 * fem,
+                  height: 70 * fem,
                   decoration: BoxDecoration(
                     border: Border.all(color: const Color(0xffe1d8d8)),
                     borderRadius: BorderRadius.circular(40 * fem),
@@ -368,9 +368,9 @@ class _LabDetailPageState extends State<LabDetailPage> {
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont(
                         'Roboto',
-                        fontSize: 65 * ffem,
+                        fontSize: 38 * ffem,
                         fontWeight: FontWeight.w600,
-                        height: 1.1725 * ffem / fem,
+                        height: 1.15 * ffem / fem,
                         color: const Color(0xffffffff),
                       ),
                     ),
@@ -514,7 +514,7 @@ class _LabDetailPageState extends State<LabDetailPage> {
                 ),
               ],
             ),
-             SizedBox(height: 25,),
+             SizedBox(height: 225,),
             PatientFooterPage()
           ],
         ),
@@ -598,7 +598,7 @@ class _LabDetailPageState extends State<LabDetailPage> {
               children: [
                 Container(
                   width: 1028 * fem,
-                  height: 127 * fem,
+                  height: 70 * fem,
                   decoration: BoxDecoration(
                     border: Border.all(color: const Color(0xffe1d8d8)),
                     borderRadius: BorderRadius.circular(40 * fem),
@@ -615,9 +615,9 @@ class _LabDetailPageState extends State<LabDetailPage> {
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont(
                         'Roboto',
-                        fontSize: 65 * ffem,
+                        fontSize: 38 * ffem,
                         fontWeight: FontWeight.w600,
-                        height: 1.1725 * ffem / fem,
+                        height: 1.15 * ffem / fem,
                         color: const Color(0xffffffff),
                       ),
                     ),

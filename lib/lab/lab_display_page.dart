@@ -113,7 +113,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         margin: EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 0 * fem, 43 * fem),
                         width: double.infinity,
-                        height: 100* fem,
+                        height: 70* fem,
                         decoration: BoxDecoration(
                           border: Border.all(color: const Color(0xffe1d8d8)),
                           borderRadius: BorderRadius.circular(40 * fem),
@@ -129,7 +129,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                             'Famous  Lab in Banglore ',
                             style: SafeGoogleFont(
                               'Inter',
-                              fontSize: 50 * ffem,
+                              fontSize: 38 * ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.15 * ffem / fem,
                               letterSpacing: -1.2349999845 * fem,
@@ -147,7 +147,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         'Your area/ pincode',
                         style: SafeGoogleFont(
                           'Inter',
-                          fontSize: 45 * ffem,
+                          fontSize: 35 * ffem,
                           fontWeight: FontWeight.w600,
                           height: 1.13 * ffem / fem,
                           color: const Color(0xff005473),
@@ -613,7 +613,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 25,),
+                SizedBox(height: 70,),
                 PatientFooterPage()
               ],
             ),
@@ -707,7 +707,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         margin: EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 0 * fem, 43 * fem),
                         width: double.infinity,
-                        height: 100* fem,
+                        height: 70* fem,
                         decoration: BoxDecoration(
                           border: Border.all(color: const Color(0xffe1d8d8)),
                           borderRadius: BorderRadius.circular(40 * fem),
@@ -723,7 +723,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                             'Famous  Lab in Banglore ',
                             style: SafeGoogleFont(
                               'Inter',
-                              fontSize: 50 * ffem,
+                              fontSize: 38 * ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.15 * ffem / fem,
                               letterSpacing: -1.2349999845 * fem,
@@ -741,7 +741,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         'Your area/ pincode',
                         style: SafeGoogleFont(
                           'Inter',
-                          fontSize: 45 * ffem,
+                          fontSize: 35 * ffem,
                           fontWeight: FontWeight.w600,
                           height: 1.13 * ffem / fem,
                           color: const Color(0xff005473),
@@ -1208,7 +1208,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                   ],
                 ),
                      SizedBox(
-              height: 25,
+              height: 70,
             ),
             PatientFooterPage(),
               ],
@@ -1304,7 +1304,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         margin: EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 0 * fem, 43 * fem),
                         width: double.infinity,
-                        height: 100* fem,
+                        height: 70* fem,
                         decoration: BoxDecoration(
                           border: Border.all(color: const Color(0xffe1d8d8)),
                           borderRadius: BorderRadius.circular(40 * fem),
@@ -1320,7 +1320,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                             'Famous  Lab in Banglore ',
                             style: SafeGoogleFont(
                               'Inter',
-                              fontSize: 50 * ffem,
+                              fontSize: 38 * ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.15 * ffem / fem,
                               letterSpacing: -1.2349999845 * fem,
@@ -1338,7 +1338,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                         'Your area/ pincode',
                         style: SafeGoogleFont(
                           'Inter',
-                          fontSize: 45 * ffem,
+                          fontSize: 35 * ffem,
                           fontWeight: FontWeight.w600,
                           height: 1.13 * ffem / fem,
                           color: const Color(0xff005473),
@@ -1805,7 +1805,7 @@ class _LabSDisplayPageState extends State<LabSDisplayPage> {
                   ],
                 ),
                      SizedBox(
-              height: 25,
+              height: 70,
             ),
             PatientFooterPage(),
               ],

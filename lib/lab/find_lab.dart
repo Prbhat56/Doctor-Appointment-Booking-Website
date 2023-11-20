@@ -39,7 +39,7 @@ class _SearchLabState extends State<SearchLab> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2800 * fem,
+        height: 1500 * fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -230,7 +230,7 @@ class _SearchLabState extends State<SearchLab> {
               ],
             ),
                  SizedBox(
-              height: 50,
+              height: 65,
             ),
             PatientFooterPage(),
           ],
@@ -247,7 +247,7 @@ class _SearchLabState extends State<SearchLab> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
+        height: 1500 * fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -417,7 +417,7 @@ class _SearchLabState extends State<SearchLab> {
               ],
             ),
                  SizedBox(
-              height: 50,
+              height: 65,
             ),
             PatientFooterPage(),
           ],
@@ -434,7 +434,7 @@ class _SearchLabState extends State<SearchLab> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
+        height: 1500 * fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -604,7 +604,7 @@ class _SearchLabState extends State<SearchLab> {
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 65,
             ),
             PatientFooterPage(),
           ],

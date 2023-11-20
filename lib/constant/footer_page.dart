@@ -3,6 +3,9 @@ import 'package:myapp/Patient/about_us_page.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/doctor/doctor_registration_form_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
+import 'package:myapp/doctorfind/final_find_doctor_page.dart';
+import 'package:myapp/doctorpart/communication/communication_view_page.dart';
+import 'package:myapp/doctorpart/communication/no_communication_page.dart';
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
@@ -12,7 +15,7 @@ import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
 import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
 import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
-import 'package:myapp/search_doctor.dart';
+
 
 import '../utils.dart';
 
@@ -217,7 +220,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const DoctorFindPage()),
+                                                const FinalDoctorFindPage()),
                                       );
                                     },
                                     child: Text(
@@ -293,7 +296,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const DoctorFindPage()),
+                                                const FinalDoctorFindPage()),
                                       );
                                     },
                                     child: Text(
@@ -759,7 +762,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const ConsultNowPage()));
+                                                  const CommunicationViewPage()));
                                     },
                                     child: Text(
                                       "Doc Search health feed",

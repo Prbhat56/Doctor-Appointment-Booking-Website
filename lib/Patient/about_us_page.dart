@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
+import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
-import 'package:myapp/search_doctor.dart';
+
 
 import '../utils.dart';
 
@@ -442,7 +443,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
                                             Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const  DoctorFindPage()),
+                                      builder: (context) => const  FinalDoctorFindPage()),
                                 );
                                         },
                                         child: Container(

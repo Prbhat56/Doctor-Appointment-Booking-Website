@@ -39,7 +39,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
+        height: 1700 * fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -208,7 +208,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                   },
                                   autoPlayInterval: 3000,
                                   isLoop: true,
-                                  children: [
+                                  children: const [
                                     Image(image: NetworkImage('https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
                                     fit: BoxFit.cover,
                                     ),
@@ -220,6 +220,8 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 60,),
+                                PatientFooterPage(),
           
           ],
         ),
@@ -234,7 +236,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
+        height: 1700 * fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -403,7 +405,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                   },
                                   autoPlayInterval: 3000,
                                   isLoop: true,
-                                  children: [
+                                  children: const [
                                     Image(image: NetworkImage('https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
                                     fit: BoxFit.cover,
                                     ),
@@ -415,6 +417,8 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 60,),
+                                PatientFooterPage(),
           
           ],
         ),
@@ -431,7 +435,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 2000 * fem,
+        height: 1700* fem,
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -600,7 +604,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                   },
                                   autoPlayInterval: 3000,
                                   isLoop: true,
-                                  children: [
+                                  children: const [
                                     Image(image: NetworkImage('https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
                                     fit: BoxFit.cover,
                                     ),
@@ -612,8 +616,8 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 25,),
-                                PatientFooterPage()
+                                SizedBox(height: 60,),
+                                PatientFooterPage(),
           
           ],
         ),

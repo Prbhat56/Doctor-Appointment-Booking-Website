@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:myapp/constant/footer_page.dart';
-import 'package:myapp/search_doctor.dart';
+import 'package:myapp/doctorfind/final_find_doctor_page.dart';
+
 
 import '../utils.dart';
 
@@ -126,7 +127,7 @@ class ConsultNowPage extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const DoctorFindPage()),
+                                                    const FinalDoctorFindPage()),
                                           );
                               },
                               borderRadius: BorderRadius.circular(30),

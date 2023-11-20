@@ -4,11 +4,12 @@ import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/image_slide_show.dart';
 
 import 'package:myapp/create_user.dart';
+import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 
 import 'package:myapp/find_chemist.dart';
 
 import 'package:myapp/registration_page.dart';
-import 'package:myapp/search_doctor.dart';
+
 
 import 'package:myapp/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -359,7 +360,7 @@ class HomePage extends StatelessWidget {
                                                                   MaterialPageRoute(
                                                                       builder:
                                                                           (context) =>
-                                                                              const DoctorFindPage()),
+                                                                              const FinalDoctorFindPage()),
                                                                 );
                                                               },
                                                               child: Text(
@@ -895,7 +896,7 @@ class HomePage extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const DoctorFindPage()),
+                                              const FinalDoctorFindPage()),
                                     );
                                   },
                                   child: Container(
@@ -934,7 +935,7 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const DoctorFindPage()),
+                                  builder: (context) => const FinalDoctorFindPage()),
                             );
                           },
                           child: Container(

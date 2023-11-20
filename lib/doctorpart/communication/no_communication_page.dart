@@ -35,16 +35,16 @@ class _NoCommunicationPageState extends State<NoCommunicationPage> {
               ),
             ),
             SizedBox(height: 40),
-            Text(
-              'No Communication yet!',
-              style: SafeGoogleFont(
-                'Joti One',
-                fontSize: 51 * ffem,
-                fontWeight: FontWeight.w400,
-                height: 1.3325 * ffem / fem,
-                color: Color(0xff005473),
-              ),
-            ),
+         Text(
+  'No communication yet!',
+  style:  SafeGoogleFont (
+    'Inter',
+    fontSize:  20*ffem,
+    fontWeight:  FontWeight.w400,
+    height:  1.2125*ffem/fem,
+    color:  Color(0xff005473),
+  ),
+),
           ],
         ),
       ),
