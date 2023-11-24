@@ -9,8 +9,9 @@ import 'package:myapp/doctorpart/communication/no_communication_page.dart';
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
-import 'package:myapp/lab/lab_display_page.dart';
-import 'package:myapp/lab/lab_result_page.dart';
+
+import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
+import 'package:myapp/lab_hospital_searchchemist_display_page/lab_display_page.dart';
 import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
 import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
@@ -502,7 +503,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const LabResultPage()));
+                                                   ChemistShopPage()));
                                     },
                                     child: Text(
                                       "Lab List",
@@ -524,7 +525,7 @@ class _PatientFooterPageState extends State<PatientFooterPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const LabSDisplayPage()));
+                                                  const LabDisplayPage()));
                                     },
                                     child: Text(
                                       "Lab Serach Page",

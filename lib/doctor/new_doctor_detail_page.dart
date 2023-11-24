@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Form/confirm_clinic_visit.dart';
 import 'package:myapp/constant/footer_page.dart';
 
+import '../constant/header_page.dart';
+import '../constant/image_slide_show.dart';
 import '../utils.dart';
 
 class NewDoctorDetailPage extends StatefulWidget {
@@ -25,6 +28,34 @@ class _NewDoctorDetailPageState extends State<NewDoctorDetailPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+             ConstantHeaderPage(),
+             SizedBox(height: 10,),
+              ImageSlideshow(
+              indicatorColor: Colors.blue,
+              onPageChanged: (value) {
+                debugPrint('PageChanged:$Value');
+              },
+              autoPlayInterval: 3000,
+              isLoop: true,
+              children: [
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+              ],
+            ),
+            SizedBox(height: 30,),
             Container(
               // autogroup1ngyVLM (Mv1DS1VDKACxivJkHX1ngy)
               width: double.infinity,

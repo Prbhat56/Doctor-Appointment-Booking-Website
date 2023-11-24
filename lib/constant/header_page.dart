@@ -1,34 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:myapp/Patient/about_us_page.dart';
+import 'package:myapp/Patient/book_appointment.dart';
 import 'package:myapp/Round_button.dart';
-import 'package:myapp/constant/search_model.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
-import 'package:myapp/controller/sidebar_controller.dart';
 import 'package:myapp/doctor/doctor_registration_page.dart';
 import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
 import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/subscription_detail_page.dart';
-
-
+import 'package:myapp/responsiveweb/webbar_builder.dart';
+import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
+import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
+import 'package:myapp/utils.dart';
 import 'package:myapp/utils2.dart';
 
-import '../constant/footer_page.dart';
-import '../constant/horizontal_list.dart';
-import '../saima/LabRegistration/labregistrationspage.dart';
-import '../saima/hospitalRegistration/hospital_registration.dart';
-import '../utils.dart';
+import '../Patient/about_us_page.dart';
+import 'search_model.dart';
 
-class SlidingWebPage extends StatefulWidget {
+class ConstantHeaderPage extends StatefulWidget {
   @override
-  State<SlidingWebPage> createState() => _SlidingWebPageState();
+  State<ConstantHeaderPage> createState() => _ConstantHeaderPageState();
 }
 
-class _SlidingWebPageState extends State<SlidingWebPage> {
+class _ConstantHeaderPageState extends State<ConstantHeaderPage> {
   late List<SearchModel> main_search_item;
   late List<SearchModel> display_list;
   bool isValidate = false;
@@ -98,6 +94,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
           double baseWidth = 1120;
           double fem = MediaQuery.of(context).size.width / baseWidth;
           double ffem = fem * 0.97;
+          
           return AlertDialog(
             content: Container(
               width: 500 * fem,
@@ -128,10 +125,8 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
           );
         },
       );
-
-  @override
   Widget build(BuildContext context) {
-    bool loading = false;
+      bool loading = false;
 
     final phoneNumberController = TextEditingController();
     final verificationCodeController = TextEditingController();
@@ -144,79 +139,10 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
     double baseWidth = 1120;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    SideBarController sideBarController = Get.put(SideBarController());
-    final _formKey = GlobalKey<FormState>();
-    void _showCustomDialog(BuildContext context) {
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return Dialog(
-           
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                      'assets/background_image.png'), // Your image path
-                  fit: BoxFit.cover, // Cover the entire dialog
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  // Add content for your dialog here
-                  const Text('Custom Dialog Content'),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: const Text('Close Dialog'),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      );
-    }
-
-    void showCustomAlertDialog(BuildContext context) {
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            content: Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                      'assets/background_image.jpg'), // Replace with your image asset path
-                  fit: BoxFit.cover, // You can adjust the fit as needed
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  // Add your content here, such as text, buttons, or other widgets
-                  const Text('Custom AlertDialog with Background Image'),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pop(); // Close the dialog
-                    },
-                    child: const Text('Close'),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      );
-    }
-
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            flex: 3,
-            child: Column(
+      final _formKey = GlobalKey<FormState>();
+  
+    return Container(
+      child:Column(
               children: [
                 Container(
                   width: 1441 * fem,
@@ -347,6 +273,24 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                           ),
                         ),
                       ),
+                         GestureDetector(
+                          onTap: (){
+                                 Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          SlidingWebPage(),
+                                    ));
+                          },
+                           child: Text(
+                                                 'Home',
+                                                 style: SafeGoogleFont(
+                            'Inter',
+                            fontSize: 24 * ffem,
+                            fontWeight: FontWeight.w400,
+                            height: 1.2125 * ffem / fem,
+                            color: const Color(0xffffffff),
+                                                 ),
+                                               ),
+                         ),
                       Text(
                         'Contact us',
                         style: SafeGoogleFont(
@@ -539,27 +483,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                         const EdgeInsets.all(8),
                                                     child: SizedBox(
                                                       width: 500,
-                                                      // child: RoundButton(
-                                                      //   title: 'Submit',
-                                                      //   loading: loading,
-                                                      //   onTap: (){
-                                                      //    setState(() {
-                                                      //      loading = true;
-                                                      //
-                                                      //    });
-                                                      //    String id = DateTime.now().millisecondsSinceEpoch.toString();
-                                                      //    fireStore.doc(id).set({
-                                                      //      'title1':nameController.text.toString(),
-                                                      //      'title2':addressController.text.toString(),
-                                                      //      'title2':mobileController.text.toString(),
-                                                      //      'id' :id
-                                                      //    }).then((value) {
-                                                      //
-                                                      //    }).onError((error, stackTrace) {
-                                                      //      utilss().toastMessage(error.toString());
-                                                      //    });
-                                                      //   },
-                                                      // )
+                                              
                                                       child: RoundButton(
                                                           title: 'submit',
                                                           loading: loading,
@@ -582,8 +506,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                               setState(() {
                                                                 isValidate = true;
                                                               });
-                                                              // Navigator.push(context,
-                                                              //     MaterialPageRoute(builder: (context) => SlidingWebPage(verificartionId: vId)));
+                                                             
                                                             } catch (e) {
                                                               setState(() {
                                                                 loading = true;
@@ -761,58 +684,9 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Expanded(
-                    child: Obx(
-                  () => Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      HorizontalListItem(
-                          text: 'Home',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 0,
-                          selected: sideBarController.index.value == 0),
-                      HorizontalListItem(
-                          text: 'Find Doctors',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 1,
-                          selected: sideBarController.index.value == 1),
-                      HorizontalListItem(
-                          text: 'Video consult',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 2,
-                          selected: sideBarController.index.value == 2),
-                      HorizontalListItem(
-                          text: 'Medicines',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 3,
-                          selected: sideBarController.index.value == 3),
-                      HorizontalListItem(
-                          text: 'Lab Test',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 4,
-                          selected: sideBarController.index.value == 4),
-                      HorizontalListItem(
-                          text: 'Hospital',
-                          fem: ffem,
-                          onTap: () => sideBarController.index.value = 5,
-                          selected: sideBarController.index.value == 5),
-                    ],
-                  ),
-                )
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 8,
-            child: Obx(
-                () => sideBarController.pages[sideBarController.index.value]),
-          ),
-        ],
-      ),
+                
+              ]
+      )
     );
   }
 }

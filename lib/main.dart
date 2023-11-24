@@ -10,37 +10,40 @@ import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/upper_bar.dart';
 import 'package:myapp/consultdoctor/consult_now.dart';
 import 'package:myapp/create_user.dart';
-import 'package:myapp/doctor/doctor_dashboard.dart';
+
 import 'package:myapp/doctor/doctor_login_page.dart';
 import 'package:myapp/doctor/doctor_otp_page.dart';
 import 'package:myapp/doctor/doctor_registration_page.dart';
 import 'package:myapp/doctor/doctor_reset_password.dart';
 import 'package:myapp/doctor/new_doctor_detail_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
-import 'package:myapp/doctor_profile_page.dart';
+
 import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/doctorpart/communication/communication_detail_page.dart';
 import 'package:myapp/doctorpart/communication/communication_view_page.dart';
 import 'package:myapp/doctorpart/communication/no_communication_page.dart';
-import 'package:myapp/doctorpart/doctor_dasboard.dart';
+
 import 'package:myapp/doctorpart/new_communication/new_communication_detail_page.dart';
 import 'package:myapp/doctorpart/new_communication/new_communication_page.dart';
 import 'package:myapp/doctorpart/online%20consultation/booked_appointment_page.dart';
 import 'package:myapp/doctorpart/online%20consultation/no_online_consulatation_page.dart';
-import 'package:myapp/doctorpart/set_time_and_day.dart';
+
 
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
-import 'package:myapp/hospital/hospital_detail_page.dart';
-import 'package:myapp/hospital/hospital_display_page.dart';
-import 'package:myapp/hospital/hospital_result_page.dart';
-import 'package:myapp/lab/find_lab.dart';
-import 'package:myapp/lab/lab_detail_page.dart';
-import 'package:myapp/lab/lab_display_page.dart';
-import 'package:myapp/lab/lab_result_page.dart';
+
+import 'package:myapp/lab_hospital_chemistshop_search_page/hospital_search_page.dart';
+
+
+
+
+
+import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
+import 'package:myapp/lab_hospital_searchchemist_display_page/hospital_result_page.dart';
+import 'package:myapp/lab_hospital_searchchemist_display_page/lab_display_page.dart';
 import 'package:myapp/login_screen.dart';
 
-import 'package:myapp/medical_shop_page.dart';
+
 import 'package:myapp/new_page.dart';
 import 'package:myapp/patient_Details/booking_confirmed_page.dart';
 import 'package:myapp/patient_Details/bronze_plan_page.dart';
@@ -52,16 +55,9 @@ import 'package:myapp/patient_Details/silver_plan_page.dart';
 import 'package:myapp/profile_page.dart';
 import 'package:myapp/registration_page.dart';
 import 'package:myapp/responsiveweb/webbar_builder.dart';
-import 'package:myapp/saima/LabRegistration/labregistrationspage.dart';
-import 'package:myapp/saima/hospitalRegistration/hospital_registration.dart';
 
-
-import 'package:myapp/upload_description.dart';
-
-import 'package:myapp/saima/lab_test.dart';
-import 'package:myapp/saima/lab_test_two.dart';
-import 'package:myapp/saima/medicalrecord/medical_record.dart';
 import 'package:myapp/test/patient_test.dart';
+
 
 import 'package:myapp/utils.dart';
 
@@ -87,7 +83,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FinalDoctorFindPage(),
+      home: SideBarPage(),
     );
   }
 }

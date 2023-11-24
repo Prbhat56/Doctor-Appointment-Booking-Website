@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/search_model.dart';
+import 'package:myapp/lab_hospital_chemistshop_search_page/hospital_search_page.dart';
 
 import '../constant/image_slide_show.dart';
 import '../responsiveweb/responsive.dart';
 import '../utils.dart';
-import 'hospital_display_page.dart';
+
 
 class FindHospitalPage extends StatefulWidget {
   const FindHospitalPage( {super.key});
@@ -73,26 +74,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
             SizedBox(
               height: 30,
             ),
-                  //           ImageSlideshow(
-                                //   indicatorColor: Colors.blue,
-                                //   onPageChanged: (value){
-                                //     debugPrint('PageChanged:$Value');
-
-                                //   },
-                                //   autoPlayInterval: 3000,
-                                //   isLoop: true,
-                                //   children: [
-                                //     Image(image: NetworkImage('https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                                //     fit: BoxFit.cover,
-                                //     ),
-                                //     Image(image: NetworkImage('https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                                //       fit: BoxFit.cover,
-                                //     ),
-                                //     Image(image: NetworkImage('https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                                //       fit: BoxFit.cover,
-                                //     ),
-                                //   ],
-                                // ),
+               
         
                Row(
                 mainAxisAlignment: MainAxisAlignment.center,

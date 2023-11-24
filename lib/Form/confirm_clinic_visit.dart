@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Form/else_confirm_page.dart';
 import 'package:myapp/Patient/book_appointment.dart';
-import 'package:myapp/constant/drawer.dart';
+
 import 'package:myapp/constant/footer_page.dart';
 
+import '../constant/header_page.dart';
+import '../constant/image_slide_show.dart';
 import '../utils.dart';
 
 class ConfirmClinicVisitPage extends StatelessWidget {
@@ -20,245 +23,40 @@ class ConfirmClinicVisitPage extends StatelessWidget {
       child: Container(
         width: double.infinity,
         height: 2600 * fem,
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/page-1/images/group-2405-Ehn.png',
-                        width: 70 * fem,
-                        height: 80 * fem,
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Doc ',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 32 * ffem,
-                          fontWeight: FontWeight.w800,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff005473),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Search',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 32 * ffem,
-                          fontWeight: FontWeight.w500,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xfffbbc05),
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Find doctors',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 27 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: const Color(0xff005473),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Book an appointment',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 20 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff5e5c5c),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Video consult',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 27 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: const Color(0xff005473),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        // consultdoctorssaB (72:20)
-                        'Consult doctors',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 20 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff5e5c5c),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Medicines',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 27 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: const Color(0xff005473),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Doc search \npharmacy',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 20 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff5e5c5c),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Labs  test ',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 27 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: const Color(0xff005473),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Health\ncheck-ups',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 20 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff5e5c5c),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Hospital',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 27 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: const Color(0xff005473),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        // findhostipalstvX (72:23)
-                        'Find hostipals',
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 20 * ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.2125 * ffem / fem,
-                          color: const Color(0xff5e5c5c),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    decoration:
-                        BoxDecoration(color: Colors.blueAccent.shade100),
-                    // ankitagF3q (266:92)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 22.5 * fem, 0 * fem),
-
-                    child: Row(
-                      children: [
-                        Text(
-                          'Ankita G',
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 30 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2125 * ffem / fem,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Material(
-                          child: IconButton(
-                              onPressed: () {
-                                 Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      SideBarPage()),
-                                            );
-                              },
-                              icon: const Icon(
-                                Icons.arrow_drop_down,
-                              )),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+             ConstantHeaderPage(),
+             const SizedBox(height: 10,),
+              ImageSlideshow(
+              indicatorColor: Colors.blue,
+              onPageChanged: (value) {
+                debugPrint('PageChanged:$Value');
+              },
+              autoPlayInterval: 3000,
+              isLoop: true,
+              children: const [
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+                Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.cover,
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 30,),
+           
+           
             Container(
               decoration: const BoxDecoration(
                 border: Border(
@@ -587,7 +385,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(
@@ -625,7 +423,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(
@@ -643,7 +441,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Padding(
@@ -659,7 +457,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 45,
             ),
             Row(
@@ -736,7 +534,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -778,7 +576,7 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Padding(
@@ -850,8 +648,8 @@ class ConfirmClinicVisitPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30,),
-            PatientFooterPage()
+            const SizedBox(height: 30,),
+            const PatientFooterPage()
           ],
         ),
       ),

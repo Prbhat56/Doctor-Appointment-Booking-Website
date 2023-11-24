@@ -47,6 +47,7 @@ dependencies:
   pinput: ^3.0.1
   url_launcher: ^6.2.1
   cloud_firestore: ^4.12.2
+  file_picker: ^6.1.1
 
 
 
@@ -198,6 +199,9 @@ flutter:
     - assets/page-1/images/boximage.png
     - assets/page-1/images/doctorbook.png
     - assets/page-1/images/doctorsearch.png
+    - assets/page-1/images/medicinepage.png
+    - assets/page-1/images/doctorbreak.png
+    - assets/page-1/images/doctorbreak2.png
     
     
 

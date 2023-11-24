@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/constant/image_slide_show.dart';
-import 'package:myapp/lab/lab_display_page.dart';
+import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
+
 import 'package:myapp/responsiveweb/responsive.dart';
 
 import '../utils.dart';
@@ -74,26 +75,7 @@ class _SearchLabState extends State<SearchLab> {
             SizedBox(
               height: 30,
             ),
-            //           ImageSlideshow(
-            //   indicatorColor: Colors.blue,
-            //   onPageChanged: (value){
-            //     debugPrint('PageChanged:$Value');
-
-            //   },
-            //   autoPlayInterval: 3000,
-            //   isLoop: true,
-            //   children: [
-            //     Image(image: NetworkImage('https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-            //     fit: BoxFit.cover,
-            //     ),
-            //     Image(image: NetworkImage('https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-            //       fit: BoxFit.cover,
-            //     ),
-            //     Image(image: NetworkImage('https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ],
-            // ),
+         
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -180,7 +162,7 @@ class _SearchLabState extends State<SearchLab> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LabSDisplayPage()),
+                            builder: (context) => const LabDisplayPage()),
                       );
                     },
                     borderRadius: BorderRadius.circular(30),
@@ -367,7 +349,7 @@ class _SearchLabState extends State<SearchLab> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LabSDisplayPage()),
+                            builder: (context) => const LabDisplayPage()),
                       );
                     },
                     borderRadius: BorderRadius.circular(30),
@@ -554,7 +536,7 @@ class _SearchLabState extends State<SearchLab> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LabSDisplayPage()),
+                            builder: (context) => const LabDisplayPage()),
                       );
                     },
                     borderRadius: BorderRadius.circular(30),

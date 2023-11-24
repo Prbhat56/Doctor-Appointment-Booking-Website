@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/constant/footer_page.dart';
+import 'package:myapp/doctor_detail_page.dart';
 
 import '../utils.dart';
 
@@ -173,22 +174,32 @@ class _FinalDoctorFindPageState extends State<FinalDoctorFindPage> {
                         SizedBox(
                           height: 45,
                         ),
-                        Container(
-                          width: 200 * fem,
-                          height: 52 * fem,
-                          decoration: BoxDecoration(
-                            color: Color(0xff005473),
-                            borderRadius: BorderRadius.circular(12 * fem),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Submit',
-                              style: SafeGoogleFont(
-                                'Inter',
-                                fontSize: 21 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2125 * ffem / fem,
-                                color: Color(0xffffffff),
+                        GestureDetector(
+                          onTap: (){
+                               Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          DetailPage(
+                                              ),
+                                    ));
+                          },
+                          child: Container(
+                            width: 200 * fem,
+                            height: 52 * fem,
+                            decoration: BoxDecoration(
+                              color: Color(0xff005473),
+                              borderRadius: BorderRadius.circular(12 * fem),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Submit',
+                                style: SafeGoogleFont(
+                                  'Inter',
+                                  fontSize: 21 * ffem,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2125 * ffem / fem,
+                                  color: Color(0xffffffff),
+                                ),
                               ),
                             ),
                           ),
