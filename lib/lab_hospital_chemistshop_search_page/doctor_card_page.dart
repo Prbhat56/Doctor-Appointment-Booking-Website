@@ -47,7 +47,7 @@ class DoctorCard extends StatelessWidget {
             // Appointment button
             ElevatedButton(
               onPressed: () {
-                // Handle appointment booking
+             
               },
               child: Text('Book Appointment'),
             ),

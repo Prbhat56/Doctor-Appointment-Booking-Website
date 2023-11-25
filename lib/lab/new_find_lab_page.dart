@@ -1,34 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/constant/footer_page.dart';
-import 'package:myapp/lab_hospital_chemistshop_search_page/hospital_search_page.dart';
+import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
 
 import '../utils.dart';
 
-class FindHospitalPage extends StatefulWidget {
-  const FindHospitalPage({super.key});
+class NewFindLabPage extends StatefulWidget {
+  const NewFindLabPage({super.key});
 
   @override
-  State<FindHospitalPage> createState() => _FindHospitalPageState();
+  State<NewFindLabPage> createState() => _NewFindLabPageState();
 }
 
-class _FindHospitalPageState extends State<FindHospitalPage> {
+class _NewFindLabPageState extends State<NewFindLabPage> {
   int _selectedIdx = 0;
-  final List<String> hospitallocation = [
-    'Hospital in Delhi',
-    'Hospital in Bangalore',
-    'Hospital in Mumbai',
-    'Hospital in Chennai',
-    'Hospital in Guwahati',
-    'Hospital in Kochi',
-    'Hospital in Ahmedabad',
-    'Hospital in Bhopal',
-    'Hospital in Indore',
-    'Hospital in Bihar',
-    'Hospital in Varanasi',
-    'Hospital in Pune',
-    'Hospital in Pune',
-    'Hospital in Pune',
-    'Hospital in Pune',
+  final List<String> lablocation = [
+    'Lab in Delhi',
+    'Lab in Bangalore',
+    'Lab in Mumbai',
+    'Lab in Chennai',
+    'Lab in Guwahati',
+    'Lab in Kochi',
+    'Lab in Ahmedabad',
+    'Lab in Bhopal',
+    'Lab in Indore',
+    'Lab in Bihar',
+    'Lab in Varanasi',
+    'Lab in Pune',
   ];
 
   @override
@@ -52,18 +49,18 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
               children: [
                 Container(
                   width: 200 * fem,
-                  height: 1000 * fem,
+                  height: 750 * fem,
                   child: ListView.separated(
-                    itemCount: hospitallocation
+                    itemCount: lablocation
                         .length, // Use the length of lablocation list
                     itemBuilder: (context, index) {
                       return Material(
                         child: InkWell(
                           onTap: () {
-                              Navigator.push(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HospitalDisplayPage(),
+                                builder: (context) => LabDisplayPage(),
                               ),
                             );
                           },
@@ -71,7 +68,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                             color: _selectedIdx == index ? Colors.blue : null,
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              hospitallocation[
+                              lablocation[
                                   index], // Display the lab location name
                               style: TextStyle(
                                 color: _selectedIdx == index
@@ -112,8 +109,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 100),
                                   child: Text(
-                                    // findhospitalinindiayYP (322:1493)
-                                    'Find Hospital in India ',
+                                    'Find Lab in India ',
                                     textAlign: TextAlign.center,
                                     style: SafeGoogleFont(
                                       'Roboto',
@@ -138,8 +134,7 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                     color: Color(0xffecfafc),
                                     child: TextField(
                                       decoration: InputDecoration(
-                                        hintText:
-                                            ' Search  Hospita in your city',
+                                        hintText: ' Search  Lab in your city',
                                         hintStyle: SafeGoogleFont(
                                           'Inter',
                                           fontSize: 20 * ffem,
@@ -161,12 +156,11 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                                 ),
                               ],
                             ),
-                            SizedBox(width: 80,),
                             Container(
                               width: 369.75 * fem,
                               height: 357.79 * fem,
                               child: Image.network(
-                                  "assets/page-1/images/group doctor3.png"),
+                                  "assets/page-1/images/find lab.png"),
                             )
                           ],
                         ),
@@ -178,14 +172,18 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                     Container(
                         width: 1110 * fem,
                         child: Image.network(
-                            "assets/page-1/images/group doctor4.png")),
-                    Container(
-                        width: 1110 * fem,
-                        child: Image.network(
-                            "assets/page-1/images/group doctor5.png")),
+                            "assets/page-1/images/group doctor.png")),
                   ],
                 )
               ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: 1433 * fem,
+              height: 322 * fem,
+              child: Image.network("assets/page-1/images/group doctor2.png"),
             ),
             SizedBox(
               height: 30,

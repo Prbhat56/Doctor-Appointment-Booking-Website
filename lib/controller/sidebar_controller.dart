@@ -5,6 +5,7 @@ import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
 import 'package:myapp/lab/find_lab.dart';
+import 'package:myapp/lab/new_find_lab_page.dart';
 
 import 'package:myapp/new_page.dart';
 import 'package:myapp/profile_page.dart';
@@ -18,7 +19,7 @@ class SideBarController extends GetxController {
       FinalDoctorFindPage(),
      ConsultNowPage(),
      SearchChemist(),
-     SearchLab(),
+     NewFindLabPage(),
       FindHospitalPage(),
     
   ];

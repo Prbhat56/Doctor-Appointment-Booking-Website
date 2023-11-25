@@ -31,6 +31,7 @@ import 'package:myapp/doctorpart/online%20consultation/no_online_consulatation_p
 
 import 'package:myapp/find_chemist.dart';
 import 'package:myapp/hospital/find_hospital.dart';
+import 'package:myapp/lab/new_find_lab_page.dart';
 
 import 'package:myapp/lab_hospital_chemistshop_search_page/hospital_search_page.dart';
 
@@ -83,7 +84,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SideBarPage(),
+      home: SlidingWebPage(),
     );
   }
 }
