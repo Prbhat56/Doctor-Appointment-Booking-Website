@@ -160,7 +160,7 @@ class _NewFindLabPageState extends State<NewFindLabPage> {
                               width: 369.75 * fem,
                               height: 357.79 * fem,
                               child: Image.network(
-                                  "assets/page-1/images/find lab.png"),
+                                  "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.43.42%20PM.jpeg?alt=media&token=ff702921-4b25-4279-aefb-8671abe5e1b2"),
                             )
                           ],
                         ),
@@ -172,7 +172,7 @@ class _NewFindLabPageState extends State<NewFindLabPage> {
                     Container(
                         width: 1110 * fem,
                         child: Image.network(
-                            "assets/page-1/images/group doctor.png")),
+                            "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.44.28%20PM.jpeg?alt=media&token=06662447-ffb2-441d-ba78-3a2a07d91254")),
                   ],
                 )
               ],
@@ -183,7 +183,7 @@ class _NewFindLabPageState extends State<NewFindLabPage> {
             Container(
               width: 1433 * fem,
               height: 322 * fem,
-              child: Image.network("assets/page-1/images/group doctor2.png"),
+              child: Image.network("https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.45.18%20PM.jpeg?alt=media&token=a35217a4-bb79-45e9-ae6d-c898b963eb48"),
             ),
             SizedBox(
               height: 30,
