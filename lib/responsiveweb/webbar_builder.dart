@@ -17,7 +17,7 @@ import 'package:myapp/patient_Details/subscription_detail_page.dart';
 
 import 'package:myapp/utils2.dart';
 
-import '../constant/footer_page.dart';
+
 import '../constant/horizontal_list.dart';
 import '../saima/LabRegistration/labregistrationspage.dart';
 import '../saima/hospitalRegistration/hospital_registration.dart';

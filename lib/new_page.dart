@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_notifier.dart';
 import 'package:myapp/constant/footer_page.dart';
@@ -104,8 +105,8 @@ class HomePage extends StatelessWidget {
                                                 child: SizedBox(
                                                   width: 12.75 * fem,
                                                   height: 14.46 * fem,
-                                                  child: Image.network(
-                                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.09.11%20PM.jpeg?alt=media&token=d5c77262-e21a-4d7d-92ba-2bea7cfe2e99',
+                                                  child: CachedNetworkImage(
+                                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.09.11%20PM.jpeg?alt=media&token=d5c77262-e21a-4d7d-92ba-2bea7cfe2e99',
                                                     width: 12.75 * fem,
                                                     height: 14.46 * fem,
                                                   ),
@@ -266,8 +267,8 @@ class HomePage extends StatelessWidget {
                                             3.75 * fem, 48 * fem, 0 * fem),
                                         width: 48 * fem,
                                         height: 33.75 * fem,
-                                        child: Image.network(
-                                          'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.11.54%20PM.jpeg?alt=media&token=26bb3d67-90c7-46d1-8bc5-b0b1641b7141',
+                                        child: CachedNetworkImage(
+                                          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.11.54%20PM.jpeg?alt=media&token=26bb3d67-90c7-46d1-8bc5-b0b1641b7141',
                                           width: 48 * fem,
                                           height: 33.75 * fem,
                                         ),
@@ -340,8 +341,8 @@ class HomePage extends StatelessWidget {
                                                                     0 * fem),
                                                             width: 60.12 * fem,
                                                             height: 61.97 * fem,
-                                                            child: Image.network(
-                                                              'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.13.45%20PM.jpeg?alt=media&token=bc6418f4-62bd-40dc-92ac-3846b6aad955',
+                                                            child:  CachedNetworkImage(
+                                                             imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.13.45%20PM.jpeg?alt=media&token=bc6418f4-62bd-40dc-92ac-3846b6aad955',
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
@@ -393,8 +394,8 @@ class HomePage extends StatelessWidget {
                                                                     0 * fem),
                                                             width: 22.8 * fem,
                                                             height: 40 * fem,
-                                                            child: Image.network(
-                                                              'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
+                                                            child:  CachedNetworkImage(
+                                                              imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
                                                               width: 22.8 * fem,
                                                               height: 40 * fem,
                                                             ),
@@ -443,8 +444,8 @@ class HomePage extends StatelessWidget {
                                                                     0 * fem),
                                                             width: 60 * fem,
                                                             height: 64.92 * fem,
-                                                            child: Image.network(
-                                                              'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.15.47%20PM.jpeg?alt=media&token=7df3ae5f-b6fd-4812-bad7-459d69699dff',
+                                                            child:  CachedNetworkImage(
+                                                              imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.15.47%20PM.jpeg?alt=media&token=7df3ae5f-b6fd-4812-bad7-459d69699dff',
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
@@ -496,8 +497,8 @@ class HomePage extends StatelessWidget {
                                                                     0.92 * fem),
                                                             width: 22.8 * fem,
                                                             height: 40 * fem,
-                                                            child: Image.network(
-                                                              'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
+                                                            child:  CachedNetworkImage(
+                                                              imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
                                                               width: 22.8 * fem,
                                                               height: 40 * fem,
                                                             ),
@@ -534,8 +535,8 @@ class HomePage extends StatelessWidget {
                                             child: SizedBox(
                                               width: 22.8 * fem,
                                               height: 40 * fem,
-                                              child: Image.network(
-                                                'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.17.13%20PM.jpeg?alt=media&token=8b3cc79e-9b4d-4427-8768-f71698500775',
+                                              child:  CachedNetworkImage(
+                                                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.17.13%20PM.jpeg?alt=media&token=8b3cc79e-9b4d-4427-8768-f71698500775',
                                                 width: 22.8 * fem,
                                                 height: 40 * fem,
                                               ),
@@ -676,8 +677,8 @@ class HomePage extends StatelessWidget {
                                                     child: SizedBox(
                                                       width: 672 * fem,
                                                       height: 456.8 * fem,
-                                                      child: Image.network(
-                                                        'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.18.40%20PM.jpeg?alt=media&token=7d0c5e5c-d231-4468-9d0b-71b2acb3a340',
+                                                      child:  CachedNetworkImage(
+                                                        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.18.40%20PM.jpeg?alt=media&token=7d0c5e5c-d231-4468-9d0b-71b2acb3a340',
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -803,8 +804,8 @@ class HomePage extends StatelessWidget {
                                                   0 * fem),
                                               width: 22.8 * fem,
                                               height: 40 * fem,
-                                              child: Image.network(
-                                                'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
+                                              child:  CachedNetworkImage(
+                                                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
                                                 width: 22.8 * fem,
                                                 height: 40 * fem,
                                               ),
@@ -813,8 +814,8 @@ class HomePage extends StatelessWidget {
                                               // vectoruHr (16:43)
                                               width: 22.8 * fem,
                                               height: 40 * fem,
-                                              child: Image.network(
-                                                'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
+                                              child:  CachedNetworkImage(
+                                                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
                                                 width: 22.8 * fem,
                                                 height: 40 * fem,
                                               ),
@@ -826,8 +827,8 @@ class HomePage extends StatelessWidget {
                                         // vectorSoa (16:34)
                                         width: 22.8 * fem,
                                         height: 40 * fem,
-                                        child: Image.network(
-                                          'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
+                                        child:  CachedNetworkImage(
+                                          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.14.38%20PM.jpeg?alt=media&token=38676858-6318-44a3-a625-b3af120f7729',
                                           width: 22.8 * fem,
                                           height: 40 * fem,
                                         ),
@@ -886,8 +887,8 @@ class HomePage extends StatelessWidget {
                                         0 * fem, 0 * fem, 43.5 * fem),
                                     width: 74.93 * fem,
                                     height: 88.5 * fem,
-                                    child: Image.network(
-                                      'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.21.04%20PM.jpeg?alt=media&token=3cf87b61-2695-4de4-acbc-c7515600e5af',
+                                    child:  CachedNetworkImage(
+                                      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.21.04%20PM.jpeg?alt=media&token=3cf87b61-2695-4de4-acbc-c7515600e5af',
                                       width: 74.93 * fem,
                                       height: 88.5 * fem,
                                     ),
@@ -944,8 +945,8 @@ class HomePage extends StatelessWidget {
                                         0 * fem, 0 * fem, 43.67 * fem),
                                     width: 85.36 * fem,
                                     height: 89.33 * fem,
-                                    child: Image.network(
-                                      'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.22.09%20PM.jpeg?alt=media&token=071ca4fb-e3dd-497e-8acb-08f5a525068c',
+                                    child:  CachedNetworkImage(
+                                      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.22.09%20PM.jpeg?alt=media&token=071ca4fb-e3dd-497e-8acb-08f5a525068c',
                                       width: 85.36 * fem,
                                       height: 89.33 * fem,
                                     ),
@@ -1002,8 +1003,8 @@ class HomePage extends StatelessWidget {
                                         0 * fem, 0 * fem, 43.65 * fem),
                                     width: 117.95 * fem,
                                     height: 103.35 * fem,
-                                    child: Image.network(
-                                      'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.22.56%20PM.jpeg?alt=media&token=f16f8f48-8504-4b93-9940-5869dfdf9f5a',
+                                    child:  CachedNetworkImage(
+                                      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.22.56%20PM.jpeg?alt=media&token=f16f8f48-8504-4b93-9940-5869dfdf9f5a',
                                       width: 117.95 * fem,
                                       height: 103.35 * fem,
                                     ),
@@ -1060,8 +1061,8 @@ class HomePage extends StatelessWidget {
                                         0 * fem, 0 * fem, 9 * fem, 43.25 * fem),
                                     width: 118 * fem,
                                     height: 104.75 * fem,
-                                    child: Image.network(
-                                      'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.24.12%20PM.jpeg?alt=media&token=1eb26a05-f13d-4071-b4c1-7fdaafd7084b',
+                                    child:  CachedNetworkImage(
+                                     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.24.12%20PM.jpeg?alt=media&token=1eb26a05-f13d-4071-b4c1-7fdaafd7084b',
                                       width: 118 * fem,
                                       height: 104.75 * fem,
                                     ),
@@ -1118,8 +1119,8 @@ class HomePage extends StatelessWidget {
                                         1 * fem, 0 * fem, 0 * fem, 43.58 * fem),
                                     width: 115 * fem,
                                     height: 105.42 * fem,
-                                    child: Image.network(
-                                      'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.25.32%20PM.jpeg?alt=media&token=b118aad2-e38f-4fcd-a904-ba3ea72d6287',
+                                    child: CachedNetworkImage(
+                                     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.25.32%20PM.jpeg?alt=media&token=b118aad2-e38f-4fcd-a904-ba3ea72d6287',
                                       width: 115 * fem,
                                       height: 105.42 * fem,
                                     ),
@@ -1199,8 +1200,8 @@ class HomePage extends StatelessWidget {
                                       0 * fem, 0 * fem, 0 * fem, 32 * fem),
                                   width: 142.04 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.26.38%20PM.jpeg?alt=media&token=abb2a641-f8aa-476c-a9d8-346452631c3f',
+                                  child:  CachedNetworkImage(
+                                   imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.26.38%20PM.jpeg?alt=media&token=abb2a641-f8aa-476c-a9d8-346452631c3f',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1250,8 +1251,8 @@ class HomePage extends StatelessWidget {
                                       0 * fem, 0 * fem, 19 * fem, 32 * fem),
                                   width: 136 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.27.33%20PM.jpeg?alt=media&token=367fae92-028e-493b-81f0-66b941856ec1',
+                                  child:  CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.27.33%20PM.jpeg?alt=media&token=367fae92-028e-493b-81f0-66b941856ec1',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1297,8 +1298,8 @@ class HomePage extends StatelessWidget {
                                       1 * fem, 0 * fem, 0 * fem, 32 * fem),
                                   width: 136 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.28.28%20PM.jpeg?alt=media&token=94bc04ce-0c8a-41a4-8dbc-2973b733ba1f',
+                                  child:  CachedNetworkImage(
+                                   imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.28.28%20PM.jpeg?alt=media&token=94bc04ce-0c8a-41a4-8dbc-2973b733ba1f',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1344,8 +1345,8 @@ class HomePage extends StatelessWidget {
                                       0 * fem, 0 * fem, 0 * fem, 24 * fem),
                                   width: 136 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.28.56%20PM.jpeg?alt=media&token=1c26c20b-0049-44ed-a04f-a67679a9f2f7',
+                                  child:  CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.28.56%20PM.jpeg?alt=media&token=1c26c20b-0049-44ed-a04f-a67679a9f2f7',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1402,8 +1403,8 @@ class HomePage extends StatelessWidget {
                                       7.29 * fem, 0 * fem, 0 * fem, 42 * fem),
                                   width: 142.04 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.30.33%20PM.jpeg?alt=media&token=00e34b70-2af9-4565-bc83-45726728cfe3',
+                                  child: CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.30.33%20PM.jpeg?alt=media&token=00e34b70-2af9-4565-bc83-45726728cfe3',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1449,8 +1450,8 @@ class HomePage extends StatelessWidget {
                                       1 * fem, 0 * fem, 0 * fem, 32 * fem),
                                   width: 136 * fem,
                                   height: 140 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.31.37%20PM.jpeg?alt=media&token=26868715-e99c-4219-8b7f-8d345370f65f',
+                                  child:  CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.31.37%20PM.jpeg?alt=media&token=26868715-e99c-4219-8b7f-8d345370f65f',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1496,8 +1497,8 @@ class HomePage extends StatelessWidget {
                                       0 * fem, 0 * fem, 0 * fem, 36 * fem),
                                   width: 136 * fem,
                                   height: 136 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.32.06%20PM.jpeg?alt=media&token=a7b0974c-8d16-4a98-95a7-5529582542d8',
+                                  child:  CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.32.06%20PM.jpeg?alt=media&token=a7b0974c-8d16-4a98-95a7-5529582542d8',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1543,8 +1544,8 @@ class HomePage extends StatelessWidget {
                                       0 * fem, 0 * fem, 0 * fem, 21 * fem),
                                   width: 140 * fem,
                                   height: 140 * fem,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.33.01%20PM.jpeg?alt=media&token=3453b74e-102b-4c98-afe9-061fefbbea6e',
+                                  child:  CachedNetworkImage(
+                                    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.33.01%20PM.jpeg?alt=media&token=3453b74e-102b-4c98-afe9-061fefbbea6e',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -1669,8 +1670,8 @@ class HomePage extends StatelessWidget {
                         topRight: Radius.circular(400 * fem),
                         bottomRight: Radius.circular(34 * fem),
                       ),
-                      child: Image.network(
-                        "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.34.13%20PM.jpeg?alt=media&token=17ab515b-28f7-4a0d-a7c9-9ca7583ad22d",
+                      child: CachedNetworkImage(
+                        imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.34.13%20PM.jpeg?alt=media&token=17ab515b-28f7-4a0d-a7c9-9ca7583ad22d",
                         fit: BoxFit.cover,
                         width: 457 * fem,
                         height: 529 * fem,
@@ -1711,8 +1712,8 @@ class HomePage extends StatelessWidget {
                             0.5 * fem, 0 * fem, 0 * fem, 7.5 * fem),
                         width: 174 * fem,
                         height: 174 * fem,
-                        child: Image.network(
-                          "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.35.29%20PM.jpeg?alt=media&token=cc5223c1-d9f9-46c3-a3ca-fe4de486d7f4",
+                        child:  CachedNetworkImage(
+                          imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.35.29%20PM.jpeg?alt=media&token=cc5223c1-d9f9-46c3-a3ca-fe4de486d7f4",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -1839,8 +1840,8 @@ class HomePage extends StatelessWidget {
                                 child: SizedBox(
                                   width: 115.27 * fem,
                                   height: 143 * fem,
-                                  child: Image.network(
-                                    "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.36.43%20PM.jpeg?alt=media&token=c4d6bc7f-e0fe-43d2-af2a-ca73ef500c4f",
+                                  child:  CachedNetworkImage(
+                                   imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.36.43%20PM.jpeg?alt=media&token=c4d6bc7f-e0fe-43d2-af2a-ca73ef500c4f",
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -2003,8 +2004,8 @@ class HomePage extends StatelessWidget {
                                 1.42 * fem, 0 * fem, 0 * fem, 9.04 * fem),
                             width: 125.04 * fem,
                             height: 119.8 * fem,
-                            child: Image.network(
-                              'assets/page-1/images/group-2405-Ehn.png',
+                            child:  CachedNetworkImage(
+                              imageUrl: 'assets/page-1/images/group-2405-Ehn.png',
                               width: 125.04 * fem,
                               height: 119.8 * fem,
                             ),
@@ -2115,8 +2116,8 @@ class HomePage extends StatelessWidget {
                                         0.16 * fem, 1.45 * fem, 0 * fem),
                                     width: 4.06 * fem,
                                     height: 2.85 * fem,
-                                    child: Image.network(
-                                      "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.39.10%20PM.jpeg?alt=media&token=2b93e76a-e5ac-478b-89f6-f35f9beb9d37",
+                                    child: CachedNetworkImage(
+                                      imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/prabhat_home_Page%2FWhatsApp%20Image%202023-11-26%20at%2010.39.10%20PM.jpeg?alt=media&token=2b93e76a-e5ac-478b-89f6-f35f9beb9d37",
                                       width: 4.06 * fem,
                                       height: 2.85 * fem,
                                     ),

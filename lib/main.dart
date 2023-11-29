@@ -22,6 +22,7 @@ import 'package:myapp/doctorfind/final_find_doctor_page.dart';
 import 'package:myapp/doctorpart/communication/communication_detail_page.dart';
 import 'package:myapp/doctorpart/communication/communication_view_page.dart';
 import 'package:myapp/doctorpart/communication/no_communication_page.dart';
+import 'package:myapp/doctorpart/doctor_dashboard_list.dart';
 
 import 'package:myapp/doctorpart/new_communication/new_communication_detail_page.dart';
 import 'package:myapp/doctorpart/new_communication/new_communication_page.dart';
@@ -40,6 +41,7 @@ import 'package:myapp/lab_hospital_chemistshop_search_page/hospital_search_page.
 
 
 import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
+import 'package:myapp/lab_hospital_searchchemist_display_page/doctor_display_page.dart';
 import 'package:myapp/lab_hospital_searchchemist_display_page/hospital_result_page.dart';
 import 'package:myapp/lab_hospital_searchchemist_display_page/lab_display_page.dart';
 import 'package:myapp/login_screen.dart';
@@ -84,7 +86,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SlidingWebPage(),
+      home: DoctorListScreen(),
     );
   }
 }

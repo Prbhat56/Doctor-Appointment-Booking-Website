@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/lab_hospital_chemistshop_search_page/lab_search_page.dart';
@@ -159,8 +160,8 @@ class _NewFindLabPageState extends State<NewFindLabPage> {
                             Container(
                               width: 369.75 * fem,
                               height: 357.79 * fem,
-                              child: Image.network(
-                                  "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.43.42%20PM.jpeg?alt=media&token=ff702921-4b25-4279-aefb-8671abe5e1b2"),
+                              child:  CachedNetworkImage(
+                                 imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.43.42%20PM.jpeg?alt=media&token=ff702921-4b25-4279-aefb-8671abe5e1b2"),
                             )
                           ],
                         ),
@@ -171,8 +172,8 @@ class _NewFindLabPageState extends State<NewFindLabPage> {
                     ),
                     Container(
                         width: 1110 * fem,
-                        child: Image.network(
-                            "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.44.28%20PM.jpeg?alt=media&token=06662447-ffb2-441d-ba78-3a2a07d91254")),
+                        child: CachedNetworkImage(
+                           imageUrl: "https://firebasestorage.googleapis.com/v0/b/docsearchweb-780db.appspot.com/o/Find%20lab%2FWhatsApp%20Image%202023-11-26%20at%2010.44.28%20PM.jpeg?alt=media&token=06662447-ffb2-441d-ba78-3a2a07d91254")),
                   ],
                 )
               ],

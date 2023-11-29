@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/constant/footer_page.dart';
 import 'package:myapp/doctor_detail_page.dart';
+import 'package:myapp/lab_hospital_searchchemist_display_page/doctor_display_page.dart';
 
 import '../utils.dart';
 
@@ -179,7 +180,7 @@ class _FinalDoctorFindPageState extends State<FinalDoctorFindPage> {
                                Navigator.of(context)
                                         .push(MaterialPageRoute(
                                       builder: (context) =>
-                                          DetailPage(
+                                          DoctorListScreen(
                                               ),
                                     ));
                           },

@@ -48,6 +48,7 @@ dependencies:
   url_launcher: ^6.2.1
   cloud_firestore: ^4.12.2
   file_picker: ^6.1.1
+  cached_network_image: ^3.3.0
 
 
 
