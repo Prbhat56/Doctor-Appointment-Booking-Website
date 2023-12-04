@@ -32,6 +32,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
   late List<SearchModel> main_search_item;
   late List<SearchModel> display_list;
   bool isValidate = false;
+  bool isSubmit = false;
 
   @override
   void initState() {
@@ -357,7 +358,14 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                           color: const Color(0xffffffff),
                         ),
                       ),
-                      Row(
+                      isSubmit != false ? InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MyDrawer()));
+                        },
+                        child: CircleAvatar(
+                          backgroundColor: Colors.grey,
+                        ),
+                      ) : Row(
                         children: [
                           Material(
                             color: Colors.blue,
@@ -458,6 +466,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                     padding:
                                                         const EdgeInsets.all(8),
                                                     child: TextFormField(
+                                                      controller: verificationCodeController,
                                                       decoration:
                                                           const InputDecoration(
                                                               hintText:
@@ -516,9 +525,7 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                                           () {
                                                                         loading =
                                                                             false;
-                                                                        // Navigator.push(context,
-                                                                        //     MaterialPageRoute(
-                                                                        //         builder: (context)=>VerifyCodeScreen(verificartionId2:verificationId)));
+                                                                        Navigator.pop(context);
                                                                       });
                                                                     },
                                                                     codeAutoRetrievalTimeout:
@@ -564,9 +571,11 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                           title: 'submit',
                                                           loading: loading,
                                                           onTap: () async {
+                                                            print("msg");
+                                                            Navigator.pop(context);
                                                             setState(() {
-                                                              loading = true;
-                                                            });
+                                                              isSubmit = true;
+                                                             });
 
                                                             final PhoneAuthCredential crendital =
                                                                 PhoneAuthProvider.credential(
@@ -575,22 +584,22 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
                                                                     smsCode:"$verificationCodeController.text"
                                                                         );
 
-                                                            try {
-                                                              await auth
-                                                                  .signInWithCredential(
-                                                                      crendital);
-                                                              setState(() {
-                                                                isValidate = true;
-                                                              });
-                                                              // Navigator.push(context,
-                                                              //     MaterialPageRoute(builder: (context) => SlidingWebPage(verificartionId: vId)));
-                                                            } catch (e) {
-                                                              setState(() {
-                                                                loading = true;
-                                                              });
-                                                              utilss().toastMessage(
-                                                                  e.toString());
-                                                            }
+
+                                                            // try {
+                                                            //   // await auth
+                                                            //   //     .signInWithCredential(
+                                                            //   //         crendital);
+                                                            //   // setState(() {
+                                                            //   //   isValidate = true;
+                                                            //   // });
+                                                            //
+                                                            // } catch (e) {
+                                                            //   setState(() {
+                                                            //     loading = true;
+                                                            //   });
+                                                            //   utilss().toastMessage(
+                                                            //       e.toString());
+                                                            // }
                                                           }),
                                                     ),
                                                   )
@@ -816,3 +825,42 @@ class _SlidingWebPageState extends State<SlidingWebPage> {
     );
   }
 }
+
+
+
+class MyDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage('https://cdn.pixabay.com/photo/2015/08/05/04/25/people-875617_1280.jpg'),
+            )
+          ),
+          ListTile(
+            title: Text('Item 1'),
+            onTap: () {
+              // Add your action for item 1
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('Item 2'),
+            onTap: () {
+              // Add your action for item 2
+              Navigator.pop(context);
+            },
+          ),
+          // Add more items as needed
+        ],
+      ),
+    );
+  }
+}
+
